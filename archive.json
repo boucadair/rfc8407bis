@@ -1,0 +1,116 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-04-13T01:18:17.294669+00:00",
+  "repo": "boucadair/rfc8407bis",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOJTh_ks5izfxi",
+      "title": "incorrect 8407 ref",
+      "url": "https://github.com/boucadair/rfc8407bis/issues/1",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Current\r\n>    revision \"2017-12-11\" {\r\n>      description\r\n>        \"Added support for YANG 1.1 actions and notifications tied to\r\n>         data nodes.  Clarify how NACM extensions can be used by other\r\n>         data models.\";\r\n>      reference\r\n>        \"RFC 8407: Network Configuration Protocol (NETCONF)\r\n>                   Access Control Model\";\r\n>    }\r\n> \r\n>    revision \"2012-02-22\" {\r\n>      description\r\n>        \"Initial version\";\r\n>      reference\r\n>        \"RFC 8341: Network Configuration\r\n>                   Access Control Model\";\r\n>    }\r\n\r\nvs.\r\n\r\n> revision \"2018-02-14\" {\r\n>        description\r\n>          \"Added support for YANG 1.1 actions and notifications tied to\r\n>           data nodes.  Clarified how NACM extensions can be used by\r\n>           other data models.\";\r\n>        reference\r\n>          \"[RFC 8341](https://www.rfc-editor.org/rfc/rfc8341): Network Configuration Access Control Model\";\r\n>      }\r\n> \r\n>      revision \"2012-02-22\" {\r\n>        description\r\n>          \"Initial version.\";\r\n>        reference\r\n>          \"[RFC 6536](https://www.rfc-editor.org/rfc/rfc6536): Network Configuration Protocol (NETCONF)\r\n>                     Access Control Model\";\r\n>      }",
+      "createdAt": "2023-04-06T15:46:55Z",
+      "updatedAt": "2023-04-06T15:46:55Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOJTh_ks5i6Ort",
+      "title": "tags reco from 8819",
+      "url": "https://github.com/boucadair/rfc8407bis/issues/2",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "> [6.1. ](https://www.rfc-editor.org/rfc/rfc8819#section-6.1)[Define Standard Tags](https://www.rfc-editor.org/rfc/rfc8819#name-define-standard-tags)\r\n> A module MAY indicate, using module-tag extension statements, a set of tags that are to be automatically associated with it (i.e., not added through configuration).\r\n> \r\n> module example-module {\r\n>   namespace \"https://example.com/yang/example\";\r\n>   prefix \"ex\";\r\n>   //...\r\n>   import module-tags { prefix tags; }\r\n> \r\n>   tags:module-tag \"ietf:some-new-tag\";\r\n>   tags:module-tag \"ietf:some-other-tag\";\r\n>   // ...\r\n> }\r\n> The module writer can use existing standard tags or use new tags defined in the model definition, as appropriate. For IETF standardized modules, new tags MUST be assigned in the IANA registry defined below, see [Section 7.2](https://www.rfc-editor.org/rfc/rfc8819#sec-ietf-yang-module-tags-registry).",
+      "createdAt": "2023-04-08T07:33:15Z",
+      "updatedAt": "2023-04-08T07:33:15Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOJTh_ks5OAe2z",
+      "title": "Update draft-boucadair-netmod-rfc8407bis.md",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/3",
+      "state": "MERGED",
+      "author": "billwuqin",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Will provide review in the next version.",
+      "createdAt": "2023-04-11T10:16:28Z",
+      "updatedAt": "2023-04-11T11:05:52Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "0453788fdeded185ab4505cda4cad8e7d0f448be",
+      "headRepository": "billwuqin/rfc8407bis",
+      "headRefName": "patch-1",
+      "headRefOid": "0d036979343e53efac902346f51b05d0e7a4ac89",
+      "closedAt": "2023-04-11T11:05:51Z",
+      "mergedAt": "2023-04-11T11:05:51Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "e7241e7b220491e434525fdc309450a25ff11b09"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}

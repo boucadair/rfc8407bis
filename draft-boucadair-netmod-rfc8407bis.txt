@@ -6,8 +6,8 @@ Network Modeling                                            M. Boucadair
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                       12 May 2023
-Expires: 13 November 2023
+Intended status: Best Current Practice                       6 July 2023
+Expires: 7 January 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 November 2023.
+   This Internet-Draft will expire on 7 January 2024.
 
 Copyright Notice
 
@@ -482,7 +482,8 @@ Table of Contents
    Native YANG features (e.g., breaking line, "+") SHOULD be used to fit
    a module into the line limits.  Exceptionally, RFC8792-folding of
    YANG modules MAY be used if and only if native YANG features are not
-   sufficient.
+   sufficient.  A similar approach (e.g., use "--yang-line-length 69" or
+   split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 3.6.  Definitions Section
 

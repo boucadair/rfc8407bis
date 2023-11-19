@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-16T01:13:50.437480+00:00",
+  "timestamp": "2023-11-19T01:18:15.045862+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -277,15 +277,41 @@
       "id": "I_kwDOJTh_ks52eAMD",
       "title": "Appendix for list of changes",
       "url": "https://github.com/boucadair/rfc8407bis/issues/21",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "      The document SHOULD contain an appendix detailing the changes\r\n       from the RFC it is replacing.\r\n\r\nsee https://github.com/tsaad-dev/te/issues/220\r\n\r\nThis is not specific to YANG, but need to check if there is an authoritative ref ",
       "createdAt": "2023-11-10T12:54:30Z",
-      "updatedAt": "2023-11-10T12:54:30Z",
-      "closedAt": null,
+      "updatedAt": "2023-11-16T08:35:54Z",
+      "closedAt": "2023-11-16T08:35:53Z",
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "body": "No Changes is needed to the bis as this is already covered by:\r\n\r\n> YANG modules under review are likely to be contained in Internet- Drafts (I-Ds). All guidelines for I-D authors [[ID-Guidelines](https://boucadair.github.io/rfc8407bis/draft-ietf-netmod-rfc8407bis.html#ID-Guidelines)] MUST be followed.\r\n\r\nThe ID-Guidelines points to https://authors.ietf.org/required-content, which then have the following:\r\n\r\n```\r\nSummary of Changes\r\nAs noted in the [Abstract](https://authors.ietf.org/en/required-content#abstract) and [Introduction](https://authors.ietf.org/en/required-content#introduction) sections above, the Abstract and Introduction must call out any RFCs an I-D intends to obsolete or update. There should also be a section providing greater detail about the motivation and changes.\r\n\r\nChecklist:\r\n\r\n Ensure the I-D clearly summarizes any changes made from the RFCs being updated or obsoleted.\r\n Ensure any errata against RFCs that are being obsoleted or updated have been considered, and that the I-D clearly identifies those that have been addressed.\r\n\r\n```\r\n\r\n\r\n",
+          "createdAt": "2023-11-16T08:35:53Z",
+          "updatedAt": "2023-11-16T08:35:53Z"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "id": "I_kwDOJTh_ks52_WWC",
+      "title": "Add a sample example of YANGSON validation",
+      "url": "https://github.com/boucadair/rfc8407bis/issues/22",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "boucadair"
+      ],
+      "labels": [],
+      "body": "exemplify how the JSON validation can be integrated in the tooling: https://github.com/ietf-wg-alto/draft-ietf-alto-oam-yang/blob/main/tools/yang.mk",
+      "createdAt": "2023-11-16T08:19:31Z",
+      "updatedAt": "2023-11-16T10:35:02Z",
+      "closedAt": "2023-11-16T10:35:02Z",
       "comments": []
     }
   ],
@@ -513,6 +539,101 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 23,
+      "id": "PR_kwDOJTh_ks5fmgD1",
+      "title": "yangson tooling",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/23",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-11-16T08:26:46Z",
+      "updatedAt": "2023-11-16T08:29:16Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "9fef21595bdacfdbb0969d034a9ccfaba35fa16d",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "1b10d01f25301cdb1cad5b91abdcf3b7be8877a5",
+      "closedAt": "2023-11-16T08:29:15Z",
+      "mergedAt": "2023-11-16T08:29:15Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "eba654e53f5f97a12586424a8da375a863e91071"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 24,
+      "id": "PR_kwDOJTh_ks5fm2W_",
+      "title": "constraint on state data",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/24",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-11-16T09:28:48Z",
+      "updatedAt": "2023-11-16T11:14:36Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "b19906d80535868ba22762e7ea37151e63e39dca",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "5396419884160a8797dba44c1a70b5f693d52982",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJTh_ks5nXJa1",
+          "commit": {
+            "abbreviatedOid": "40f8479"
+          },
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-16T11:13:21Z",
+          "updatedAt": "2023-11-16T11:13:22Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\nHowever, {{Section 5.3 of !RFC8342}} softens that behavior by allowing semantic\r\n```",
+              "createdAt": "2023-11-16T11:13:21Z",
+              "updatedAt": "2023-11-16T11:13:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJTh_ks5nXJ5C",
+          "commit": {
+            "abbreviatedOid": "6bcd12e"
+          },
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-11-16T11:14:32Z",
+          "updatedAt": "2023-11-16T11:14:33Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\r\nthe detection by a management system of abnormal behaviors of a managed entity.\r\n```",
+              "createdAt": "2023-11-16T11:14:32Z",
+              "updatedAt": "2023-11-16T11:14:33Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

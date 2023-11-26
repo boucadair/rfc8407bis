@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-23T01:13:20.394340+00:00",
+  "timestamp": "2023-11-26T01:17:04.930258+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -261,15 +261,15 @@
       "id": "I_kwDOJTh_ks51bcJq",
       "title": "must + error-message for \"config false\"",
       "url": "https://github.com/boucadair/rfc8407bis/issues/20",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "See the use in https://datatracker.ietf.org/doc/draft-ietf-pce-pcep-yang/. ",
       "createdAt": "2023-10-31T10:22:32Z",
-      "updatedAt": "2023-10-31T10:22:32Z",
-      "closedAt": null,
+      "updatedAt": "2023-11-23T10:32:11Z",
+      "closedAt": "2023-11-23T10:32:11Z",
       "comments": []
     },
     {
@@ -312,6 +312,22 @@
       "createdAt": "2023-11-16T08:19:31Z",
       "updatedAt": "2023-11-16T10:35:02Z",
       "closedAt": "2023-11-16T10:35:02Z",
+      "comments": []
+    },
+    {
+      "number": 25,
+      "id": "I_kwDOJTh_ks53zwJ8",
+      "title": "\"especially\" in Sec Cons (SAAG Review)",
+      "url": "https://github.com/boucadair/rfc8407bis/issues/25",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "From Rich Salz: \r\n\r\n> You should remove the word \u201cespecially\u201d in the two places it\u2019s used and \u201csignificant\u201d from the privacy concerns item.\r\n> \r\n> They do not make the intent more clear, and when you remove those words it still leaves the authors to have room for judgement.\r\n",
+      "createdAt": "2023-11-24T17:57:34Z",
+      "updatedAt": "2023-11-24T17:57:34Z",
+      "closedAt": null,
       "comments": []
     }
   ],
@@ -573,24 +589,26 @@
       "id": "PR_kwDOJTh_ks5fm2W_",
       "title": "constraint on state data",
       "url": "https://github.com/boucadair/rfc8407bis/pull/24",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2023-11-16T09:28:48Z",
-      "updatedAt": "2023-11-16T11:14:36Z",
+      "updatedAt": "2023-11-23T10:32:11Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "b19906d80535868ba22762e7ea37151e63e39dca",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "boucadair-patch-1",
       "headRefOid": "5396419884160a8797dba44c1a70b5f693d52982",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2023-11-23T10:32:10Z",
+      "mergedAt": "2023-11-23T10:32:10Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "8162e72727cc6fb5dfff9767ee0a533a3f075c50"
+      },
       "comments": [],
       "reviews": [
         {

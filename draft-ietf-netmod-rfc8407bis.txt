@@ -6,8 +6,8 @@ Network Modeling                                            M. Boucadair
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                  23 November 2023
-Expires: 26 May 2024
+Intended status: Best Current Practice                  30 November 2023
+Expires: 2 June 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 May 2024.
+   This Internet-Draft will expire on 2 June 2024.
 
 Copyright Notice
 
@@ -3477,6 +3477,8 @@ Acknowledgments
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
 
    Thanks to Xufeng Liu for reviewing the document.
+
+   Thanks to Rach Salz and Michael Richardson for the SAAG review.
 
    The author of RFC 8407:  Andy Bierman
 

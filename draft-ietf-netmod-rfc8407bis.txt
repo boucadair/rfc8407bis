@@ -286,6 +286,8 @@ Table of Contents
    *  Added a discussion about "must + error-message" constructs for
       state data.
 
+   *  Added text about summary of changes in revision statements.
+
 2.  Terminology
 
    The following terms are used throughout this document:

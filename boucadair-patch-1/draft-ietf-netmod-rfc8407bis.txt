@@ -6,8 +6,8 @@ Network Modeling                                            M. Boucadair
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                  16 November 2023
-Expires: 19 May 2024
+Intended status: Best Current Practice                   1 December 2023
+Expires: 3 June 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 May 2024.
+   This Internet-Draft will expire on 3 June 2024.
 
 Copyright Notice
 
@@ -73,7 +73,7 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Changes since RFC 8407
+     1.1.  Changes Since RFC 8407
    2.  Terminology
      2.1.  NETCONF Terms
      2.2.  YANG Terms
@@ -172,9 +172,9 @@ Table of Contents
 
    The standardization of network configuration interfaces for use with
    network configuration management protocols, such as the Network
-   Configuration Protocol [RFC6241] and the RESTCONF protocol [RFC8040],
-   requires a modular set of data models that can be reused and extended
-   over time.
+   Configuration Protocol (NETCONF) [RFC6241] and the RESTCONF protocol
+   [RFC8040], requires a modular set of data models that can be reused
+   and extended over time.
 
    This document defines a set of usage guidelines for documents
    containing YANG 1.1 [RFC7950] and YANG 1.0 [RFC6020] data models,
@@ -214,7 +214,7 @@ Table of Contents
    expected to know the YANG data modeling language before implementing
    the guidance in this document.
 
-1.1.  Changes since RFC 8407
+1.1.  Changes Since RFC 8407
 
    The following changes have been made to the guidelines published in
    [RFC8407]:
@@ -257,7 +257,7 @@ Table of Contents
 
    *  Added guidelines for IANA-maintained modules.
 
-   *  Elaborate the guidance for the use of values reserved for
+   *  Elaborated the guidance for the use of values reserved for
       documentation in examples.
 
    *  Recommended the use of "example:" for URI examples.
@@ -278,10 +278,13 @@ Table of Contents
       identities, but uses them without their prefix as per
       Section 4.6.4.
 
-   *  Fixed an inconsistency in Section 4.6.4 fails to use derived-from-
-      or-self() mentioned back in Section 4.6.2.
+   *  Fixed an inconsistency in Section 4.6.4 which fails to use
+      "derived-from-or-self()" mentioned back in Section 4.6.2.
 
    *  Added a new section for modeling abstract data structures.
+
+   *  Added a discussion about "must + error-message" constructs for
+      state data.
 
 2.  Terminology
 
@@ -553,7 +556,7 @@ Table of Contents
       Device models are also used to refer to model a function embedded
       in a device (e.g., Access Control Lists (ACLs) [RFC8519]).
 
-      A comprehensive list of devices models is provided in Appendix 4.2
+      A comprehensive list of device models is provided in Appendix 4.2
       of [RFC8969].
 
 3.6.  Definitions Section
@@ -596,10 +599,9 @@ Table of Contents
    (e.g., [RFC7952]), the security section MUST be patterned after the
    latest approved template (available at
    <https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>).
-   Section 3.7.1 contains the security considerations template dated
-   2013-05-08 and last updated on 2018-10-18.  Authors MUST check the
-   web page at the URL listed above in case there is a more recent
-   version available.
+   Section 3.7.1 contains the security considerations template.  Authors
+   MUST check the web page at the URL listed above in case there is a
+   more recent version available.
 
    In particular:
 
@@ -776,7 +778,7 @@ Table of Contents
 
      <https://github.com/CZ-NIC/yangson>
 
-   An example of integrating "yangson" in the tooling chain can be found
+   An example of integrating "yangson" in a tooling chain can be found
    at [YANGSON-Validate].
 
 3.11.  Module Extraction Tools
@@ -1378,17 +1380,42 @@ Table of Contents
    the module.  Modules are often extracted from their original
    documents, and it is useful for developers and operators to know how
    to find the original source document in a consistent manner.  The
-   "revision" statement MAY have a "description" substatement.
+   "revision" statement MAY have a "description" substatement.  For
+   convenience, the description text of a new published revision may
+   summarize any changes made to a module compared to the previous
+   published revision.  Typically, that list is a YANG-specific subset
+   of the summary of changes listing any changes made from the RFC being
+   updated or obsoleted as per [ID-Guidelines].
 
    The following example shows the revision statement for a published
    YANG module:
 
-      revision "2012-02-22" {
+      revision 2010-09-24 {
         description
-          "Initial version";
+          "Initial revision.";
+      reference
+        "RFC 6021: Common YANG Data Types";
+      }
+
+   The following example shows the revision statements for a published
+   YANG module that updates a published module:
+
+     revision 2013-07-15 {
+       description
+         "This revision adds the following new data types:
+          - yang:yang-identifier
+          - yang:hex-string
+          - yang:uuid
+          - yang:dotted-quad";
         reference
-          "RFC 6536: Network Configuration Protocol (NETCONF)
-                     Access Control Model";
+          "RFC 6991: Common YANG Data Types";
+      }
+
+      revision 2010-09-24 {
+        description
+          "Initial revision.";
+      reference
+        "RFC 6021: Common YANG Data Types";
       }
 
    For an unpublished module, a complete history of each unpublished
@@ -1400,24 +1427,48 @@ Table of Contents
    revision date of that new module version MUST be updated to a date
    later than that of the previous version.
 
-   The following example shows the two revision statements for an
+   The following example shows the revisions statements for an
    unpublished update to a published YANG module:
 
-      revision "2017-12-11" {
-        description
-          "Added support for YANG 1.1 actions and notifications tied to
-           data nodes. Clarify how NACM extensions can be used by other
-           data models.";
+     revision 2023-01-23 {
+       description
+        "This revision adds the following new data types:
+         - yang:date-with-zone-offset
+         - yang:date-no-zone
+         - yang:time-with-zone-offset
+         - yang:time-no-zone
+         - yang:hours32
+         - yang:minutes32
+         - yang:seconds32
+         - yang:centiseconds32
+         - yang:milliseconds32
+         - yang:microseconds32
+         - yang:microseconds64
+         - yang:nanoseconds32
+         - yang:nanoseconds64
+         - yang:language-tag
+          The yang-identifier definition has been aligned with YANG 1.1.
+          Several pattern statements have been improved.";
+       reference
+        "RFC XXXX: Common YANG Data Types";
+     }
+
+     revision 2013-07-15 {
+       description
+         "This revision adds the following new data types:
+          - yang:yang-identifier
+          - yang:hex-string
+          - yang:uuid
+          - yang:dotted-quad";
         reference
-          "RFC YYYY: Network Configuration Access Control Model";
+          "RFC 6991: Common YANG Data Types";
       }
 
-      revision "2012-02-22" {
+      revision 2010-09-24 {
         description
-          "Initial version";
-        reference
-          "RFC 6536: Network Configuration Protocol (NETCONF)
-                     Access Control Model";
+          "Initial revision.";
+      reference
+        "RFC 6021: Common YANG Data Types";
       }
 
 4.9.  Namespace Assignments
@@ -3475,6 +3526,8 @@ Acknowledgments
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
 
    Thanks to Xufeng Liu for reviewing the document.
+
+   Thanks to Rach Salz and Michael Richardson for the SAAG review.
 
    The author of RFC 8407:  Andy Bierman
 

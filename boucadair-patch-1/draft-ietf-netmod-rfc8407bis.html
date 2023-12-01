@@ -31,13 +31,13 @@
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.3
-    platformdirs 3.11.0
+    platformdirs 4.0.0
     pycountry 22.3.5
     PyYAML 6.0
     requests 2.31.0
     setuptools 67.7.2
     six 1.16.0
-    wcwidth 0.2.9
+    wcwidth 0.2.10
 -->
 <link href="draft-ietf-netmod-rfc8407bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1036,11 +1036,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Guidelines for YANG Documents</td>
-<td class="right">November 2023</td>
+<td class="right">December 2023</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Boucadair &amp; Wu</td>
-<td class="center">Expires 19 May 2024</td>
+<td class="center">Expires 3 June 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1059,12 +1059,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-11-16" class="published">16 November 2023</time>
+<time datetime="2023-12-01" class="published">1 December 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-05-19">19 May 2024</time></dd>
+<dd class="expires"><time datetime="2024-06-03">3 June 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1121,7 +1121,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 19 May 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 3 June 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1154,7 +1154,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.1">
-                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-changes-since-rfc-8407" class="internal xref">Changes since RFC 8407</a></p>
+                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-changes-since-rfc-8407" class="internal xref">Changes Since RFC 8407</a></p>
 </li>
             </ul>
 </li>
@@ -1481,7 +1481,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       </h2>
 <p id="section-1-1">The standardization of network configuration interfaces for use with
    network configuration management protocols, such as the Network
-   Configuration Protocol <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> and the RESTCONF protocol <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>,
+   Configuration Protocol (NETCONF) <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> and the RESTCONF protocol <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>,
    requires a modular set of data models that can be reused and extended
    over time.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document defines a set of usage guidelines for documents
@@ -1516,7 +1516,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <div id="changes-since-rfc-8407">
 <section id="section-1.1">
         <h3 id="name-changes-since-rfc-8407">
-<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-changes-since-rfc-8407" class="section-name selfRef">Changes since RFC 8407</a>
+<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-changes-since-rfc-8407" class="section-name selfRef">Changes Since RFC 8407</a>
         </h3>
 <p id="section-1.1-1">The following changes have been made to the guidelines published in
    <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>:<a href="#section-1.1-1" class="pilcrow">¶</a></p>
@@ -1564,7 +1564,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.1-2.14.1">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.14.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.15">
-            <p id="section-1.1-2.15.1">Elaborate the guidance for the use of values reserved for documentation in examples.<a href="#section-1.1-2.15.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.15.1">Elaborated the guidance for the use of values reserved for documentation in examples.<a href="#section-1.1-2.15.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.16">
             <p id="section-1.1-2.16.1">Recommended the use of "example:" for URI examples.<a href="#section-1.1-2.16.1" class="pilcrow">¶</a></p>
@@ -1588,10 +1588,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.1-2.22.1">Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.<a href="#section-1.1-2.22.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.23">
-            <p id="section-1.1-2.23.1">Fixed an inconsistency in Section 4.6.4 fails to use derived-from-or-self() mentioned back in Section 4.6.2.<a href="#section-1.1-2.23.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.23.1">Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.<a href="#section-1.1-2.23.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.24">
             <p id="section-1.1-2.24.1">Added a new section for modeling abstract data structures.<a href="#section-1.1-2.24.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.1-2.25">
+            <p id="section-1.1-2.25.1">Added a discussion about "must + error-message" constructs for state data.<a href="#section-1.1-2.25.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -1970,7 +1973,7 @@ equipment and operating environment.<a href="#section-3.5.1-2.2.1" class="pilcro
             <dd class="break"></dd>
 <dt id="section-3.5.1-2.15"></dt>
             <dd style="margin-left: 1.5em" id="section-3.5.1-2.16">
-              <p id="section-3.5.1-2.16.1">A comprehensive list of devices models is provided in Appendix 4.2 of <span>[<a href="#RFC8969" class="cite xref">RFC8969</a>]</span>.<a href="#section-3.5.1-2.16.1" class="pilcrow">¶</a></p>
+              <p id="section-3.5.1-2.16.1">A comprehensive list of device models is provided in Appendix 4.2 of <span>[<a href="#RFC8969" class="cite xref">RFC8969</a>]</span>.<a href="#section-3.5.1-2.16.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 </dl>
@@ -2018,7 +2021,7 @@ statements within a module.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
 <p id="section-3.7-2">Unless the modules comply with <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> or define YANG exetnsions (e.g., <span>[<a href="#RFC7952" class="cite xref">RFC7952</a>]</span>), the security section <span class="bcp14">MUST</span>
    be patterned after the latest approved template
    (available at <code>&lt;https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines&gt;</code>).  <a href="#sec-security-template" class="auto internal xref">Section 3.7.1</a> contains the security considerations
-   template dated 2013-05-08 and last updated on 2018-10-18.  Authors
+   template.  Authors
    <span class="bcp14">MUST</span> check the web page at the URL listed above in case there is a
    more recent version available.<a href="#section-3.7-2" class="pilcrow">¶</a></p>
 <p id="section-3.7-3">In particular:<a href="#section-3.7-3" class="pilcrow">¶</a></p>
@@ -2222,7 +2225,7 @@ modules.<a href="#section-3.10-8" class="pilcrow">¶</a></p>
   &lt;https://github.com/CZ-NIC/yangson&gt;
 </pre><a href="#section-3.10-10" class="pilcrow">¶</a>
 </div>
-<p id="section-3.10-11">An example of integrating "yangson" in the tooling chain can be found at <span>[<a href="#YANGSON-Validate" class="cite xref">YANGSON-Validate</a>]</span>.<a href="#section-3.10-11" class="pilcrow">¶</a></p>
+<p id="section-3.10-11">An example of integrating "yangson" in a tooling chain can be found at <span>[<a href="#YANGSON-Validate" class="cite xref">YANGSON-Validate</a>]</span>.<a href="#section-3.10-11" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="module-extraction-tools">
@@ -2905,49 +2908,99 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    the module.  Modules are often extracted from their original
    documents, and it is useful for developers and operators to know how
    to find the original source document in a consistent manner.  The
-   "revision" statement <span class="bcp14">MAY</span> have a "description" substatement.<a href="#section-4.8-6" class="pilcrow">¶</a></p>
+   "revision" statement <span class="bcp14">MAY</span> have a "description" substatement. For convenience,
+   the description text of a new published revision may summarize any changes made
+   to a module compared to the previous published revision. Typically, that list
+   is a YANG-specific subset of the summary of changes listing any changes made from the RFC
+   being updated or obsoleted as per <span>[<a href="#ID-Guidelines" class="cite xref">ID-Guidelines</a>]</span>.<a href="#section-4.8-6" class="pilcrow">¶</a></p>
 <p id="section-4.8-7">The following example shows the revision statement for a published
    YANG module:<a href="#section-4.8-7" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.8-8">
 <pre>
-   revision "2012-02-22" {
+   revision 2010-09-24 {
      description
-       "Initial version";
-     reference
-       "RFC 6536: Network Configuration Protocol (NETCONF)
-                  Access Control Model";
+       "Initial revision.";
+   reference
+     "RFC 6021: Common YANG Data Types";
    }
 </pre><a href="#section-4.8-8" class="pilcrow">¶</a>
 </div>
-<p id="section-4.8-9">For an unpublished module, a complete history of each unpublished
+<p id="section-4.8-9">The following example shows the revision statements for a published
+   YANG module that updates a published module:<a href="#section-4.8-9" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.8-10">
+<pre>
+  revision 2013-07-15 {
+    description
+      "This revision adds the following new data types:
+       - yang:yang-identifier
+       - yang:hex-string
+       - yang:uuid
+       - yang:dotted-quad";
+     reference
+       "RFC 6991: Common YANG Data Types";
+   }
+
+   revision 2010-09-24 {
+     description
+       "Initial revision.";
+   reference
+     "RFC 6021: Common YANG Data Types";
+   }
+</pre><a href="#section-4.8-10" class="pilcrow">¶</a>
+</div>
+<p id="section-4.8-11">For an unpublished module, a complete history of each unpublished
    module revision is not required.  That is, within a sequence of draft
    versions, only the most recent revision need be recorded in the
    module.  Do not remove or reuse a revision statement for a published
    module.  A new revision date is not required unless the module
    contents have changed.  If the module contents have changed, then the
    revision date of that new module version <span class="bcp14">MUST</span> be updated to a date
-   later than that of the previous version.<a href="#section-4.8-9" class="pilcrow">¶</a></p>
-<p id="section-4.8-10">The following example shows the two revision statements for an
-   unpublished update to a published YANG module:<a href="#section-4.8-10" class="pilcrow">¶</a></p>
-<div class="lang-yang sourcecode" id="section-4.8-11">
+   later than that of the previous version.<a href="#section-4.8-11" class="pilcrow">¶</a></p>
+<p id="section-4.8-12">The following example shows the revisions statements for an
+   unpublished update to a published YANG module:<a href="#section-4.8-12" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.8-13">
 <pre>
-   revision "2017-12-11" {
-     description
-       "Added support for YANG 1.1 actions and notifications tied to
-        data nodes. Clarify how NACM extensions can be used by other
-        data models.";
+  revision 2023-01-23 {
+    description
+     "This revision adds the following new data types:
+      - yang:date-with-zone-offset
+      - yang:date-no-zone
+      - yang:time-with-zone-offset
+      - yang:time-no-zone
+      - yang:hours32
+      - yang:minutes32
+      - yang:seconds32
+      - yang:centiseconds32
+      - yang:milliseconds32
+      - yang:microseconds32
+      - yang:microseconds64
+      - yang:nanoseconds32
+      - yang:nanoseconds64
+      - yang:language-tag
+       The yang-identifier definition has been aligned with YANG 1.1.
+       Several pattern statements have been improved.";
+    reference
+     "RFC XXXX: Common YANG Data Types";
+  }
+
+  revision 2013-07-15 {
+    description
+      "This revision adds the following new data types:
+       - yang:yang-identifier
+       - yang:hex-string
+       - yang:uuid
+       - yang:dotted-quad";
      reference
-       "RFC YYYY: Network Configuration Access Control Model";
+       "RFC 6991: Common YANG Data Types";
    }
 
-   revision "2012-02-22" {
+   revision 2010-09-24 {
      description
-       "Initial version";
-     reference
-       "RFC 6536: Network Configuration Protocol (NETCONF)
-                  Access Control Model";
+       "Initial revision.";
+   reference
+     "RFC 6021: Common YANG Data Types";
    }
-</pre><a href="#section-4.8-11" class="pilcrow">¶</a>
+</pre><a href="#section-4.8-13" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
@@ -5316,35 +5369,36 @@ module ietf-template {
 <p id="appendix-C-3"><a href="#sec-tags" class="auto internal xref">Section 4.28</a> is inspired from RFC 8819.<a href="#appendix-C-3" class="pilcrow">¶</a></p>
 <p id="appendix-C-4">Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.<a href="#appendix-C-4" class="pilcrow">¶</a></p>
 <p id="appendix-C-5">Thanks to Xufeng Liu for reviewing the document.<a href="#appendix-C-5" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="appendix-C-6">
-        <dt id="appendix-C-6.1">The author of RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-6.2">
-          <p id="appendix-C-6.2.1">Andy Bierman<a href="#appendix-C-6.2.1" class="pilcrow">¶</a></p>
+<p id="appendix-C-6">Thanks to Rach Salz and Michael Richardson for the SAAG review.<a href="#appendix-C-6" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-C-7">
+        <dt id="appendix-C-7.1">The author of RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-7.2">
+          <p id="appendix-C-7.2.1">Andy Bierman<a href="#appendix-C-7.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-6.3"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-6.4">
-          <p id="appendix-C-6.4.1">YumaWorks<a href="#appendix-C-6.4.1" class="pilcrow">¶</a></p>
+<dt id="appendix-C-7.3"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-7.4">
+          <p id="appendix-C-7.4.1">YumaWorks<a href="#appendix-C-7.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-6.5"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-6.6">
-          <p id="appendix-C-6.6.1">email: andy@yumaworks.com<a href="#appendix-C-6.6.1" class="pilcrow">¶</a></p>
+<dt id="appendix-C-7.5"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-7.6">
+          <p id="appendix-C-7.6.1">email: andy@yumaworks.com<a href="#appendix-C-7.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-6.7">Acknowledgments from RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-6.8">
-          <p id="appendix-C-6.8.1">The structure and contents of this document are adapted from
+<dt id="appendix-C-7.7">Acknowledgments from RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-7.8">
+          <p id="appendix-C-7.8.1">The structure and contents of this document are adapted from
 "Guidelines for Authors and Reviewers of MIB Documents" <span>[<a href="#RFC4181" class="cite xref">RFC4181</a>]</span>, by
- C. M. Heard.<a href="#appendix-C-6.8.1" class="pilcrow">¶</a></p>
+ C. M. Heard.<a href="#appendix-C-7.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-C-6.9"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-C-6.10">
-          <p id="appendix-C-6.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
+<dt id="appendix-C-7.9"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-C-7.10">
+          <p id="appendix-C-7.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
 Ladislav Lhotka, Jernej Tuljak, Lou Berger, Robert Wilton, Kent
 Watsen, and William Lupton for their extensive reviews and
-contributions to this document.<a href="#appendix-C-6.10.1" class="pilcrow">¶</a></p>
+contributions to this document.<a href="#appendix-C-7.10.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>

@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-30T01:13:21.960377+00:00",
+  "timestamp": "2023-12-03T01:17:15.483802+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -658,7 +658,7 @@
       "id": "PR_kwDOJTh_ks5gb_bW",
       "title": "no especially in the sec cons",
       "url": "https://github.com/boucadair/rfc8407bis/pull/26",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [
@@ -667,14 +667,14 @@
       "labels": [],
       "body": "",
       "createdAt": "2023-11-27T13:15:49Z",
-      "updatedAt": "2023-11-27T13:15:49Z",
+      "updatedAt": "2023-12-01T10:34:42Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "0302342227438daed4f3681dc0e2815194355435",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "no-especially",
       "headRefOid": "359d39ae287ea2ffb777924817165c11f4ca9891",
-      "closedAt": null,
+      "closedAt": "2023-12-01T10:34:42Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -686,24 +686,105 @@
       "id": "PR_kwDOJTh_ks5gcAv5",
       "title": "Thanks SAAG",
       "url": "https://github.com/boucadair/rfc8407bis/pull/27",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2023-11-27T13:19:06Z",
-      "updatedAt": "2023-11-27T13:19:06Z",
+      "updatedAt": "2023-11-30T15:13:46Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "0302342227438daed4f3681dc0e2815194355435",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "saag",
       "headRefOid": "37841fab12a338285eb094a896e57ae1bc322df7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2023-11-30T15:13:45Z",
+      "mergedAt": "2023-11-30T15:13:45Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "83bea1203297b7c46bba5d2757f98ec50ead65d1"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 28,
+      "id": "PR_kwDOJTh_ks5g3xRd",
+      "title": "changes in revision statements",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/28",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "boucadair"
+      ],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-12-01T08:29:25Z",
+      "updatedAt": "2023-12-01T10:24:00Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "83bea1203297b7c46bba5d2757f98ec50ead65d1",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "8c9f26e1a28450892dcc6fea985e5664cfbc57e5",
+      "closedAt": "2023-12-01T10:24:00Z",
+      "mergedAt": "2023-12-01T10:24:00Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "a38d4efb76263ac0f2fa0ee43ede7bdc3a1e433a"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJTh_ks5o349U",
+          "commit": {
+            "abbreviatedOid": "2281885"
+          },
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-01T10:23:21Z",
+          "updatedAt": "2023-12-01T10:23:21Z",
+          "comments": [
+            {
+              "originalPosition": 87,
+              "body": "```suggestion\r\n     \"RFC YYYY: Common YANG Data Types\";\r\n```",
+              "createdAt": "2023-12-01T10:23:21Z",
+              "updatedAt": "2023-12-01T10:23:21Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "id": "PR_kwDOJTh_ks5g4UA6",
+      "title": "summary-changes",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/29",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-12-01T09:58:59Z",
+      "updatedAt": "2023-12-01T10:01:57Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "boucadair-patch-1",
+      "baseRefOid": "0b590bdb9923b85a5b463eae0bb830f48eae767f",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "5e30a9c7e976b430c12844520c3e35eec0572833",
+      "closedAt": "2023-12-01T10:01:56Z",
+      "mergedAt": "2023-12-01T10:01:56Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "22818858b1a9f3eadaaf07af9b92bba86927f0fe"
+      },
       "comments": [],
       "reviews": []
     }

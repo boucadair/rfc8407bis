@@ -31,13 +31,13 @@
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.3
-    platformdirs 4.0.0
+    platformdirs 4.1.0
     pycountry 22.3.5
     PyYAML 6.0
     requests 2.31.0
     setuptools 67.7.2
     six 1.16.0
-    wcwidth 0.2.10
+    wcwidth 0.2.12
 -->
 <link href="draft-ietf-netmod-rfc8407bis.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1040,7 +1040,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Boucadair &amp; Wu</td>
-<td class="center">Expires 3 June 2024</td>
+<td class="center">Expires 9 June 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1059,12 +1059,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-12-01" class="published">1 December 2023</time>
+<time datetime="2023-12-07" class="published">7 December 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-06-03">3 June 2024</time></dd>
+<dd class="expires"><time datetime="2024-06-09">9 June 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1121,7 +1121,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 3 June 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 9 June 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1595,6 +1595,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="normal" id="section-1.1-2.25">
             <p id="section-1.1-2.25.1">Added a discussion about "must + error-message" constructs for state data.<a href="#section-1.1-2.25.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.1-2.26">
+            <p id="section-1.1-2.26.1">Added text about summary of changes in revision statements.<a href="#section-1.1-2.26.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.1-2.27">
+            <p id="section-1.1-2.27.1">Added a note to be used for IANA-maintained modules<a href="#section-1.1-2.27.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.1-2.28">
+            <p id="section-1.1-2.28.1">Added a statement to require that revisons of IANA-maintained modules to include a reference statement.<a href="#section-1.1-2.28.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -4610,39 +4619,49 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
    For both cases, the document that defines an IANA-maintained module
    <span class="bcp14">MUST</span> include a note indicating that the document is only documenting
    the initial version of the module and that the authoritative version
-   is to be retrieved from the IANA registry. It is <span class="bcp14">RECOMMENDED</span> to
+   is to be retrieved from the IANA registry. Also, the IANA-maintained
+   module <span class="bcp14">MUST</span> include the following note indicating the RFC that
+   registered the initial version of the IANA-maintained module:<a href="#section-4.30.2-5" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-4.30.2-6.1">
+              <p id="section-4.30.2-6.1.1">The initial version of this YANG module is part of RFC IIII;
+     see the RFC itself for full legal notices.<a href="#section-4.30.2-6.1.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-4.30.2-7">It is <span class="bcp14">RECOMMENDED</span> to
    include the URL from where to retrieve the recent version of the
    module.  When a script is used, the Internet-Draft that defines an
    IANA-maintained module <span class="bcp14">SHOULD</span> include an appendix with the initial
    full version of the module.  Including such an appendix in pre-RFC
    versions is meant to assess the correctness of the outcome of the
    supplied script.  The authors <span class="bcp14">MUST</span> include a note to the RFC Editor
-   requesting that the appendix be removed before publication as RFC.
+   requesting that the appendix be removed before publication as RFC and
+   that RFC IIII is replaced with the RFC number that is assigned to the document.
    Initial versions of IANA-maintained modules that are published in
    RFCs may be misused despite the appropriate language to refer to the
    IANA registry to retrieve the up-to-date module.  This is problematic
    for interoperability, e.g., when values are deprecated or are
-   associated with a new meaning.<a href="#section-4.30.2-5" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-4.30.2-6">
+   associated with a new meaning.<a href="#section-4.30.2-7" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4.30.2-8">
 <pre>
   Note: [Style] provides XSLT 1.0 stylesheets and other tools for
   translating IANA registries to YANG modules.  The tools can be
   used to generate up-to-date revisions of an IANA-maintained module
   based upon the XML representation of an IANA registry.
-</pre><a href="#section-4.30.2-6" class="pilcrow">¶</a>
+</pre><a href="#section-4.30.2-8" class="pilcrow">¶</a>
 </div>
-<p id="section-4.30.2-7">If an IANA-maintained module is imported by another module, a
+<p id="section-4.30.2-9">If an IANA-maintained module is imported by another module, a
    normative reference with the IANA URL from where to retrieve the
    IANA-maintained module <span class="bcp14">SHOULD</span> be included.  Although not encouraged,
    referencing the RFC that defines the initial version of the IANA
    module is acceptable in specific cases (e.g., the imported version is
    specifically the initial version, the RFC includes useful description
-   about the usage of the module).<a href="#section-4.30.2-7" class="pilcrow">¶</a></p>
-<p id="section-4.30.2-8">Examples of IANA URLs from where to retrieve the latest version of an
+   about the usage of the module).<a href="#section-4.30.2-9" class="pilcrow">¶</a></p>
+<p id="section-4.30.2-10">Examples of IANA URLs from where to retrieve the latest version of an
    IANA-maintained module are: <span>[<a href="#IANA_BGP-L2_URL" class="cite xref">IANA_BGP-L2_URL</a>]</span>, <span>[<a href="#IANA_PW-Types_URL" class="cite xref">IANA_PW-Types_URL</a>]</span>,
    and <span>[<a href="#IANA_BFD_URL" class="cite xref">IANA_BFD_URL</a>]</span>. [IANA_FOO_URL] is used in the following to refer
    to such URLs.  These URLs are expected to be sufficiently permanent
-   and stable.<a href="#section-4.30.2-8" class="pilcrow">¶</a></p>
+   and stable.<a href="#section-4.30.2-10" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-iana-mm">
@@ -5365,8 +5384,8 @@ module ietf-template {
    discussion and valuable comments.  Special thanks to Ladislav Lhotka
    for sharing more context that led to the design documented in
    <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>.<a href="#appendix-C-1" class="pilcrow">¶</a></p>
-<p id="appendix-C-2">Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch, and
-   Randy Presuhn for the comments.  Lou Berger suggested to include more
+<p id="appendix-C-2">Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
+   Randy Presuhn, and Martin Björklund for the comments.  Lou Berger suggested to include more
    details about IANA considerations.<a href="#appendix-C-2" class="pilcrow">¶</a></p>
 <p id="appendix-C-3"><a href="#sec-tags" class="auto internal xref">Section 4.28</a> is inspired from RFC 8819.<a href="#appendix-C-3" class="pilcrow">¶</a></p>
 <p id="appendix-C-4">Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.<a href="#appendix-C-4" class="pilcrow">¶</a></p>

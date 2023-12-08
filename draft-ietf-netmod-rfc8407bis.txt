@@ -164,7 +164,8 @@ Table of Contents
      7.1.  Normative References
      7.2.  Informative References
    Appendix A.  Module Review Checklist
-   Appendix B.  YANG Module Template
+   Appendix B.  Template for IETF Modules
+   Appendix C.  Template for IANA-Maintained Modules
    Acknowledgments
    Authors' Addresses
 
@@ -292,6 +293,8 @@ Table of Contents
 
    *  Added a statement to require that revisons of IANA-maintained
       modules to include a reference statement.
+
+   *  Added a template for IANA-maintained modules
 
 2.  Terminology
 
@@ -2888,6 +2891,8 @@ Table of Contents
    [IANA_BGP-L2_URL-Revision] are used.  [IANA_FOO_URL_With_REV] is used
    in the following to refer to such URLs.
 
+   A template for IANA-maintained modules is provided in Appendix C.
+
 4.30.3.  Guidance for Writing the IANA Considerations for RFCs Defining
          IANA-Maintained Modules
 
@@ -3465,7 +3470,7 @@ Appendix A.  Module Review Checklist
       sufficiently clear and unambiguous to allow interoperable
       implementations to be created.
 
-Appendix B.  YANG Module Template
+Appendix B.  Template for IETF Modules
 
    <CODE BEGINS> file "ietf-template@2023-07-26.yang"
    module ietf-template {
@@ -3539,6 +3544,99 @@ Appendix B.  YANG Module Template
      // rpc statements
      // notification statements
      // DO NOT put deviation statements in a published module
+   }
+   <CODE ENDS>
+
+Appendix C.  Template for IANA-Maintained Modules
+
+   <CODE BEGINS> file "ietf-template@2023-12-08.yang"
+   module iana-template {
+     yang-version 1.1;
+
+     // replace this string with a unique namespace URN value
+
+     namespace "urn:ietf:params:xml:ns:yang:iana-template";
+
+     // replace with the assigned prefix
+
+     prefix iana-foo;
+
+     organization
+       "Internet Assigned Numbers Authority (IANA)";
+
+     contact
+       "Internet Assigned Numbers Authority
+
+        ICANN
+        12025 Waterfront Drive, Suite 300
+        Los Angeles, CA 90094
+
+        Tel: +1 424 254 5300
+
+        <mailto:iana@iana.org>";
+
+     description
+       "This module defines a template for IANA-maintained modules.
+
+        Copyright (c) <insert year> IETF Trust and the persons
+        identified as authors of the code.  All rights reserved.
+
+        Redistribution and use in source and binary forms, with or
+        without modification, is permitted pursuant to, and subject to
+        the license terms contained in, the Simplified BSD License set
+        forth in Section 4.c of the IETF Trust's Legal Provisions
+        Relating to IETF Documents
+        (https://trustee.ietf.org/license-info).
+
+        The initial version of this YANG module is part of RFC IIII; see
+        the RFC itself for full legal notices.
+
+     // RFC Ed.: replace IIII with actual RFC number and remove
+     // this note
+
+     // If a script is used, complete with the script information
+
+        This version of this YANG module was generated from the
+        corresponding IANA registry using an <script-info>.
+
+     // RFC Ed.: replace the URL and remove this note
+
+        The latest version of this YANG module is available at
+        <URL>.";
+
+     // replace with the registry name and the URL of the IANA registry
+
+     reference
+       "Registry Name (URL)";
+
+
+     // replace 'date-revision' with the module publication date
+     // the format is (year-month-day)
+
+     revision date-revision {
+       description
+         "Indicates the list of changes";
+       reference
+         "URL of the latest version of the module";
+     }
+
+     // replace 'date-initial' with the module publication date
+     // the format is (year-month-day)
+
+     revision date-initial {
+       description
+         "Initial version";
+       reference
+         "URL of the published initial version of the module
+          RFC IIII: RFC Title";
+
+     // RFC Ed.: Update with the RFC number and title
+     // of the RFC that defined the initial version of
+     // the module and remove this not
+     }
+
+     // identity statements
+     // typedef statements
    }
    <CODE ENDS>
 

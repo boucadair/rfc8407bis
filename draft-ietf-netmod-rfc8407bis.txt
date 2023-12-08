@@ -2883,7 +2883,10 @@ Table of Contents
    IANA-maintained module are: [IANA_BGP-L2_URL], [IANA_PW-Types_URL],
    and [IANA_BFD_URL].  [IANA_FOO_URL] is used in the following to refer
    to such URLs.  These URLs are expected to be sufficiently permanent
-   and stable.
+   and stable.  Whenever referencing a specific version of an IANA-
+   maintained module is needed, then URLs such as
+   [IANA_BGP-L2_URL-Revision] are used.  [IANA_FOO_URL_With_REV] is used
+   in the following to refer to such URLs.
 
 4.30.3.  Guidance for Writing the IANA Considerations for RFCs Defining
          IANA-Maintained Modules
@@ -2971,7 +2974,7 @@ Table of Contents
    statement with a unique revision date must be added in front of the
    existing revision statements. The "revision" statement must have a
    "reference" substatement that points to the published module
-   (i.e., [IANA_FOO_URL]).
+   (i.e., [IANA_FOO_URL_With_REV]]).
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3017,7 +3020,7 @@ Table of Contents
    statement with a unique revision date must be added in front of the
    existing revision statements. The "revision" statement must have a
    "reference" substatement that points to the published module
-   (i.e., [IANA_FOO_URL]).
+   (i.e., [IANA_FOO_URL_With_REV]).
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3189,6 +3192,11 @@ Table of Contents
               IANA, "iana-bgp-l2-encaps YANG Module",
               <https://www.iana.org/assignments/iana-bgp-l2-encaps/iana-
               bgp-l2-encaps.xhtml>.
+
+   [IANA_BGP-L2_URL-Revision]
+              IANA, "iana-bfd-types@2021-10-21.yang",
+              <https://www.iana.org/assignments/yang-parameters/iana-
+              bfd-types@2021-10-21.yang>.
 
    [IANA_PW-Types_URL]
               IANA, "iana-pseudowire-types YANG Module",

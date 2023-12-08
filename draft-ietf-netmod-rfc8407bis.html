@@ -4662,7 +4662,10 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
    IANA-maintained module are: <span>[<a href="#IANA_BGP-L2_URL" class="cite xref">IANA_BGP-L2_URL</a>]</span>, <span>[<a href="#IANA_PW-Types_URL" class="cite xref">IANA_PW-Types_URL</a>]</span>,
    and <span>[<a href="#IANA_BFD_URL" class="cite xref">IANA_BFD_URL</a>]</span>. [IANA_FOO_URL] is used in the following to refer
    to such URLs.  These URLs are expected to be sufficiently permanent
-   and stable.<a href="#section-4.30.2-10" class="pilcrow">¶</a></p>
+   and stable. Whenever referencing a specific version of an
+   IANA-maintained module is needed, then URLs such as <span>[<a href="#IANA_BGP-L2_URL-Revision" class="cite xref">IANA_BGP-L2_URL-Revision</a>]</span>
+   are used. [IANA_FOO_URL_With_REV] is used in the following to refer
+   to such URLs.<a href="#section-4.30.2-10" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-iana-mm">
@@ -4763,7 +4766,7 @@ When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
 "reference" substatement that points to the published module
-(i.e., [IANA_FOO_URL]).
+(i.e., [IANA_FOO_URL_With_REV]]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -4818,7 +4821,7 @@ When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
 "reference" substatement that points to the published module
-(i.e., [IANA_FOO_URL]).
+(i.e., [IANA_FOO_URL_With_REV]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -5029,6 +5032,10 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <dt id="IANA_BGP-L2_URL">[IANA_BGP-L2_URL]</dt>
         <dd>
 <span class="refAuthor">IANA</span>, <span class="refTitle">"iana-bgp-l2-encaps YANG Module"</span>, <span>&lt;<a href="https://www.iana.org/assignments/iana-bgp-l2-encaps/iana-bgp-l2-encaps.xhtml">https://www.iana.org/assignments/iana-bgp-l2-encaps/iana-bgp-l2-encaps.xhtml</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="IANA_BGP-L2_URL-Revision">[IANA_BGP-L2_URL-Revision]</dt>
+        <dd>
+<span class="refAuthor">IANA</span>, <span class="refTitle">"iana-bfd-types@2021-10-21.yang"</span>, <span>&lt;<a href="https://www.iana.org/assignments/yang-parameters/iana-bfd-types@2021-10-21.yang">https://www.iana.org/assignments/yang-parameters/iana-bfd-types@2021-10-21.yang</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IANA_PW-Types_URL">[IANA_PW-Types_URL]</dt>
         <dd>

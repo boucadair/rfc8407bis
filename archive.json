@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-07T01:13:55.347150+00:00",
+  "timestamp": "2023-12-10T01:18:24.684336+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -328,6 +328,22 @@
       "createdAt": "2023-11-24T17:57:34Z",
       "updatedAt": "2023-11-24T17:57:34Z",
       "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 30,
+      "id": "I_kwDOJTh_ks55EBno",
+      "title": "IANA modules",
+      "url": "https://github.com/boucadair/rfc8407bis/issues/30",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "From Martin:\r\n\r\n```\r\nThere has been some discussion with IANA on the YANG doctors list\r\nregarding this text in section 4.8 in RFC 8407:\r\n\r\n   A \"revision\" statement MUST be present for each published version of\r\n   the module.  The \"revision\" statement MUST have a \"reference\"\r\n   substatement.  It MUST identify the published document that contains\r\n   the module.\r\n\r\n(the same text is present in rfc8407bis)\r\n\r\nIt continues with the motivation behind the rule:\r\n\r\n   Modules are often extracted from their original\r\n   documents, and it is useful for developers and operators to know how\r\n   to find the original source document in a consistent manner.\r\n\r\nAs can be seen in e.g.,\r\nhttps://www.iana.org/assignments/yang-parameters/iana-dns-class-rr-type@2023-11-08.yang,\r\nthis rule has not been followed.\r\n\r\nThe discussion ended with the recommendation to IANA to always add a\r\n\"reference\" statement that refers to the published module (e.g.,\r\nhttps://www.iana.org/assignments/yang-parameters/iana-dns-class-rr-type@2023-11-08.yang).\r\n\r\nIf people agree that this is the correct solution, I think we should\r\nupdate 8407bis with this.\r\n\r\nSpecifically, I suggest to change 4.30.3.1 and 4.30.3.2:\r\n\r\nOLD:\r\n\r\nWhen the \"iana-foo\" YANG module is updated, a new \"revision\"\r\nstatement with a unique revision date must be added in front of the\r\nexisting revision statements.\r\n\r\nNEW:\r\n\r\nWhen the \"iana-foo\" YANG module is updated, a new \"revision\"\r\nstatement with a unique revision date must be added in front of the\r\nexisting revision statements.  The \"revision\" statement must have a\r\n\"reference\" substatement that to the published module (e.g.,\r\nhttps://www.iana.org/assignments/yang-parameters/iana-foo@2023-11-08.yang)\r\n\r\n\r\n\r\n\r\nFurther, some IANA modules use the IETF template for the module's\r\n\"description\", see e.g.,\r\nhttps://www.iana.org/assignments/yang-parameters/iana-routing-types@2022-08-19.yang.\r\nThat module has in its \"description\":\r\n\r\n     This version of this YANG module is part of RFC 8294; see\r\n     the RFC itself for full legal notices.\";\r\n\r\nBut that is not correct.  Other module use this instead:\r\n\r\n     The initial version of this YANG module is part of RFC 7224;\r\n     see the RFC itself for full legal notices.\";\r\n\r\nI think 8407bis should recommend that IANA-maintained modules use this\r\nwording instead.\r\n\r\n```",
+      "createdAt": "2023-12-07T16:21:07Z",
+      "updatedAt": "2023-12-08T07:41:02Z",
+      "closedAt": "2023-12-08T07:41:02Z",
       "comments": []
     }
   ],
@@ -784,6 +800,62 @@
       "mergedBy": "boucadair",
       "mergeCommit": {
         "oid": "22818858b1a9f3eadaaf07af9b92bba86927f0fe"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 31,
+      "id": "PR_kwDOJTh_ks5hcVtC",
+      "title": "IANA-maintained reference statement",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/31",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-12-07T16:39:48Z",
+      "updatedAt": "2023-12-08T07:41:12Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "6e3f4b0783f66d49ab671c72dd64482a2f3dafb7",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "IANA-maintained-reference-statement",
+      "headRefOid": "0a46dbe6588133f81143aad664e415997a275c24",
+      "closedAt": "2023-12-08T07:41:11Z",
+      "mergedAt": "2023-12-08T07:41:11Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "82a98d2aa3b6886f255261f7929fbe0275c64d8c"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 32,
+      "id": "PR_kwDOJTh_ks5hcebg",
+      "title": "note rather than the one in the template",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/32",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-12-07T17:04:10Z",
+      "updatedAt": "2023-12-08T07:41:02Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "6e3f4b0783f66d49ab671c72dd64482a2f3dafb7",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "4720a9ed9b4302c4b178b7b573030aa9f10bb976",
+      "closedAt": "2023-12-08T07:41:01Z",
+      "mergedAt": "2023-12-08T07:41:01Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "6d4c82d70c2f9bfa63dc8f5f438bf785d38e95fa"
       },
       "comments": [],
       "reviews": []

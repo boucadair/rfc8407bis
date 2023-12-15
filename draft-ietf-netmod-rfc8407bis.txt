@@ -3586,10 +3586,10 @@ Appendix C.  Template for IANA-Maintained Modules
         This version of this YANG module was generated from the
         corresponding IANA registry using an <script-info>.
 
-     // RFC Ed.: replace the URL and remove this note
+     // RFC Ed.: replace the IANA_FOO_URL and remove this note
 
         The latest version of this YANG module is available at
-        <URL>.";
+        <IANA_FOO_URL>.";
 
      // replace with the registry name and the URL of the IANA registry
 
@@ -3619,7 +3619,7 @@ Appendix C.  Template for IANA-Maintained Modules
 
      // RFC Ed.: Update with the RFC number and title
      // of the RFC that defined the initial version of
-     // the module and remove this not
+     // the module and remove this note
      }
 
      // identity statements

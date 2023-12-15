@@ -3541,6 +3541,8 @@ Appendix B.  Template for IETF Modules
 Appendix C.  Template for IANA-Maintained Modules
 
    <CODE BEGINS> file "iana-template@2023-12-08.yang"
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
    module iana-template {
      yang-version 1.1;
 
@@ -3579,7 +3581,8 @@ Appendix C.  Template for IANA-Maintained Modules
         Relating to IETF Documents
         (https://trustee.ietf.org/license-info).
 
-        The initial version of this YANG module is part of RFC IIII; see
+        The initial version of this YANG module is part of RFC IIII; \
+                                                                    see
         the RFC itself for full legal notices.
 
      // RFC Ed.: replace IIII with actual RFC number and remove

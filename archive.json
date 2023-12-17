@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-14T01:13:01.160267+00:00",
+  "timestamp": "2023-12-17T01:18:16.873198+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -859,6 +859,53 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 33,
+      "id": "PR_kwDOJTh_ks5iEtwi",
+      "title": "case + when",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/33",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-12-15T07:19:43Z",
+      "updatedAt": "2023-12-15T16:51:44Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "ff11d1f71aacce983114a14e9fed754a698a5438",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "case+when",
+      "headRefOid": "03025109c35a55c7607a91a30f500c8661c87542",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJTh_ks5qXanS",
+          "commit": {
+            "abbreviatedOid": "0f1f7e9"
+          },
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-12-15T16:51:39Z",
+          "updatedAt": "2023-12-15T16:51:40Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "```suggestion\r\nSuch a construct SHOULD be avoided by removing the \"when\" statement\r\n```",
+              "createdAt": "2023-12-15T16:51:39Z",
+              "updatedAt": "2023-12-15T16:51:40Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

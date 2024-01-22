@@ -6,8 +6,8 @@ Network Modeling                                       M. Boucadair, Ed.
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                  15 December 2023
-Expires: 17 June 2024
+Intended status: Best Current Practice                   22 January 2024
+Expires: 25 July 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,11 +54,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 June 2024.
+   This Internet-Draft will expire on 25 July 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1055,12 +1055,33 @@ Table of Contents
    below.  Such a construct SHOULD be avoided by removing the "when"
    statement or using a "container" outside the "choice".
 
-     case yang-datastore {
-       when 'derived-from-or-self(ex:source-type, "ex:yang-datastore")';
-       description
-         "Example data source for local or remote YANG datastore.";
-       ...
-     }
+       leaf type {
+         type enumeration {
+           enum a;
+           enum b;
+           enum c;
+         }
+         mandatory true;
+       }
+       choice type-choice {
+         case b {
+           container type-b {
+             when "../type = 'b'";
+             leaf foo {
+               type string;
+             }
+           }
+         }
+         case c {
+           container type-c {
+             when "../type = 'c'";
+             leaf bar {
+               mandatory true;
+               type string;
+             }
+           }
+         }
+       }
 
    Section 8.1 of [RFC7950] includes a provision for defining a
    constraint on state data and specifies that the constraint must be

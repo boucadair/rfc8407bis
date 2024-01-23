@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-21T01:20:20.062777+00:00",
+  "timestamp": "2024-01-23T01:16:20.721556+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -872,13 +872,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2023-12-15T07:19:43Z",
-      "updatedAt": "2023-12-15T16:51:44Z",
+      "updatedAt": "2024-01-22T07:52:04Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "ff11d1f71aacce983114a14e9fed754a698a5438",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "case+when",
-      "headRefOid": "03025109c35a55c7607a91a30f500c8661c87542",
+      "headRefOid": "0d256dcf4aa876e72cdbda381327d8bcb26252b0",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,

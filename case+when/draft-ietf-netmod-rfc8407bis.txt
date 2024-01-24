@@ -6,8 +6,8 @@ Network Modeling                                       M. Boucadair, Ed.
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                   22 January 2024
-Expires: 25 July 2024
+Intended status: Best Current Practice                   24 January 2024
+Expires: 27 July 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 July 2024.
+   This Internet-Draft will expire on 27 July 2024.
 
 Copyright Notice
 
@@ -1055,33 +1055,33 @@ Table of Contents
    below.  Such a construct SHOULD be avoided by removing the "when"
    statement or using a "container" outside the "choice".
 
-       leaf type {
-         type enumeration {
-           enum a;
-           enum b;
-           enum c;
-         }
-         mandatory true;
-       }
-       choice type-choice {
-         case b {
-           container type-b {
-             when "../type = 'b'";
-             leaf foo {
-               type string;
-             }
-           }
-         }
-         case c {
-           container type-c {
-             when "../type = 'c'";
-             leaf bar {
-               mandatory true;
-               type string;
-             }
-           }
+   leaf type {
+     type enumeration {
+       enum a;
+       enum b;
+       enum c;
+     }
+     mandatory true;
+   }
+   choice type-choice {
+     case b {
+       container type-b {
+         when "../type = 'b'";
+         leaf foo {
+           type string;
+          }
+        }
+     }
+     case c {
+       container type-c {
+         when "../type = 'c'";
+         leaf bar {
+           type string;
+           mandatory true;
          }
        }
+     }
+   }
 
    Section 8.1 of [RFC7950] includes a provision for defining a
    constraint on state data and specifies that the constraint must be

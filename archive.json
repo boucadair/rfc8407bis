@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-01T01:13:06.539681+00:00",
+  "timestamp": "2024-02-04T01:13:49.906161+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -906,6 +906,32 @@
           ]
         }
       ]
+    },
+    {
+      "number": 34,
+      "id": "PR_kwDOJTh_ks5lzZj_",
+      "title": "Dale Worley's comment on the security template",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/34",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-02T08:37:39Z",
+      "updatedAt": "2024-02-02T08:39:46Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "0136d836f682bd1da1a6c069e58b0c785ad197f7",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-dale-worley",
+      "headRefOid": "7b41853d3a7366775d078697fc6224ab0af1feef",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }

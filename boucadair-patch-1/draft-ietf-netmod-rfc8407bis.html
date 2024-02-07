@@ -1040,7 +1040,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Boucadair &amp; Wu</td>
-<td class="center">Expires 9 August 2024</td>
+<td class="center">Expires 10 August 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1059,12 +1059,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-02-06" class="published">6 February 2024</time>
+<time datetime="2024-02-07" class="published">7 February 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-08-09">9 August 2024</time></dd>
+<dd class="expires"><time datetime="2024-08-10">10 August 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1122,7 +1122,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 10 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2062,6 +2062,9 @@ statements within a module.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
 
 X.  Security Considerations
 
+This section uses the template which is initially defined in
+Section 3.7.1 of RFC XXXX.
+
 The YANG module specified in this document defines a schema for data
 that is designed to be accessed via network management protocols such
 as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
@@ -2085,10 +2088,11 @@ default).  These data nodes may be considered sensitive or vulnerable
 in some network environments.  Write operations (e.g., edit-config)
 and delete operations to these data nodes without proper protection
 or authentication can have a negative effect on network operations.
-These are the subtrees and data nodes and their sensitivity/
-vulnerability:
+Specifically, the following subtrees and data nodes have particular
+sensitivities/vulnerabilities:
 
-&lt;list subtrees and data nodes and state why they are sensitive&gt;
+&lt;list subtrees and data nodes and explain the associated security
+ risks with a focus on how they can be disruptive if abused&gt;
 
  -- for all YANG modules you must evaluate whether any readable data
  -- nodes (those are all the "config false" nodes, but also all other
@@ -2101,20 +2105,22 @@ vulnerability:
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control read access (e.g., via get, get-config, or
-notification) to these data nodes.  These are the subtrees and data
-nodes and their sensitivity/vulnerability:
+notification) to these data nodes. Specifically, the following
+subtrees and data nodes have particular sensitivities/vulnerabilities:
 
-&lt;list subtrees and data nodes and state why they are sensitive&gt;
+&lt;list subtrees and data nodes and explain the reasons for
+ the sensitivity/privacy concerns&gt;
 
  -- if your YANG module has defined any RPC operations
  -- describe their specific sensitivity or vulnerability.
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
-important to control access to these operations.  These are the
-operations and their sensitivity/vulnerability:
+important to control access to these operations.  Specifically,
+the following operations have particular sensitivities/vulnerabilities:
 
-&lt;list RPC operations and state why they are sensitive&gt;
+&lt;list RPC operations and explain the reasons for the sensitivity/privacy
+ concerns&gt;
 
 
 &lt;CODE ENDS&gt;</pre><a href="#section-3.7.1-1" class="pilcrow">¶</a>
@@ -5490,7 +5496,7 @@ module iana-template {
    for sharing more context that led to the design documented in
    <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>.<a href="#appendix-D-1" class="pilcrow">¶</a></p>
 <p id="appendix-D-2">Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
-   Randy Presuhn, and Martin Björklund for the comments.  Lou Berger suggested to include more
+   Randy Presuhn, Martin Björklund, Dale R. Worley, and Kent Watsen for the comments.  Lou Berger suggested to include more
    details about IANA considerations.<a href="#appendix-D-2" class="pilcrow">¶</a></p>
 <p id="appendix-D-3"><a href="#sec-tags" class="auto internal xref">Section 4.28</a> is inspired from RFC 8819.<a href="#appendix-D-3" class="pilcrow">¶</a></p>
 <p id="appendix-D-4">Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.<a href="#appendix-D-4" class="pilcrow">¶</a></p>

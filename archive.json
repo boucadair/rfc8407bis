@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-06T01:09:02.090536+00:00",
+  "timestamp": "2024-02-08T01:07:50.655500+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -940,20 +940,69 @@
       "id": "PR_kwDOJTh_ks5mBlWM",
       "title": "mirror the registry",
       "url": "https://github.com/boucadair/rfc8407bis/pull/35",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-05T13:31:20Z",
-      "updatedAt": "2024-02-05T15:05:19Z",
+      "updatedAt": "2024-02-06T09:59:24Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "9d0bf08767207645f78cdce02c4d90eddc33778e",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "boucadair-patch-1",
-      "headRefOid": "10ef5691d92a7c4b2d782a9d48a14fc799543d4b",
+      "headRefOid": "a2f0095c22f38edd97fe05260c1935acf83d53b6",
+      "closedAt": "2024-02-06T09:59:23Z",
+      "mergedAt": "2024-02-06T09:59:23Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "abdcdfce688d9b1867e541fe15851eb6626a3885"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJTh_ks5vJUh8",
+          "commit": {
+            "abbreviatedOid": "10ef569"
+          },
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-02-06T09:52:26Z",
+          "updatedAt": "2024-02-06T09:52:27Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\n   authoritative IANA registry, or the name does not comply with YANG naming conventions ({{sec-id-naming}})).\r\n```",
+              "createdAt": "2024-02-06T09:52:27Z",
+              "updatedAt": "2024-02-06T09:52:27Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "id": "PR_kwDOJTh_ks5mORBg",
+      "title": "reference back the sec template",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/36",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-07T06:35:00Z",
+      "updatedAt": "2024-02-07T06:35:00Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5d2e98243cbbba974d2fc27633e6e53552f845e",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "29936305725e8c0f882931efa502d4da77f9aaac",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,

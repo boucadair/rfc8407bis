@@ -6,8 +6,8 @@ Network Modeling                                       M. Boucadair, Ed.
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                   7 February 2024
-Expires: 10 August 2024
+Intended status: Best Current Practice                   8 February 2024
+Expires: 11 August 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 August 2024.
+   This Internet-Draft will expire on 11 August 2024.
 
 Copyright Notice
 
@@ -632,8 +632,7 @@ Table of Contents
    <CODE BEGINS>
    X.  Security Considerations
 
-   This section uses the template which is initially defined in
-   Section 3.7.1 of RFC XXXX.
+   This section uses the template described in Section 3.7 of [RFCXXXX].
 
    The YANG module specified in this document defines a schema for data
    that is designed to be accessed via network management protocols such

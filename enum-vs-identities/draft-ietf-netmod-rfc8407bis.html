@@ -3162,9 +3162,12 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
     }
 </pre><a href="#section-4.11.1-4" class="pilcrow">¶</a>
 </div>
-<p id="section-4.11.1-5">Note that any module can declare an identity with base "foo-type"
+<p id="section-4.11.1-5">If the set of the data type contents requires some hierarchy or
+   the allocation of the values is distributed, then an "identityref"
+   data type <span class="bcp14">SHOULD</span> be used.<a href="#section-4.11.1-5" class="pilcrow">¶</a></p>
+<p id="section-4.11.1-6">Note that any module can declare an identity with base "foo-type"
    that is valid for the "foo" leaf.  Identityref values are considered
-   to be qualified names.<a href="#section-4.11.1-5" class="pilcrow">¶</a></p>
+   to be qualified names.<a href="#section-4.11.1-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="patterns-and-ranges">
@@ -5493,7 +5496,7 @@ module iana-template {
    for sharing more context that led to the design documented in
    <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>.<a href="#appendix-D-1" class="pilcrow">¶</a></p>
 <p id="appendix-D-2">Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
-   Randy Presuhn, Martin Björklund, Dale R. Worley, and Kent Watsen for the comments.  Lou Berger suggested to include more
+   Randy Presuhn, Martin Björklund, Dale R. Worley, Kent Watsen, and Joel Halpern for the comments.  Lou Berger suggested to include more
    details about IANA considerations.<a href="#appendix-D-2" class="pilcrow">¶</a></p>
 <p id="appendix-D-3"><a href="#sec-tags" class="auto internal xref">Section 4.28</a> is inspired from RFC 8819.<a href="#appendix-D-3" class="pilcrow">¶</a></p>
 <p id="appendix-D-4">Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.<a href="#appendix-D-4" class="pilcrow">¶</a></p>

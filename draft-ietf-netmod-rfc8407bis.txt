@@ -1580,8 +1580,8 @@ Table of Contents
 4.11.1.  Fixed-Value Extensibility
 
    If the set of values is fixed and the data type contents are
-   controlled by a single naming authority, then an enumeration data
-   type SHOULD be used.
+   controlled by a single naming authority (e.g., IANA), then an
+   enumeration data type SHOULD be used.
 
        leaf foo {
          type enumeration {
@@ -1590,9 +1590,9 @@ Table of Contents
          }
        }
 
-   If extensibility of enumerated values is required, then the
-   "identityref" data type SHOULD be used instead of an enumeration or
-   other built-in type.
+   If distributed extensibility or hierarchical organization of
+   enumerated values is required, then the "identityref" data type
+   SHOULD be used instead of an enumeration or other built-in type.
 
        identity foo-type {
          description "Base for the extensible type";
@@ -2808,16 +2808,17 @@ Table of Contents
    are present or expected to be present for each sub-registry).  An
    example of such a module is documented in Section 5.2 of [RFC9132].
 
-   An IANA-maintained module may use identities (e.g., [RFC8675]) or
-   enumerations (e.g., [RFC9108]).  The decision about which type to use
-   is left to the module designers and should be made based upon
-   specifics related to the intended use of the IANA-maintained module.
-   For example, identities are useful if the registry entries are
-   organized hierarchically, possibly including multiple inheritances.
-   It is RECOMMENDED that the reasoning for the design choice is
-   documented in the companion specification that registers an IANA-
-   maintained module.  For example, [RFC9244] defines an IANA-maintained
-   module that uses enumerations for the following reason:
+   An IANA-maintained module may use the "identityref" data type (e.g.,
+   [RFC8675]) or an enumeration data type (e.g., [RFC9108]).  See
+   Section 4.11.1 for a guidance on which data type to use.  The
+   decision about which type to use should be made based upon specifics
+   related to the intended use of the IANA-maintained module.  For
+   example, identities are useful if the registry entries are organized
+   hierarchically, possibly including multiple inheritances.  It is
+   RECOMMENDED that the reasoning for the design choice is documented in
+   the companion specification that registers an IANA-maintained module.
+   For example, [RFC9244] defines an IANA-maintained module that uses
+   enumerations for the following reason:
 
     "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
     than "identities" to define units, samples, and intervals because

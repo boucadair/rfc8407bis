@@ -3122,13 +3122,13 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 <p id="section-4.11-3">The signed numeric data types (i.e., "int8", "int16", "int32", and
    "int64") <span class="bcp14">SHOULD NOT</span> be used unless negative values are allowed for
    the desired semantics.<a href="#section-4.11-3" class="pilcrow">¶</a></p>
-<div id="fixed-value-extensibility">
+<div id="sec-fve">
 <section id="section-4.11.1">
           <h4 id="name-fixed-value-extensibility">
 <a href="#section-4.11.1" class="section-number selfRef">4.11.1. </a><a href="#name-fixed-value-extensibility" class="section-name selfRef">Fixed-Value Extensibility</a>
           </h4>
 <p id="section-4.11.1-1">If the set of values is fixed and the data type contents are
-   controlled by a single naming authority, then an enumeration data
+   controlled by a single naming authority (e.g., IANA), then an enumeration data
    type <span class="bcp14">SHOULD</span> be used.<a href="#section-4.11.1-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.1-2">
 <pre>
@@ -3140,7 +3140,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
     }
 </pre><a href="#section-4.11.1-2" class="pilcrow">¶</a>
 </div>
-<p id="section-4.11.1-3">If extensibility of enumerated values is required, then the
+<p id="section-4.11.1-3">If distributed extensibility or hierarchical organization of enumerated values is required, then the
    "identityref" data type <span class="bcp14">SHOULD</span> be used instead of an enumeration or
    other built-in type.<a href="#section-4.11.1-3" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.1-4">
@@ -4581,15 +4581,15 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
    maintaining that single module is manageable (e.g., very few values
    are present or expected to be present for each sub-registry).  An
    example of such a module is documented in <span><a href="https://rfc-editor.org/rfc/rfc9132#section-5.2" class="relref">Section 5.2</a> of [<a href="#RFC9132" class="cite xref">RFC9132</a>]</span>.<a href="#section-4.30.2-2" class="pilcrow">¶</a></p>
-<p id="section-4.30.2-3">An IANA-maintained module may use identities (e.g., <span>[<a href="#RFC8675" class="cite xref">RFC8675</a>]</span>) or
-   enumerations (e.g., <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>).  The decision about which type to use
-   is left to the module designers and should be made based upon
+<p id="section-4.30.2-3">An IANA-maintained module may use the "identityref" data type (e.g., <span>[<a href="#RFC8675" class="cite xref">RFC8675</a>]</span>) or
+   an enumeration data type (e.g., <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>). See <a href="#sec-fve" class="auto internal xref">Section 4.11.1</a> for a guidance on which data type to use. The decision about which type to use
+   should be made based upon
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
    It is <span class="bcp14">RECOMMENDED</span> that the reasoning for the design choice is
    documented in the companion specification that registers an
-   IANA-maintained module.  For example, <span>[<a href="#RFC9244" class="cite xref">RFC9244</a>]</span> defines an IANA-maintained
+   IANA-maintained module. For example, <span>[<a href="#RFC9244" class="cite xref">RFC9244</a>]</span> defines an IANA-maintained
    module that uses enumerations for the following reason:<a href="#section-4.30.2-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.30.2-4">
 <pre>

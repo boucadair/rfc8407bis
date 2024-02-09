@@ -688,8 +688,8 @@ Table of Contents
    important to control access to these operations.  Specifically,
    the following operations have particular sensitivities/vulnerabilities:
 
-   <list RPC operations and explain the reasons for the sensitivity/privacy
-    concerns>
+   <list RPC operations and explain the reasons for the sensitivity/
+    privacy concerns>
    <CODE ENDS>
 
    Note:  [RFC8446], [RFC6241], [RFC6242], [RFC8341], and [RFC8040] (or
@@ -2885,7 +2885,7 @@ Table of Contents
          IANA-Maintained Modules
 
    In addition to the IANA considerations in Section 3.8, the IANA
-   Considerations Section of an RFC that includes an IANA- maintained
+   Considerations Section of an RFC that includes an IANA-maintained
    module MUST provide the required instructions for IANA to
    automatically perform the maintenance of that IANA module.  These
    instructions describe how to proceed with updates to the IANA-
@@ -2933,7 +2933,7 @@ Table of Contents
 
    A template for the IANA Considerations is provided in
    Section 4.30.3.1 for IANA-maintained modules with identities and
-   Section 4.30.3.2 for IANA- maintained modules with enumerations.
+   Section 4.30.3.2 for IANA-maintained modules with enumerations.
    Authors may modify the template to reflect specifics of their modules
    (e.g., Multiple registries can be listed for a single IANA-maintained
    module, no explicit description (or name) field is listed under the
@@ -2979,8 +2979,8 @@ Table of Contents
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
    existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published module
-   (i.e., IANA_FOO_URL_With_REV).
+   "reference" substatement that points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV).
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3025,8 +3025,8 @@ Table of Contents
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
    existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published module
-   (i.e., IANA_FOO_URL_With_REV).
+   "reference" substatement that points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV).
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3662,9 +3662,10 @@ Acknowledgments
    Lou Berger suggested to include more details about IANA
    considerations.
 
-   Section 4.28 is inspired from RFC 8819.
+   Section 4.28 is inspired from [RFC8819].
 
-   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
+   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of
+   [RFC8407].
 
    Thanks to Xufeng Liu for reviewing the document.
 

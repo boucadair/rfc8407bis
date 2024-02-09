@@ -6,8 +6,8 @@ Network Modeling                                       M. Boucadair, Ed.
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                   8 February 2024
-Expires: 11 August 2024
+Intended status: Best Current Practice                   9 February 2024
+Expires: 12 August 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 August 2024.
+   This Internet-Draft will expire on 12 August 2024.
 
 Copyright Notice
 
@@ -1588,9 +1588,9 @@ Table of Contents
          }
        }
 
-   If extensibility of enumerated values is required, then the
-   "identityref" data type SHOULD be used instead of an enumeration or
-   other built-in type.
+   If distributed extensibility or hierarchical organization of
+   enumerated values is required, then the "identityref" data type
+   SHOULD be used instead of an enumeration or other built-in type.
 
        identity foo-type {
          description "Base for the extensible type";
@@ -1609,10 +1609,6 @@ Table of Contents
            base f:foo-type;
          }
        }
-
-   If the set of the data type contents requires some hierarchy or the
-   allocation of the values is distributed, then an "identityref" data
-   type SHOULD be used.
 
    Note that any module can declare an identity with base "foo-type"
    that is valid for the "foo" leaf.  Identityref values are considered
@@ -2811,10 +2807,9 @@ Table of Contents
    example of such a module is documented in Section 5.2 of [RFC9132].
 
    An IANA-maintained module may use the "identityref" data type (e.g.,
-   [RFC8675]) or an enumeration data type (e.g., [RFC9108]).  Consistent
-   with Section 4.11.1, the default recommendation is to use an
-   enumeration data type.  The decision about which type to use is left
-   to the module designers and should be made based upon specifics
+   [RFC8675]) or an enumeration data type (e.g., [RFC9108]).  See
+   Section 4.11.1 for a guidance on which data type to use.  The
+   decision about which type to use should be made based upon specifics
    related to the intended use of the IANA-maintained module.  For
    example, identities are useful if the registry entries are organized
    hierarchically, possibly including multiple inheritances.  It is

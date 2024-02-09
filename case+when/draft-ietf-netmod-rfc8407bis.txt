@@ -266,7 +266,8 @@ Table of Contents
    *  Added a new section "Defining Standard Tags" (Section 4.28) to
       echo the guidance in [RFC8819].
 
-   *  Recommended against the use of "case + when" construct.
+   *  Recommended against the use of "case + when" construct in some
+      cases.
 
    *  Added a discussion about the prefix pattern to use for example
       modules.

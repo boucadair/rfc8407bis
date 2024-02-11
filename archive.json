@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-08T01:07:50.655500+00:00",
+  "timestamp": "2024-02-11T01:13:52.596981+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -872,13 +872,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2023-12-15T07:19:43Z",
-      "updatedAt": "2024-01-24T12:55:33Z",
+      "updatedAt": "2024-02-09T10:23:34Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
-      "baseRefOid": "ff11d1f71aacce983114a14e9fed754a698a5438",
+      "baseRefOid": "a02e171bd7ca1c32fd915d7addfe09e793d79950",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "case+when",
-      "headRefOid": "a2fdf9c1df582f5a51c566d602e905c0565db1bf",
+      "headRefOid": "6596d7283043b6ddda5fa671c2972e2bd0b837e2",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -902,6 +902,26 @@
               "body": "```suggestion\r\nSuch a construct SHOULD be avoided by removing the \"when\" statement\r\n```",
               "createdAt": "2023-12-15T16:51:39Z",
               "updatedAt": "2023-12-15T16:51:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJTh_ks5vlXwT",
+          "commit": {
+            "abbreviatedOid": "7b693e8"
+          },
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-02-09T10:23:29Z",
+          "updatedAt": "2024-02-09T10:23:29Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n   - Recommended against the use of \"case + when\" construct in some cases.\r\n```",
+              "createdAt": "2024-02-09T10:23:29Z",
+              "updatedAt": "2024-02-09T10:23:29Z"
             }
           ]
         }
@@ -989,24 +1009,108 @@
       "id": "PR_kwDOJTh_ks5mORBg",
       "title": "reference back the sec template",
       "url": "https://github.com/boucadair/rfc8407bis/pull/36",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-07T06:35:00Z",
-      "updatedAt": "2024-02-07T06:35:00Z",
+      "updatedAt": "2024-02-09T09:25:32Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "e5d2e98243cbbba974d2fc27633e6e53552f845e",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "boucadair-patch-1",
-      "headRefOid": "29936305725e8c0f882931efa502d4da77f9aaac",
-      "closedAt": null,
+      "headRefOid": "28c5332fcd576fffb3c8b6064f5d455a0d51dbb6",
+      "closedAt": "2024-02-09T09:25:31Z",
+      "mergedAt": "2024-02-09T09:25:31Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "caa499ed9984dc3273337f542b2a5e1de0201ccf"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 37,
+      "id": "PR_kwDOJTh_ks5mWH4o",
+      "title": "enum vs identities",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/37",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-08T08:27:10Z",
+      "updatedAt": "2024-02-09T09:28:52Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "e5d2e98243cbbba974d2fc27633e6e53552f845e",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "enum-vs-identities",
+      "headRefOid": "437f2b80d025da3092392fb903323700153c8707",
+      "closedAt": "2024-02-09T09:28:51Z",
+      "mergedAt": "2024-02-09T09:28:51Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "b081ad9c8986f1b3f51f579d9b98919376886418"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 38,
+      "id": "PR_kwDOJTh_ks5mdhSx",
+      "title": "upd",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/38",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-09T09:27:45Z",
+      "updatedAt": "2024-02-09T09:28:53Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "enum-vs-identities",
+      "baseRefOid": "437f2b80d025da3092392fb903323700153c8707",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "main",
+      "headRefOid": "b081ad9c8986f1b3f51f579d9b98919376886418",
+      "closedAt": "2024-02-09T09:28:53Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 39,
+      "id": "PR_kwDOJTh_ks5mdyuj",
+      "title": "upg",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/39",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-09T10:20:19Z",
+      "updatedAt": "2024-02-09T10:20:49Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "case+when",
+      "baseRefOid": "a93edb8c91bcdd1e73bc04780f14471bf3766ecf",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "main",
+      "headRefOid": "a02e171bd7ca1c32fd915d7addfe09e793d79950",
+      "closedAt": "2024-02-09T10:20:49Z",
+      "mergedAt": "2024-02-09T10:20:49Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "7b693e852aa749e308bc7d1939ec4dd20af60782"
+      },
       "comments": [],
       "reviews": []
     }

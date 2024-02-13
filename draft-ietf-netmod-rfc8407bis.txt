@@ -630,6 +630,8 @@ Table of Contents
 3.7.1.  Security Considerations Section Template
 
    <CODE BEGINS>
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
    X.  Security Considerations
 
    This section uses the template described in Section 3.7 of [RFCXXXX].
@@ -675,7 +677,8 @@ Table of Contents
    sensitive or vulnerable in some network environments.  It is thus
    important to control read access (e.g., via get, get-config, or
    notification) to these data nodes. Specifically, the following
-   subtrees and data nodes have particular sensitivities/vulnerabilities:
+   subtrees and data nodes have particular sensitivities/\
+                                                        vulnerabilities:
 
    <list subtrees and data nodes and explain the reasons for
     the sensitivity/privacy concerns>
@@ -686,7 +689,8 @@ Table of Contents
    Some of the RPC operations in this YANG module may be considered
    sensitive or vulnerable in some network environments.  It is thus
    important to control access to these operations.  Specifically,
-   the following operations have particular sensitivities/vulnerabilities:
+   the following operations have particular sensitivities/\
+                                                        vulnerabilities:
 
    <list RPC operations and explain the reasons for the sensitivity/
     privacy concerns>
@@ -2946,6 +2950,8 @@ Table of Contents
 4.30.3.1.  Template for IANA-Maintained Modules with Identities
 
    <CODE BEGINS>
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
    This document defines the initial version of the IANA-maintained
    "iana-foo" YANG module.  The most recent version of the YANG module
    is available from the "YANG Parameters" registry
@@ -2971,7 +2977,8 @@ Table of Contents
 
     "description":  Replicates the description from the registry.
 
-    "reference":   Replicates the reference(s) from the registry with the
+    "reference":   Replicates the reference(s) from the registry with \
+                                                                     the
                    title of the document(s) added.
 
    Unassigned or reserved values are not present in the module.
@@ -2992,6 +2999,8 @@ Table of Contents
 4.30.3.2.  Template for IANA-Maintained Modules with Enumerations
 
    <CODE BEGINS>
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
    This document defines the initial version of the IANA-maintained
    "iana-foo" YANG module.  The most recent version of the YANG module
    is available from the "YANG Parameters" registry
@@ -3008,16 +3017,19 @@ Table of Contents
 
     "enum":        Replicates a name from the registry.
 
-    "value":       Contains the decimal value of the IANA-assigned value.
+    "value":       Contains the decimal value of the IANA-assigned \
+                                                                  value.
 
-    "status":      Is included only if a registration has been deprecated
+    "status":      Is included only if a registration has been \
+                                                              deprecated
                    or obsoleted.  IANA "deprecated" maps to YANG status
                    "deprecated", and IANA "obsolete" maps to YANG status
                    "obsolete".
 
     "description":  Replicates the description from the registry.
 
-    "reference":   Replicates the reference(s) from the registry with the
+    "reference":   Replicates the reference(s) from the registry with \
+                                                                     the
                    title of the document(s) added.
 
    Unassigned or reserved values are not present in the module.

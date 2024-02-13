@@ -2994,8 +2994,6 @@ Table of Contents
 4.30.3.2.  Template for IANA-Maintained Modules with Enumerations
 
    <CODE BEGINS>
-   =============== NOTE: '\' line wrapping per RFC 8792 ================
-
    This document defines the initial version of the IANA-maintained
    "iana-foo" YANG module.  The most recent version of the YANG module
    is available from the "YANG Parameters" registry
@@ -3012,20 +3010,18 @@ Table of Contents
 
     "enum":        Replicates a name from the registry.
 
-    "value":       Contains the decimal value of the IANA-assigned \
-                                                                  value.
+    "value":       Contains the decimal value of the IANA-assigned
+                   value.
 
-    "status":      Is included only if a registration has been \
-                                                              deprecated
-                   or obsoleted.  IANA "deprecated" maps to YANG status
-                   "deprecated", and IANA "obsolete" maps to YANG status
-                   "obsolete".
+    "status":      Is included only if a registration has been
+                   deprecated or obsoleted.  IANA "deprecated" maps
+                   to YANG status "deprecated", and IANA "obsolete"
+                   maps to YANG status "obsolete".
 
     "description":  Replicates the description from the registry.
 
-    "reference":   Replicates the reference(s) from the registry with \
-                                                                     the
-                   title of the document(s) added.
+    "reference":   Replicates the reference(s) from the registry with
+                   the title of the document(s) added.
 
    Unassigned or reserved values are not present in the module.
 

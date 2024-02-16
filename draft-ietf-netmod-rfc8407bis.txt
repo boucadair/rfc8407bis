@@ -6,8 +6,8 @@ Network Modeling                                       M. Boucadair, Ed.
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                  13 February 2024
-Expires: 16 August 2024
+Intended status: Best Current Practice                  16 February 2024
+Expires: 19 August 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 August 2024.
+   This Internet-Draft will expire on 19 August 2024.
 
 Copyright Notice
 
@@ -265,6 +265,9 @@ Table of Contents
 
    *  Added a new section "Defining Standard Tags" (Section 4.28) to
       echo the guidance in [RFC8819].
+
+   *  Recommended against the use of "case + when" construct in some
+      cases.
 
    *  Added a discussion about the prefix pattern to use for example
       modules.
@@ -1050,6 +1053,80 @@ Table of Contents
    leaf will have the exact node-set result as the key leaf.  In such a
    case, the "when" statement for the key leaf is redundant and SHOULD
    be avoided.
+
+   Some modules use "case + when" construct but provide duplicated
+   information (e.g., the "when" statements are constraining a single
+   case in the choice as shown in the example below).  Such constructs
+   with duplicated information SHOULD NOT be used.
+
+       leaf type {
+         type enumeration {
+           enum a;
+           enum b;
+           enum c;
+         }
+         mandatory true;
+       }
+       choice type-choice {
+         case b {
+           container type-b {
+             when "../type = 'b'";
+             leaf foo {
+               type string;
+             }
+           }
+         }
+         case c {
+           container type-c {
+             when "../type = 'c'";
+             leaf bar {
+               mandatory true;
+               type string;
+             }
+           }
+         }
+       }
+
+   Note that the use of "case + when" is still useful in cases where
+   complementary modelling constraints should be expressed.  See the
+   example provided below.
+
+       leaf type {
+         type enumeration {
+           enum a;
+           enum b;
+           enum c;
+         }
+       }
+       choice second-type {
+         mandatory true;
+         case foo {
+           container foo {
+             presence "When present, indicates type foo"
+             leaf foo-attribute {
+               type string;
+             }
+           }
+         }
+         case b {
+           container bar {
+             when "../type = 'a' or ../type = 'b'";
+             presence "When present, indicates type bar"
+             leaf bar-attribute {
+               type string;
+             }
+           }
+         }
+         case c {
+           container baz {
+             when "../type = 'c'";
+             leaf baz-attribute {
+               mandatory true;
+               type string;
+             }
+           }
+         }
+       }
 
    Section 8.1 of [RFC7950] includes a provision for defining a
    constraint on state data and specifies that the constraint must be
@@ -3667,6 +3744,8 @@ Acknowledgments
    [RFC8407].
 
    Thanks to Xufeng Liu for reviewing the document.
+
+   Italo Busi provided the examples of "case + when" construct.
 
    Thanks to Rach Salz and Michael Richardson for the SAAG review.
 

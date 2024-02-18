@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-15T01:09:09.495757+00:00",
+  "timestamp": "2024-02-18T01:12:56.925107+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -113,15 +113,15 @@
       "id": "I_kwDOJTh_ks5w62fn",
       "title": "Module Update (rfc7950#section-11)",
       "url": "https://github.com/boucadair/rfc8407bis/issues/5",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "From Ladislav Lhotka (ladislav.lhotka@nic.cz)\r\n\r\n> \"I have actually always thought that the section \"Updating a Module\" should never have become part of the YANG language definition. A sensible approach could IMO be to move this section to 8407bis, and relax the requirements to SHOULD there.\"\r\n\r\nFrom Rob:\r\n\r\nrfc7950#section-11\r\n>    Otherwise, if the semantics of any previous definition are changed\r\n>    (i.e., if a non-editorial change is made to any definition other than\r\n>    those specifically allowed above), then this MUST be achieved by a\r\n>    new definition with a new identifier.\r\n> \r\n> to\r\n> \r\n>    Otherwise, if the semantics of any previous definition are changed\r\n>    (i.e., if a non-editorial change is made to any definition other than\r\n>    those specifically allowed above), then this SHOULD be achieved by a\r\n>    new definition with a new identifier.\r\n",
       "createdAt": "2023-09-13T12:57:37Z",
-      "updatedAt": "2023-09-13T12:57:37Z",
-      "closedAt": null,
+      "updatedAt": "2024-02-16T08:52:11Z",
+      "closedAt": "2024-02-16T08:52:11Z",
       "comments": []
     },
     {
@@ -319,16 +319,24 @@
       "id": "I_kwDOJTh_ks53zwJ8",
       "title": "\"especially\" in Sec Cons (SAAG Review)",
       "url": "https://github.com/boucadair/rfc8407bis/issues/25",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "From Rich Salz: \r\n\r\n> You should remove the word \u201cespecially\u201d in the two places it\u2019s used and \u201csignificant\u201d from the privacy concerns item.\r\n> \r\n> They do not make the intent more clear, and when you remove those words it still leaves the authors to have room for judgement.\r\n",
       "createdAt": "2023-11-24T17:57:34Z",
-      "updatedAt": "2023-11-24T17:57:34Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2024-02-16T07:53:03Z",
+      "closedAt": "2024-02-16T07:53:03Z",
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "body": "no follow-up to https://mailarchive.ietf.org/arch/msg/netmod/SI7TwK9X56Tt7AvJF9IwNTh--cQ/",
+          "createdAt": "2024-02-16T07:53:03Z",
+          "updatedAt": "2024-02-16T07:53:03Z"
+        }
+      ]
     },
     {
       "number": 30,
@@ -865,24 +873,26 @@
       "id": "PR_kwDOJTh_ks5iEtwi",
       "title": "case + when",
       "url": "https://github.com/boucadair/rfc8407bis/pull/33",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2023-12-15T07:19:43Z",
-      "updatedAt": "2024-02-09T10:23:34Z",
+      "updatedAt": "2024-02-16T07:50:20Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "a02e171bd7ca1c32fd915d7addfe09e793d79950",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "case+when",
       "headRefOid": "6596d7283043b6ddda5fa671c2972e2bd0b837e2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-16T07:50:20Z",
+      "mergedAt": "2024-02-16T07:50:20Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "50b3245f2c56c6998633743224885591e897bf49"
+      },
       "comments": [],
       "reviews": [
         {

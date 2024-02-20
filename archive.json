@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-18T01:12:56.925107+00:00",
+  "timestamp": "2024-02-20T01:07:43.216032+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -1121,6 +1121,58 @@
       "mergeCommit": {
         "oid": "7b693e852aa749e308bc7d1939ec4dd20af60782"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 40,
+      "id": "PR_kwDOJTh_ks5nP0xk",
+      "title": "Andy-coauthor",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/40",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-19T06:22:11Z",
+      "updatedAt": "2024-02-19T06:23:49Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "50b3245f2c56c6998633743224885591e897bf49",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "Andy-coauthor",
+      "headRefOid": "9c87ea024c5b5ab056ec19241029619bcaa1cc85",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 41,
+      "id": "PR_kwDOJTh_ks5nQY-0",
+      "title": "nmda-exceptions",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/41",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-19T08:11:22Z",
+      "updatedAt": "2024-02-19T08:11:22Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "50b3245f2c56c6998633743224885591e897bf49",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "nmda-exceptions",
+      "headRefOid": "9786128e49a26e54114a7043939cf5eb04c5f3d9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }

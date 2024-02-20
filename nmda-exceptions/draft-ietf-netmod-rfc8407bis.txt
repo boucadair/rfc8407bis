@@ -505,8 +505,8 @@ Table of Contents
 
    If the document contains a temporary non-NMDA (Network Management
    Datastore Architecture) [RFC8342], then the Introduction section
-   should mention this fact with the reasoning that motivated NMDA
-   exceptions.  Refer to Section 4.23 for more NMDA-related guidance.
+   should mention this fact with the reasoning that motivated that
+   design.  Refer to Section 4.23 for more NMDA-related guidance.
 
    Consistent indentation SHOULD be used for all examples, including
    YANG fragments and protocol message instance data.  If line wrapping

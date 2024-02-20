@@ -6,8 +6,8 @@ Network Modeling                                       M. Boucadair, Ed.
 Internet-Draft                                                    Orange
 Obsoletes: 8407 (if approved)                                      Q. Wu
 Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                  19 February 2024
-Expires: 22 August 2024
+Intended status: Best Current Practice                  20 February 2024
+Expires: 23 August 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 August 2024.
+   This Internet-Draft will expire on 23 August 2024.
 
 Copyright Notice
 
@@ -503,11 +503,10 @@ Table of Contents
    as well.  Refer to Section 2.3 of [RFC8349] for an example of this
    overview section.
 
-   If the document contains a YANG module that is non-compliant with
-   Network Management Datastore Architecture (NMDA) [RFC8342], then the
-   Introduction section should mention this fact with the reasoning that
-   motivated NMDA exceptions.  Refer to Section 4.23 for more NMDA-
-   related guidance.
+   If the document contains a temporary non-NMDA (Network Management
+   Datastore Architecture) [RFC8342], then the Introduction section
+   should mention this fact with the reasoning that motivated NMDA
+   exceptions.  Refer to Section 4.23 for more NMDA-related guidance.
 
    Consistent indentation SHOULD be used for all examples, including
    YANG fragments and protocol message instance data.  If line wrapping

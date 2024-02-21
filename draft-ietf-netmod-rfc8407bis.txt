@@ -2,12 +2,13 @@
 
 
 
-Network Modeling                                       M. Boucadair, Ed.
-Internet-Draft                                                    Orange
-Obsoletes: 8407 (if approved)                                      Q. Wu
-Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                  16 February 2024
-Expires: 19 August 2024
+Network Modeling                                              A. Bierman
+Internet-Draft                                                 YumaWorks
+Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
+Updates: 8126 (if approved)                                       Orange
+Intended status: Best Current Practice                             Q. Wu
+Expires: 24 August 2024                                           Huawei
+                                                        21 February 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 August 2024.
+   This Internet-Draft will expire on 24 August 2024.
 
 Copyright Notice
 
@@ -3765,6 +3766,12 @@ Acknowledgments
       contributions to this document.
 
 Authors' Addresses
+
+   Andy Bierman
+   YumaWorks
+   United States of America
+   Email: andy@yumaworks.com
+
 
    Mohamed Boucadair (editor)
    Orange

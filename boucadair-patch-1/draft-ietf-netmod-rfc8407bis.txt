@@ -2,12 +2,13 @@
 
 
 
-Network Modeling                                       M. Boucadair, Ed.
-Internet-Draft                                                    Orange
-Obsoletes: 8407 (if approved)                                      Q. Wu
-Updates: 8126 (if approved)                                       Huawei
-Intended status: Best Current Practice                   8 February 2024
-Expires: 11 August 2024
+Network Modeling                                              A. Bierman
+Internet-Draft                                                 YumaWorks
+Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
+Updates: 8126 (if approved)                                       Orange
+Intended status: Best Current Practice                             Q. Wu
+Expires: 25 August 2024                                           Huawei
+                                                        22 February 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 August 2024.
+   This Internet-Draft will expire on 25 August 2024.
 
 Copyright Notice
 
@@ -265,6 +266,9 @@ Table of Contents
 
    *  Added a new section "Defining Standard Tags" (Section 4.28) to
       echo the guidance in [RFC8819].
+
+   *  Recommended against the use of "case + when" construct in some
+      cases.
 
    *  Added a discussion about the prefix pattern to use for example
       modules.
@@ -598,7 +602,7 @@ Table of Contents
    section that discusses security considerations relevant to those
    modules.
 
-   Unless the modules comply with [RFC8791] or define YANG exetnsions
+   Unless the modules comply with [RFC8791] or define YANG extensions
    (e.g., [RFC7952]), the security section MUST be patterned after the
    latest approved template (available at
    <https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>).
@@ -675,7 +679,8 @@ Table of Contents
    sensitive or vulnerable in some network environments.  It is thus
    important to control read access (e.g., via get, get-config, or
    notification) to these data nodes. Specifically, the following
-   subtrees and data nodes have particular sensitivities/vulnerabilities:
+   subtrees and data nodes have particular sensitivities/
+   vulnerabilities:
 
    <list subtrees and data nodes and explain the reasons for
     the sensitivity/privacy concerns>
@@ -686,10 +691,11 @@ Table of Contents
    Some of the RPC operations in this YANG module may be considered
    sensitive or vulnerable in some network environments.  It is thus
    important to control access to these operations.  Specifically,
-   the following operations have particular sensitivities/vulnerabilities:
+   the following operations have particular sensitivities/
+   vulnerabilities:
 
-   <list RPC operations and explain the reasons for the sensitivity/privacy
-    concerns>
+   <list RPC operations and explain the reasons for the sensitivity/
+    privacy concerns>
    <CODE ENDS>
 
    Note:  [RFC8446], [RFC6241], [RFC6242], [RFC8341], and [RFC8040] (or
@@ -781,8 +787,8 @@ Table of Contents
    modules.
 
    To check that JSON-encoded examples [RFC7951] comply with the target
-   data models, "yangson" program should be used.  The "yangson" program
-   is freely available from GitHub.
+   data models, programs such as "yangson" should be used.  The
+   "yangson" program is freely available from GitHub.
 
      <https://github.com/CZ-NIC/yangson>
 
@@ -1048,6 +1054,80 @@ Table of Contents
    leaf will have the exact node-set result as the key leaf.  In such a
    case, the "when" statement for the key leaf is redundant and SHOULD
    be avoided.
+
+   Some modules use "case + when" construct but provide duplicated
+   information (e.g., the "when" statements are constraining a single
+   case in the choice as shown in the example below).  Such constructs
+   with duplicated information SHOULD NOT be used.
+
+       leaf type {
+         type enumeration {
+           enum a;
+           enum b;
+           enum c;
+         }
+         mandatory true;
+       }
+       choice type-choice {
+         case b {
+           container type-b {
+             when "../type = 'b'";
+             leaf foo {
+               type string;
+             }
+           }
+         }
+         case c {
+           container type-c {
+             when "../type = 'c'";
+             leaf bar {
+               mandatory true;
+               type string;
+             }
+           }
+         }
+       }
+
+   Note that the use of "case + when" is still useful in cases where
+   complementary modelling constraints should be expressed.  See the
+   example provided below.
+
+       leaf type {
+         type enumeration {
+           enum a;
+           enum b;
+           enum c;
+         }
+       }
+       choice second-type {
+         mandatory true;
+         case foo {
+           container foo {
+             presence "When present, indicates type foo"
+             leaf foo-attribute {
+               type string;
+             }
+           }
+         }
+         case b {
+           container bar {
+             when "../type = 'a' or ../type = 'b'";
+             presence "When present, indicates type bar"
+             leaf bar-attribute {
+               type string;
+             }
+           }
+         }
+         case c {
+           container baz {
+             when "../type = 'c'";
+             leaf baz-attribute {
+               mandatory true;
+               type string;
+             }
+           }
+         }
+       }
 
    Section 8.1 of [RFC7950] includes a provision for defining a
    constraint on state data and specifies that the constraint must be
@@ -1580,8 +1660,8 @@ Table of Contents
 4.11.1.  Fixed-Value Extensibility
 
    If the set of values is fixed and the data type contents are
-   controlled by a single naming authority, then an enumeration data
-   type SHOULD be used.
+   controlled by a single naming authority (e.g., IANA), then an
+   enumeration data type SHOULD be used.
 
        leaf foo {
          type enumeration {
@@ -1590,9 +1670,9 @@ Table of Contents
          }
        }
 
-   If extensibility of enumerated values is required, then the
-   "identityref" data type SHOULD be used instead of an enumeration or
-   other built-in type.
+   If distributed extensibility or hierarchical organization of
+   enumerated values is required, then the "identityref" data type
+   SHOULD be used instead of an enumeration or other built-in type.
 
        identity foo-type {
          description "Base for the extensible type";
@@ -2808,16 +2888,17 @@ Table of Contents
    are present or expected to be present for each sub-registry).  An
    example of such a module is documented in Section 5.2 of [RFC9132].
 
-   An IANA-maintained module may use identities (e.g., [RFC8675]) or
-   enumerations (e.g., [RFC9108]).  The decision about which type to use
-   is left to the module designers and should be made based upon
-   specifics related to the intended use of the IANA-maintained module.
-   For example, identities are useful if the registry entries are
-   organized hierarchically, possibly including multiple inheritances.
-   It is RECOMMENDED that the reasoning for the design choice is
-   documented in the companion specification that registers an IANA-
-   maintained module.  For example, [RFC9244] defines an IANA-maintained
-   module that uses enumerations for the following reason:
+   An IANA-maintained module may use the "identityref" data type (e.g.,
+   [RFC8675]) or an enumeration data type (e.g., [RFC9108]).  See
+   Section 4.11.1 for a guidance on which data type to use.  The
+   decision about which type to use should be made based upon specifics
+   related to the intended use of the IANA-maintained module.  For
+   example, identities are useful if the registry entries are organized
+   hierarchically, possibly including multiple inheritances.  It is
+   RECOMMENDED that the reasoning for the design choice is documented in
+   the companion specification that registers an IANA-maintained module.
+   For example, [RFC9244] defines an IANA-maintained module that uses
+   enumerations for the following reason:
 
     "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
     than "identities" to define units, samples, and intervals because
@@ -2884,7 +2965,7 @@ Table of Contents
          IANA-Maintained Modules
 
    In addition to the IANA considerations in Section 3.8, the IANA
-   Considerations Section of an RFC that includes an IANA- maintained
+   Considerations Section of an RFC that includes an IANA-maintained
    module MUST provide the required instructions for IANA to
    automatically perform the maintenance of that IANA module.  These
    instructions describe how to proceed with updates to the IANA-
@@ -2932,7 +3013,7 @@ Table of Contents
 
    A template for the IANA Considerations is provided in
    Section 4.30.3.1 for IANA-maintained modules with identities and
-   Section 4.30.3.2 for IANA- maintained modules with enumerations.
+   Section 4.30.3.2 for IANA-maintained modules with enumerations.
    Authors may modify the template to reflect specifics of their modules
    (e.g., Multiple registries can be listed for a single IANA-maintained
    module, no explicit description (or name) field is listed under the
@@ -2970,16 +3051,16 @@ Table of Contents
 
     "description":  Replicates the description from the registry.
 
-    "reference":   Replicates the reference(s) from the registry with the
-                   title of the document(s) added.
+    "reference":   Replicates the reference(s) from the registry with
+                   the title of the document(s) added.
 
    Unassigned or reserved values are not present in the module.
 
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
    existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published module
-   (i.e., IANA_FOO_URL_With_REV).
+   "reference" substatement that points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV).
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3007,25 +3088,26 @@ Table of Contents
 
     "enum":        Replicates a name from the registry.
 
-    "value":       Contains the decimal value of the IANA-assigned value.
+    "value":       Contains the decimal value of the IANA-assigned
+                   value.
 
-    "status":      Is included only if a registration has been deprecated
-                   or obsoleted.  IANA "deprecated" maps to YANG status
-                   "deprecated", and IANA "obsolete" maps to YANG status
-                   "obsolete".
+    "status":      Is included only if a registration has been
+                   deprecated or obsoleted.  IANA "deprecated" maps
+                   to YANG status "deprecated", and IANA "obsolete"
+                   maps to YANG status "obsolete".
 
     "description":  Replicates the description from the registry.
 
-    "reference":   Replicates the reference(s) from the registry with the
-                   title of the document(s) added.
+    "reference":   Replicates the reference(s) from the registry with
+                   the title of the document(s) added.
 
    Unassigned or reserved values are not present in the module.
 
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
    existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published module
-   (i.e., IANA_FOO_URL_With_REV).
+   "reference" substatement that points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV).
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3037,7 +3119,7 @@ Table of Contents
 5.  IANA Considerations
 
    The following registration in the "ns" subregistry of the "IETF XML
-   Registry" [RFC3688] was detailed in [RFC6087].  This document
+   Registry" [RFC3688] was detailed in [RFC8407].  This document
    requests IANA to update this registration to reference this document.
 
         URI: urn:ietf:params:xml:ns:yang:ietf-template
@@ -3067,7 +3149,7 @@ Table of Contents
       Prefix:  iana-foo
       Reference:  RFC XXXX
 
-   Also, This document requests IANA to update the reference for the
+   Also, this document requests IANA to update the reference for the
    "YANG Module Names" registry under the "YANG Parameters" registry
    group to point to the RFC number that will be assigned to this
    document as it contains the template necessary for registration in
@@ -3257,10 +3339,6 @@ Table of Contents
               Reserved for Documentation", RFC 5737,
               DOI 10.17487/RFC5737, January 2010,
               <https://www.rfc-editor.org/rfc/rfc5737>.
-
-   [RFC6087]  Bierman, A., "Guidelines for Authors and Reviewers of YANG
-              Data Model Documents", RFC 6087, DOI 10.17487/RFC6087,
-              January 2011, <https://www.rfc-editor.org/rfc/rfc6087>.
 
    [RFC6991]  Schoenwaelder, J., Ed., "Common YANG Data Types",
               RFC 6991, DOI 10.17487/RFC6991, July 2013,
@@ -3655,15 +3733,20 @@ Acknowledgments
    more context that led to the design documented in [RFC9108].
 
    Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch, Randy
-   Presuhn, Martin Björklund, Dale R.  Worley, and Kent Watsen for the
-   comments.  Lou Berger suggested to include more details about IANA
+   Presuhn, Martin Björklund, Acee Lindem, Dale R.  Worley, and Kent
+   Watsen for the comments.
+
+   Lou Berger suggested to include more details about IANA
    considerations.
 
-   Section 4.28 is inspired from RFC 8819.
+   Section 4.28 is inspired from [RFC8819].
 
-   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
+   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of
+   [RFC8407].
 
    Thanks to Xufeng Liu for reviewing the document.
+
+   Italo Busi provided the examples of "case + when" construct.
 
    Thanks to Rach Salz and Michael Richardson for the SAAG review.
 
@@ -3683,6 +3766,12 @@ Acknowledgments
       contributions to this document.
 
 Authors' Addresses
+
+   Andy Bierman
+   YumaWorks
+   United States of America
+   Email: andy@yumaworks.com
+
 
    Mohamed Boucadair (editor)
    Orange

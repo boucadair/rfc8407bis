@@ -5,6 +5,7 @@
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
 <title>Guidelines for Authors and Reviewers of Documents Containing YANG Data Models</title>
+<meta content="Andy Bierman" name="author">
 <meta content="Mohamed Boucadair" name="author">
 <meta content="Qin Wu" name="author">
 <meta content="
@@ -18,13 +19,13 @@
    providing additional guidelines for writing the IANA considerations
    for RFCs that specify IANA-maintained modules. 
     " name="description">
-<meta content="xml2rfc 3.19.2" name="generator">
+<meta content="xml2rfc 3.19.4" name="generator">
 <meta content="NETCONF" name="keyword">
 <meta content="RESTCONF" name="keyword">
 <meta content="Automation" name="keyword">
 <meta content="draft-ietf-netmod-rfc8407bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.19.2
+  xml2rfc 3.19.4
     Python 3.11.6
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
@@ -1039,8 +1040,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <td class="right">February 2024</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Boucadair &amp; Wu</td>
-<td class="center">Expires 11 August 2024</td>
+<td class="left">Bierman, et al.</td>
+<td class="center">Expires 25 August 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1059,14 +1060,18 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-02-08" class="published">8 February 2024</time>
+<time datetime="2024-02-22" class="published">22 February 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-08-11">11 August 2024</time></dd>
+<dd class="expires"><time datetime="2024-08-25">25 August 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
+<div class="author">
+      <div class="author-name">A. Bierman</div>
+<div class="org">YumaWorks</div>
+</div>
 <div class="author">
       <div class="author-name">M. Boucadair, <span class="editor">Ed.</span>
 </div>
@@ -1122,7 +1127,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 11 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 25 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1577,31 +1582,34 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.1-2.17.1">Added a new section "Defining Standard Tags" (<a href="#sec-tags" class="auto internal xref">Section 4.28</a>) to echo the guidance in <span>[<a href="#RFC8819" class="cite xref">RFC8819</a>]</span>.<a href="#section-1.1-2.17.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.18">
-            <p id="section-1.1-2.18.1">Added a discussion about the prefix pattern to use for example modules.<a href="#section-1.1-2.18.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.18.1">Recommended against the use of "case + when" construct in some cases.<a href="#section-1.1-2.18.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.19">
-            <p id="section-1.1-2.19.1">Added a statement for NMDA to be listed as normative reference.<a href="#section-1.1-2.19.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.19.1">Added a discussion about the prefix pattern to use for example modules.<a href="#section-1.1-2.19.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.20">
-            <p id="section-1.1-2.20.1">Added a new section about YANG module classification.<a href="#section-1.1-2.20.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.20.1">Added a statement for NMDA to be listed as normative reference.<a href="#section-1.1-2.20.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.21">
-            <p id="section-1.1-2.21.1">Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.<a href="#section-1.1-2.21.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.21.1">Added a new section about YANG module classification.<a href="#section-1.1-2.21.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.22">
-            <p id="section-1.1-2.22.1">Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.<a href="#section-1.1-2.22.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.22.1">Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.<a href="#section-1.1-2.22.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.23">
-            <p id="section-1.1-2.23.1">Added a new section for modeling abstract data structures.<a href="#section-1.1-2.23.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.23.1">Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.<a href="#section-1.1-2.23.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.24">
-            <p id="section-1.1-2.24.1">Added a discussion about "must + error-message" constructs for state data.<a href="#section-1.1-2.24.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.24.1">Added a new section for modeling abstract data structures.<a href="#section-1.1-2.24.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.25">
-            <p id="section-1.1-2.25.1">Added text about summary of changes in revision statements.<a href="#section-1.1-2.25.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.25.1">Added a discussion about "must + error-message" constructs for state data.<a href="#section-1.1-2.25.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.26">
-            <p id="section-1.1-2.26.1">Added a template for IANA-maintained modules.<a href="#section-1.1-2.26.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.26.1">Added text about summary of changes in revision statements.<a href="#section-1.1-2.26.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.1-2.27">
+            <p id="section-1.1-2.27.1">Added a template for IANA-maintained modules.<a href="#section-1.1-2.27.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -2025,7 +2033,7 @@ statements within a module.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
 <p id="section-3.7-1">Each specification that defines one or more modules <span class="bcp14">MUST</span> contain a
    section that discusses security considerations relevant to those
    modules.<a href="#section-3.7-1" class="pilcrow">¶</a></p>
-<p id="section-3.7-2">Unless the modules comply with <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> or define YANG exetnsions (e.g., <span>[<a href="#RFC7952" class="cite xref">RFC7952</a>]</span>), the security section <span class="bcp14">MUST</span>
+<p id="section-3.7-2">Unless the modules comply with <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> or define YANG extensions (e.g., <span>[<a href="#RFC7952" class="cite xref">RFC7952</a>]</span>), the security section <span class="bcp14">MUST</span>
    be patterned after the latest approved template
    (available at <code>&lt;https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines&gt;</code>).  <a href="#sec-security-template" class="auto internal xref">Section 3.7.1</a> contains the security considerations
    template.  Authors
@@ -2059,6 +2067,7 @@ statements within a module.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
           </h4>
 <div class="breakable sourcecode" id="section-3.7.1-1">
 <pre>&lt;CODE BEGINS&gt;
+
 
 X.  Security Considerations
 
@@ -2105,7 +2114,8 @@ Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control read access (e.g., via get, get-config, or
 notification) to these data nodes. Specifically, the following
-subtrees and data nodes have particular sensitivities/vulnerabilities:
+subtrees and data nodes have particular sensitivities/
+vulnerabilities:
 
 &lt;list subtrees and data nodes and explain the reasons for
  the sensitivity/privacy concerns&gt;
@@ -2116,10 +2126,11 @@ subtrees and data nodes have particular sensitivities/vulnerabilities:
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control access to these operations.  Specifically,
-the following operations have particular sensitivities/vulnerabilities:
+the following operations have particular sensitivities/
+vulnerabilities:
 
-&lt;list RPC operations and explain the reasons for the sensitivity/privacy
- concerns&gt;
+&lt;list RPC operations and explain the reasons for the sensitivity/
+ privacy concerns&gt;
 
 
 &lt;CODE ENDS&gt;</pre><a href="#section-3.7.1-1" class="pilcrow">¶</a>
@@ -2231,7 +2242,7 @@ guideline issues.<a href="#section-3.10-4" class="pilcrow">¶</a></p>
 <p id="section-3.10-8">This tool can be used to validate XPath statements within YANG
 modules.<a href="#section-3.10-8" class="pilcrow">¶</a></p>
 <p id="section-3.10-9">To check that JSON-encoded examples <span>[<a href="#RFC7951" class="cite xref">RFC7951</a>]</span> comply with the target data models,
-"yangson" program should be used. The "yangson" program is freely available from GitHub.<a href="#section-3.10-9" class="pilcrow">¶</a></p>
+programs such as "yangson" should be used. The "yangson" program is freely available from GitHub.<a href="#section-3.10-9" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-3.10-10">
 <pre>
   &lt;https://github.com/CZ-NIC/yangson&gt;
@@ -2424,36 +2435,36 @@ that mix both example and standard modules can easily identify example parts.<a 
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-identifiers" class="section-name selfRef">Identifiers</a>
         </h3>
 <p id="section-4.3-1">All YANG identifiers in published modules <span class="bcp14">MUST</span> be
-   between 1 and 64 characters in length.  These include any construct
-   specified as an "identifier-arg-str" token in the ABNF in <span><a href="https://rfc-editor.org/rfc/rfc7950#section-14" class="relref">Section 14</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+between 1 and 64 characters in length.  These include any construct
+specified as an "identifier-arg-str" token in the ABNF in <span><a href="https://rfc-editor.org/rfc/rfc7950#section-14" class="relref">Section 14</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <div id="sec-id-naming">
 <section id="section-4.3.1">
           <h4 id="name-identifier-naming-conventio">
 <a href="#section-4.3.1" class="section-number selfRef">4.3.1. </a><a href="#name-identifier-naming-conventio" class="section-name selfRef">Identifier Naming Conventions</a>
           </h4>
 <p id="section-4.3.1-1">Identifiers <span class="bcp14">SHOULD</span> follow a consistent naming pattern throughout the
-   module.  Only lowercase letters, numbers, and dashes <span class="bcp14">SHOULD</span> be used
-   in identifier names.  Uppercase characters, the period character, and
-   the underscore character <span class="bcp14">MAY</span> be used if the identifier represents a
-   well-known value that uses these characters.  YANG does not permit
-   any other characters in YANG identifiers.<a href="#section-4.3.1-1" class="pilcrow">¶</a></p>
+module.  Only lowercase letters, numbers, and dashes <span class="bcp14">SHOULD</span> be used
+in identifier names.  Uppercase characters, the period character, and
+the underscore character <span class="bcp14">MAY</span> be used if the identifier represents a
+well-known value that uses these characters.  YANG does not permit
+any other characters in YANG identifiers.<a href="#section-4.3.1-1" class="pilcrow">¶</a></p>
 <p id="section-4.3.1-2">Identifiers <span class="bcp14">SHOULD</span> include complete words and/or well-known acronyms
-   or abbreviations.  Child nodes within a container or list <span class="bcp14">SHOULD NOT</span>
-   replicate the parent identifier.  YANG identifiers are hierarchical
-   and are only meant to be unique within the set of sibling nodes
-   defined in the same module namespace.<a href="#section-4.3.1-2" class="pilcrow">¶</a></p>
+or abbreviations.  Child nodes within a container or list <span class="bcp14">SHOULD NOT</span>
+replicate the parent identifier.  YANG identifiers are hierarchical
+and are only meant to be unique within the set of sibling nodes
+defined in the same module namespace.<a href="#section-4.3.1-2" class="pilcrow">¶</a></p>
 <p id="section-4.3.1-3">List identifiers <span class="bcp14">SHOULD</span> be singular with the surrounding container name plural.
-   Similarly, "leaf-list" identifiers <span class="bcp14">SHOULD</span> be singular.<a href="#section-4.3.1-3" class="pilcrow">¶</a></p>
+Similarly, "leaf-list" identifiers <span class="bcp14">SHOULD</span> be singular.<a href="#section-4.3.1-3" class="pilcrow">¶</a></p>
 <p id="section-4.3.1-4">It is permissible to use common identifiers such as "name" or "id" in
-   data definition statements, especially if these data nodes share a
-   common data type.<a href="#section-4.3.1-4" class="pilcrow">¶</a></p>
+data definition statements, especially if these data nodes share a
+common data type.<a href="#section-4.3.1-4" class="pilcrow">¶</a></p>
 <p id="section-4.3.1-5">Identifiers <span class="bcp14">SHOULD NOT</span> carry any special semantics that identify data
-   modeling properties.  Only YANG statements and YANG extension
-   statements are designed to convey machine-readable data modeling
-   properties.  For example, naming an object "config" or "state" does
-   not change whether it is configuration data or state data.  Only
-   defined YANG statements or YANG extension statements can be used to
-   assign semantics in a machine-readable format in YANG.<a href="#section-4.3.1-5" class="pilcrow">¶</a></p>
+modeling properties.  Only YANG statements and YANG extension
+statements are designed to convey machine-readable data modeling
+properties.  For example, naming an object "config" or "state" does
+not change whether it is configuration data or state data.  Only
+defined YANG statements or YANG extension statements can be used to
+assign semantics in a machine-readable format in YANG.<a href="#section-4.3.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2545,7 +2556,81 @@ It is possible that a "when" statement for an ancestor node of a key
 leaf will have the exact node-set result as the key leaf.  In such a
 case, the "when" statement for the key leaf is redundant and <span class="bcp14">SHOULD</span>
 be avoided.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
-<p id="section-4.5-7"><span><a href="https://rfc-editor.org/rfc/rfc7950#section-8.1" class="relref">Section 8.1</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> includes a provision for defining a constraint
+<p id="section-4.5-7">Some modules use "case + when" construct but provide duplicated information (e.g., the "when" statements are constraining a single case in the choice as shown in the example below).
+Such constructs with duplicated information <span class="bcp14">SHOULD NOT</span> be used.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.5-8">
+<pre>
+    leaf type {
+      type enumeration {
+        enum a;
+        enum b;
+        enum c;
+      }
+      mandatory true;
+    }
+    choice type-choice {
+      case b {
+        container type-b {
+          when "../type = 'b'";
+          leaf foo {
+            type string;
+          }
+        }
+      }
+      case c {
+        container type-c {
+          when "../type = 'c'";
+          leaf bar {
+            mandatory true;
+            type string;
+          }
+        }
+      }
+    }
+</pre><a href="#section-4.5-8" class="pilcrow">¶</a>
+</div>
+<p id="section-4.5-9">Note that the use of "case + when" is still useful in cases where complementary modelling constraints should be expressed. See the example provided below.<a href="#section-4.5-9" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.5-10">
+<pre>
+    leaf type {
+      type enumeration {
+        enum a;
+        enum b;
+        enum c;
+      }
+    }
+    choice second-type {
+      mandatory true;
+      case foo {
+        container foo {
+          presence "When present, indicates type foo"
+          leaf foo-attribute {
+            type string;
+          }
+        }
+      }
+      case b {
+        container bar {
+          when "../type = 'a' or ../type = 'b'";
+          presence "When present, indicates type bar"
+          leaf bar-attribute {
+            type string;
+          }
+        }
+      }
+      case c {
+        container baz {
+          when "../type = 'c'";
+          leaf baz-attribute {
+            mandatory true;
+            type string;
+          }
+        }
+      }
+    }
+</pre><a href="#section-4.5-10" class="pilcrow">¶</a>
+</div>
+<p id="section-4.5-11"><span><a href="https://rfc-editor.org/rfc/rfc7950#section-8.1" class="relref">Section 8.1</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> includes a provision for defining a constraint
 on state data and specifies that the constraint must be true in a valid state data.
 However, <span><a href="https://rfc-editor.org/rfc/rfc8342#section-5.3" class="relref">Section 5.3</a> of [<a href="#RFC8342" class="cite xref">RFC8342</a>]</span> softens that behavior by allowing semantic
 constraints to be violated under some circumstances to help detecting anomalies.
@@ -2553,7 +2638,7 @@ Relaxing validation constraints on state data is meant to reveal deviations of
 the observed behavior vs. intended behavior of a managed entity and hopefully
 trigger corrective actions by a management system. From that perspective,
 it is <span class="bcp14">RECOMMENDED</span> to avoid defining constraints on state data that would hinder
-the detection by a management system of abnormal behaviors of a managed entity.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
+the detection by a management system of abnormal behaviors of a managed entity.<a href="#section-4.5-11" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="xpath-usage">
@@ -3122,13 +3207,13 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 <p id="section-4.11-3">The signed numeric data types (i.e., "int8", "int16", "int32", and
    "int64") <span class="bcp14">SHOULD NOT</span> be used unless negative values are allowed for
    the desired semantics.<a href="#section-4.11-3" class="pilcrow">¶</a></p>
-<div id="fixed-value-extensibility">
+<div id="sec-fve">
 <section id="section-4.11.1">
           <h4 id="name-fixed-value-extensibility">
 <a href="#section-4.11.1" class="section-number selfRef">4.11.1. </a><a href="#name-fixed-value-extensibility" class="section-name selfRef">Fixed-Value Extensibility</a>
           </h4>
 <p id="section-4.11.1-1">If the set of values is fixed and the data type contents are
-   controlled by a single naming authority, then an enumeration data
+   controlled by a single naming authority (e.g., IANA), then an enumeration data
    type <span class="bcp14">SHOULD</span> be used.<a href="#section-4.11.1-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.1-2">
 <pre>
@@ -3140,7 +3225,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
     }
 </pre><a href="#section-4.11.1-2" class="pilcrow">¶</a>
 </div>
-<p id="section-4.11.1-3">If extensibility of enumerated values is required, then the
+<p id="section-4.11.1-3">If distributed extensibility or hierarchical organization of enumerated values is required, then the
    "identityref" data type <span class="bcp14">SHOULD</span> be used instead of an enumeration or
    other built-in type.<a href="#section-4.11.1-3" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.1-4">
@@ -4581,15 +4666,15 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
    maintaining that single module is manageable (e.g., very few values
    are present or expected to be present for each sub-registry).  An
    example of such a module is documented in <span><a href="https://rfc-editor.org/rfc/rfc9132#section-5.2" class="relref">Section 5.2</a> of [<a href="#RFC9132" class="cite xref">RFC9132</a>]</span>.<a href="#section-4.30.2-2" class="pilcrow">¶</a></p>
-<p id="section-4.30.2-3">An IANA-maintained module may use identities (e.g., <span>[<a href="#RFC8675" class="cite xref">RFC8675</a>]</span>) or
-   enumerations (e.g., <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>).  The decision about which type to use
-   is left to the module designers and should be made based upon
+<p id="section-4.30.2-3">An IANA-maintained module may use the "identityref" data type (e.g., <span>[<a href="#RFC8675" class="cite xref">RFC8675</a>]</span>) or
+   an enumeration data type (e.g., <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>). See <a href="#sec-fve" class="auto internal xref">Section 4.11.1</a> for a guidance on which data type to use. The decision about which type to use
+   should be made based upon
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
    It is <span class="bcp14">RECOMMENDED</span> that the reasoning for the design choice is
    documented in the companion specification that registers an
-   IANA-maintained module.  For example, <span>[<a href="#RFC9244" class="cite xref">RFC9244</a>]</span> defines an IANA-maintained
+   IANA-maintained module. For example, <span>[<a href="#RFC9244" class="cite xref">RFC9244</a>]</span> defines an IANA-maintained
    module that uses enumerations for the following reason:<a href="#section-4.30.2-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.30.2-4">
 <pre>
@@ -4664,11 +4749,11 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
 <a href="#section-4.30.3" class="section-number selfRef">4.30.3. </a><a href="#name-guidance-for-writing-the-ia" class="section-name selfRef">Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules</a>
           </h4>
 <p id="section-4.30.3-1">In addition to the IANA considerations in <a href="#sec-iana-cons" class="auto internal xref">Section 3.8</a>,
-   the IANA Considerations Section of an RFC that includes an IANA-
-   maintained module <span class="bcp14">MUST</span> provide the required instructions for IANA to
+   the IANA Considerations Section of an RFC that includes an
+   IANA-maintained module <span class="bcp14">MUST</span> provide the required instructions for IANA to
    automatically perform the maintenance of that IANA module.  These
-   instructions describe how to proceed with updates to the IANA-
-   maintained module that are triggered by a change to the authoritative
+   instructions describe how to proceed with updates to the
+   IANA-maintained module that are triggered by a change to the authoritative
    registry.  Concretely, the IANA Considerations Section <span class="bcp14">SHALL</span> at least
    provide the following information:<a href="#section-4.30.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
@@ -4718,8 +4803,8 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
 </li>
           </ul>
 <p id="section-4.30.3-3">A template for the IANA Considerations is provided in <a href="#sec-temp-id" class="auto internal xref">Section 4.30.3.1</a> for
-   IANA-maintained modules with identities and <a href="#sec-temp-enum" class="auto internal xref">Section 4.30.3.2</a> for IANA-
-   maintained modules with enumerations.  Authors may modify the
+   IANA-maintained modules with identities and <a href="#sec-temp-enum" class="auto internal xref">Section 4.30.3.2</a> for
+   IANA-maintained modules with enumerations.  Authors may modify the
    template to reflect specifics of their modules (e.g., Multiple
    registries can be listed for a single IANA-maintained module, no
    explicit description (or name) field is listed under the
@@ -4733,6 +4818,7 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
             </h5>
 <div class="sourcecode" id="section-4.30.3.1-1">
 <pre>&lt;CODE BEGINS&gt;
+
 
 This document defines the initial version of the IANA-maintained
 "iana-foo" YANG module.  The most recent version of the YANG module
@@ -4759,22 +4845,23 @@ statements defined:
 
  "description":  Replicates the description from the registry.
 
- "reference":   Replicates the reference(s) from the registry with the
-                title of the document(s) added.
+ "reference":   Replicates the reference(s) from the registry with
+                the title of the document(s) added.
 
 Unassigned or reserved values are not present in the module.
 
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published module
-(i.e., IANA_FOO_URL_With_REV).
+"reference" substatement that points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
 
    When this registry is modified, the YANG module "iana-foo"
    [IANA_FOO_URL] must be updated as defined in RFC IIII.
+
 
 
 &lt;CODE ENDS&gt;</pre><a href="#section-4.30.3.1-1" class="pilcrow">¶</a>
@@ -4788,6 +4875,7 @@ registry]:
             </h5>
 <div class="sourcecode" id="section-4.30.3.2-1">
 <pre>&lt;CODE BEGINS&gt;
+
 
 This document defines the initial version of the IANA-maintained
 "iana-foo" YANG module.  The most recent version of the YANG module
@@ -4805,25 +4893,26 @@ and sub-statements thereof, should be defined:
 
  "enum":        Replicates a name from the registry.
 
- "value":       Contains the decimal value of the IANA-assigned value.
+ "value":       Contains the decimal value of the IANA-assigned
+                value.
 
- "status":      Is included only if a registration has been deprecated
-                or obsoleted.  IANA "deprecated" maps to YANG status
-                "deprecated", and IANA "obsolete" maps to YANG status
-                "obsolete".
+ "status":      Is included only if a registration has been
+                deprecated or obsoleted.  IANA "deprecated" maps
+                to YANG status "deprecated", and IANA "obsolete"
+                maps to YANG status "obsolete".
 
  "description":  Replicates the description from the registry.
 
- "reference":   Replicates the reference(s) from the registry with the
-                title of the document(s) added.
+ "reference":   Replicates the reference(s) from the registry with
+                the title of the document(s) added.
 
 Unassigned or reserved values are not present in the module.
 
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published module
-(i.e., IANA_FOO_URL_With_REV).
+"reference" substatement that points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -4848,7 +4937,7 @@ registry]:
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
 <p id="section-5-1">The following registration in the "ns" subregistry of the "IETF XML
-Registry" <span>[<a href="#RFC3688" class="cite xref">RFC3688</a>]</span> was detailed in <span>[<a href="#RFC6087" class="cite xref">RFC6087</a>]</span>. This document requests IANA
+Registry" <span>[<a href="#RFC3688" class="cite xref">RFC3688</a>]</span> was detailed in <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>. This document requests IANA
 to update this registration to reference this document.<a href="#section-5-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-5-2">
 <pre>
@@ -4883,11 +4972,11 @@ Names" registry <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> 
    Reference:  RFC XXXX
 </pre><a href="#section-5-6" class="pilcrow">¶</a>
 </div>
-<p id="section-5-7">Also, This document requests IANA to update the reference for
-   the "YANG Module Names" registry under the "YANG Parameters" registry group
-   to point to the RFC number that will
-   be assigned to this document as it contains the template necessary
-   for registration in Appendix B.<a href="#section-5-7" class="pilcrow">¶</a></p>
+<p id="section-5-7">Also, this document requests IANA to update the reference for
+the "YANG Module Names" registry under the "YANG Parameters" registry group
+to point to the RFC number that will
+be assigned to this document as it contains the template necessary
+for registration in Appendix B.<a href="#section-5-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -5075,10 +5164,6 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <dt id="RFC5737">[RFC5737]</dt>
         <dd>
 <span class="refAuthor">Arkko, J.</span>, <span class="refAuthor">Cotton, M.</span>, and <span class="refAuthor">L. Vegoda</span>, <span class="refTitle">"IPv4 Address Blocks Reserved for Documentation"</span>, <span class="seriesInfo">RFC 5737</span>, <span class="seriesInfo">DOI 10.17487/RFC5737</span>, <time datetime="2010-01" class="refDate">January 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5737">https://www.rfc-editor.org/rfc/rfc5737</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC6087">[RFC6087]</dt>
-        <dd>
-<span class="refAuthor">Bierman, A.</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of YANG Data Model Documents"</span>, <span class="seriesInfo">RFC 6087</span>, <span class="seriesInfo">DOI 10.17487/RFC6087</span>, <time datetime="2011-01" class="refDate">January 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6087">https://www.rfc-editor.org/rfc/rfc6087</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6991">[RFC6991]</dt>
         <dd>
@@ -5495,41 +5580,42 @@ module iana-template {
    for sharing more context that led to the design documented in
    <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>.<a href="#appendix-D-1" class="pilcrow">¶</a></p>
 <p id="appendix-D-2">Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
-   Randy Presuhn, Martin Björklund, Dale R. Worley, and Kent Watsen for the comments.  Lou Berger suggested to include more
-   details about IANA considerations.<a href="#appendix-D-2" class="pilcrow">¶</a></p>
-<p id="appendix-D-3"><a href="#sec-tags" class="auto internal xref">Section 4.28</a> is inspired from RFC 8819.<a href="#appendix-D-3" class="pilcrow">¶</a></p>
-<p id="appendix-D-4">Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.<a href="#appendix-D-4" class="pilcrow">¶</a></p>
-<p id="appendix-D-5">Thanks to Xufeng Liu for reviewing the document.<a href="#appendix-D-5" class="pilcrow">¶</a></p>
-<p id="appendix-D-6">Thanks to Rach Salz and Michael Richardson for the SAAG review.<a href="#appendix-D-6" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="appendix-D-7">
-        <dt id="appendix-D-7.1">The author of RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-7.2">
-          <p id="appendix-D-7.2.1">Andy Bierman<a href="#appendix-D-7.2.1" class="pilcrow">¶</a></p>
+   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, and Kent Watsen for the comments.<a href="#appendix-D-2" class="pilcrow">¶</a></p>
+<p id="appendix-D-3">Lou Berger suggested to include more details about IANA considerations.<a href="#appendix-D-3" class="pilcrow">¶</a></p>
+<p id="appendix-D-4"><a href="#sec-tags" class="auto internal xref">Section 4.28</a> is inspired from <span>[<a href="#RFC8819" class="cite xref">RFC8819</a>]</span>.<a href="#appendix-D-4" class="pilcrow">¶</a></p>
+<p id="appendix-D-5">Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>.<a href="#appendix-D-5" class="pilcrow">¶</a></p>
+<p id="appendix-D-6">Thanks to Xufeng Liu for reviewing the document.<a href="#appendix-D-6" class="pilcrow">¶</a></p>
+<p id="appendix-D-7">Italo Busi provided the examples of "case + when" construct.<a href="#appendix-D-7" class="pilcrow">¶</a></p>
+<p id="appendix-D-8">Thanks to Rach Salz and Michael Richardson for the SAAG review.<a href="#appendix-D-8" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-D-9">
+        <dt id="appendix-D-9.1">The author of RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-9.2">
+          <p id="appendix-D-9.2.1">Andy Bierman<a href="#appendix-D-9.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-7.3"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-7.4">
-          <p id="appendix-D-7.4.1">YumaWorks<a href="#appendix-D-7.4.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-9.3"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-9.4">
+          <p id="appendix-D-9.4.1">YumaWorks<a href="#appendix-D-9.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-7.5"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-7.6">
-          <p id="appendix-D-7.6.1">email: andy@yumaworks.com<a href="#appendix-D-7.6.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-9.5"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-9.6">
+          <p id="appendix-D-9.6.1">email: andy@yumaworks.com<a href="#appendix-D-9.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-7.7">Acknowledgments from RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-7.8">
-          <p id="appendix-D-7.8.1">The structure and contents of this document are adapted from
+<dt id="appendix-D-9.7">Acknowledgments from RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-9.8">
+          <p id="appendix-D-9.8.1">The structure and contents of this document are adapted from
 "Guidelines for Authors and Reviewers of MIB Documents" <span>[<a href="#RFC4181" class="cite xref">RFC4181</a>]</span>, by
- C. M. Heard.<a href="#appendix-D-7.8.1" class="pilcrow">¶</a></p>
+ C. M. Heard.<a href="#appendix-D-9.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-7.9"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-7.10">
-          <p id="appendix-D-7.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
+<dt id="appendix-D-9.9"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-9.10">
+          <p id="appendix-D-9.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
 Ladislav Lhotka, Jernej Tuljak, Lou Berger, Robert Wilton, Kent
 Watsen, and William Lupton for their extensive reviews and
-contributions to this document.<a href="#appendix-D-7.10.1" class="pilcrow">¶</a></p>
+contributions to this document.<a href="#appendix-D-9.10.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>
@@ -5540,6 +5626,15 @@ contributions to this document.<a href="#appendix-D-7.10.1" class="pilcrow">¶</
       <h2 id="name-authors-addresses">
 <a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Andy Bierman</span></div>
+<div dir="auto" class="left"><span class="org">YumaWorks</span></div>
+<div dir="auto" class="left"><span class="country-name">United States of America</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:andy@yumaworks.com" class="email">andy@yumaworks.com</a>
+</div>
+</address>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Mohamed Boucadair (<span class="role">editor</span>)</span></div>
 <div dir="auto" class="left"><span class="org">Orange</span></div>

@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 24 August 2024                                           Huawei
-                                                        21 February 2024
+Expires: 31 August 2024                                           Huawei
+                                                        28 February 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 August 2024.
+   This Internet-Draft will expire on 31 August 2024.
 
 Copyright Notice
 
@@ -273,7 +273,8 @@ Table of Contents
    *  Added a discussion about the prefix pattern to use for example
       modules.
 
-   *  Added a statement for NMDA to be listed as normative reference.
+   *  Updated the NMDA guidance in the narrative text to highlight
+      modules that are not NMDA-compliant.
 
    *  Added a new section about YANG module classification.
 
@@ -503,13 +504,10 @@ Table of Contents
    as well.  Refer to Section 2.3 of [RFC8349] for an example of this
    overview section.
 
-   If the document contains a YANG module that is compliant with Network
-   Management Datastore Architecture (NMDA) [RFC8342], then the
-   Introduction section should mention this fact with [RFC8342] listed
-   as a normative reference.
-
-   Example:  The YANG data model in this document conforms to the
-      Network Management Datastore Architecture defined in [RFC8342].
+   If the document contains a temporary non-NMDA (Network Management
+   Datastore Architecture) [RFC8342], then the Introduction section
+   should mention this fact with the reasoning that motivated that
+   design.  Refer to Section 4.23 for more NMDA-related guidance.
 
    Consistent indentation SHOULD be used for all examples, including
    YANG fragments and protocol message instance data.  If line wrapping

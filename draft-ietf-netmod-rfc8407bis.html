@@ -1174,7 +1174,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.2.2.2.1"><a href="#section-2.2" class="auto internal xref">2.2</a>.  <a href="#name-yang-terms" class="internal xref">YANG Terms</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.3">
-                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="auto internal xref">2.3</a>.  <a href="#name-network-management-datastor" class="internal xref">Network Management Datastore Architecture (NMDA) Terms</a></p>
+                <p id="section-toc.1-1.2.2.3.1"><a href="#section-2.3" class="auto internal xref">2.3</a>.  <a href="#name-network-management-datastor" class="internal xref">Network Management Datastore Architecture () Terms</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.4">
                 <p id="section-toc.1-1.2.2.4.1"><a href="#section-2.4" class="auto internal xref">2.4</a>.  <a href="#name-requirements-notation" class="internal xref">Requirements Notation</a></p>
@@ -1724,10 +1724,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
    submodules, the term 'submodule' is used instead.<a href="#section-2.2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="network-management-datastore-architecture-nmda-terms">
+<div id="network-management-datastore-architecture-terms">
 <section id="section-2.3">
         <h3 id="name-network-management-datastor">
-<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-network-management-datastor" class="section-name selfRef">Network Management Datastore Architecture (NMDA) Terms</a>
+<a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-network-management-datastor" class="section-name selfRef">Network Management Datastore Architecture () Terms</a>
         </h3>
 <p id="section-2.3-1">The following terms are defined in <span>[<a href="#RFC8342" class="cite xref">RFC8342</a>]</span> and are not redefined
    here:<a href="#section-2.3-1" class="pilcrow">¶</a></p>
@@ -1914,9 +1914,9 @@ modules, then those facts <span class="bcp14">MUST</span> be noted in the overvi
 special interpretations of definitions in other modules <span class="bcp14">MUST</span> be noted
 as well.  Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.3" class="relref">Section 2.3</a> of [<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of this
 overview section.<a href="#section-3.5-2" class="pilcrow">¶</a></p>
-<p id="section-3.5-3">If the document contains a temporary non-NMDA (Network Management Datastore Architecture) <span>[<a href="#RFC8342" class="cite xref">RFC8342</a>]</span>, then the Introduction
+<p id="section-3.5-3">If the document contains major Network Management Datastore Architecture (NMDA) exceptions or include a temporary non-NMDA module <span>[<a href="#RFC8342" class="cite xref">RFC8342</a>]</span>, then the Introduction
 section should mention this fact with the reasoning that motivated that design.
-Refer to <a href="#sec-op-state" class="auto internal xref">Section 4.23</a> for more NMDA-related guidance.<a href="#section-3.5-3" class="pilcrow">¶</a></p>
+Refer to <a href="#sec-op-state" class="auto internal xref">Section 4.23</a> for more NMDA-related guidance. Specifically, <a href="#sec-4.23.2" class="auto internal xref">Section 4.23.2</a> includes a recommendation for designers to describe and justify any NMDA exceptions in detail as part of the module itself.<a href="#section-3.5-3" class="pilcrow">¶</a></p>
 <p id="section-3.5-4">Consistent indentation <span class="bcp14">SHOULD</span> be used for all examples, including
 YANG fragments and protocol message instance data.  If line wrapping
 is done for formatting purposes, then this <span class="bcp14">SHOULD</span> be noted following <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span>, as shown
@@ -4142,7 +4142,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 </div>
 </section>
 </div>
-<div id="representing-operational-values-of-configuration-data">
+<div id="sec-4.23.2">
 <section id="section-4.23.2">
           <h4 id="name-representing-operational-va">
 <a href="#section-4.23.2" class="section-number selfRef">4.23.2. </a><a href="#name-representing-operational-va" class="section-name selfRef">Representing Operational Values of Configuration Data</a>

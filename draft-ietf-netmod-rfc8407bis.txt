@@ -78,7 +78,7 @@ Table of Contents
    2.  Terminology
      2.1.  NETCONF Terms
      2.2.  YANG Terms
-     2.3.  Network Management Datastore Architecture (NMDA) Terms
+     2.3.  Network Management Datastore Architecture () Terms
      2.4.  Requirements Notation
    3.  General Documentation Guidelines
      3.1.  Module Copyright
@@ -361,7 +361,7 @@ Table of Contents
    module or submodule.  When describing properties that are specific to
    submodules, the term 'submodule' is used instead.
 
-2.3.  Network Management Datastore Architecture (NMDA) Terms
+2.3.  Network Management Datastore Architecture () Terms
 
    The following terms are defined in [RFC8342] and are not redefined
    here:
@@ -504,10 +504,13 @@ Table of Contents
    as well.  Refer to Section 2.3 of [RFC8349] for an example of this
    overview section.
 
-   If the document contains a temporary non-NMDA (Network Management
-   Datastore Architecture) [RFC8342], then the Introduction section
-   should mention this fact with the reasoning that motivated that
-   design.  Refer to Section 4.23 for more NMDA-related guidance.
+   If the document contains major Network Management Datastore
+   Architecture (NMDA) exceptions or include a temporary non-NMDA module
+   [RFC8342], then the Introduction section should mention this fact
+   with the reasoning that motivated that design.  Refer to Section 4.23
+   for more NMDA-related guidance.  Specifically, Section 4.23.2
+   includes a recommendation for designers to describe and justify any
+   NMDA exceptions in detail as part of the module itself.
 
    Consistent indentation SHOULD be used for all examples, including
    YANG fragments and protocol message instance data.  If line wrapping

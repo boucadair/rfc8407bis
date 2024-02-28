@@ -78,7 +78,7 @@ Table of Contents
    2.  Terminology
      2.1.  NETCONF Terms
      2.2.  YANG Terms
-     2.3.  Network Management Datastore Architecture () Terms
+     2.3.  Network Management Datastore Architecture (NMDA) Terms
      2.4.  Requirements Notation
    3.  General Documentation Guidelines
      3.1.  Module Copyright
@@ -361,7 +361,7 @@ Table of Contents
    module or submodule.  When describing properties that are specific to
    submodules, the term 'submodule' is used instead.
 
-2.3.  Network Management Datastore Architecture () Terms
+2.3.  Network Management Datastore Architecture (NMDA) Terms
 
    The following terms are defined in [RFC8342] and are not redefined
    here:

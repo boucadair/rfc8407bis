@@ -485,7 +485,7 @@ Table of Contents
    (Section 2.2 of [RFC8340]), authors SHOULD NOT include it in the
    document.
 
-   These guidelines take precedende over the generic guidance in
+   These guidelines take precedence over the generic guidance in
    Section 3 of [RFC8340].
 
    If YANG tree diagrams are used, then an informative reference to the

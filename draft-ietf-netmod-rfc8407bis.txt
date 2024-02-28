@@ -600,7 +600,7 @@ Table of Contents
    section that discusses security considerations relevant to those
    modules.
 
-   Unless the modules comply with [RFC8791] or define YANG exetnsions
+   Unless the modules comply with [RFC8791] or define YANG extensions
    (e.g., [RFC7952]), the security section MUST be patterned after the
    latest approved template (available at
    <https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>).
@@ -785,8 +785,8 @@ Table of Contents
    modules.
 
    To check that JSON-encoded examples [RFC7951] comply with the target
-   data models, "yangson" program should be used.  The "yangson" program
-   is freely available from GitHub.
+   data models, programs such as "yangson" should be used.  The
+   "yangson" program is freely available from GitHub.
 
      <https://github.com/CZ-NIC/yangson>
 

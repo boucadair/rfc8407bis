@@ -722,9 +722,7 @@ Table of Contents
    Modules that use the groupings that are defined in this document
    should identify the corresponding security considerations. For
    example, reusing some of these groupings will expose privacy-related
-   information (e.g., 'node-example'). Disclosing such information may
-   be considered a violation of the customer-provider trust
-   relationship.
+   information (e.g., 'node-example').
    <CODE ENDS>
 
    Note:  [RFC8446], [RFC6241], [RFC6242], [RFC8341], and [RFC8040] (or

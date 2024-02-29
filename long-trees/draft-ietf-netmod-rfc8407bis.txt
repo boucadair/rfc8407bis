@@ -242,6 +242,8 @@ Table of Contents
    *  Added a note that folding of the examples should be done as per
       [RFC8792] conventions.
 
+   *  Added a recommendation about long trees
+
    *  Added a note that RFC8792-folding of YANG modules can be used if
       and only if native YANG features (e.g., break line, "+") are not
       sufficient.

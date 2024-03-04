@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 31 August 2024                                           Huawei
-                                                        28 February 2024
+Expires: 5 September 2024                                         Huawei
+                                                            4 March 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 August 2024.
+   This Internet-Draft will expire on 5 September 2024.
 
 Copyright Notice
 
@@ -3734,8 +3734,8 @@ Acknowledgments
    more context that led to the design documented in [RFC9108].
 
    Thanks to Italo Busi, Benoit Claise, Tom Petch, Randy Presuhn, Martin
-   Björklund, Acee Lindem, Dale R.  Worley, Kent Watsen, and Jan
-   Lindblad for the comments.
+   Björklund, Acee Lindem, Dale R.  Worley, Kent Watsen, Jan Lindblad,
+   and Qiufang Ma for the comments.
 
    Lou Berger suggested to include more details about IANA
    considerations.

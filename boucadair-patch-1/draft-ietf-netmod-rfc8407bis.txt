@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 31 August 2024                                           Huawei
-                                                        28 February 2024
+Expires: 5 September 2024                                         Huawei
+                                                            4 March 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 August 2024.
+   This Internet-Draft will expire on 5 September 2024.
 
 Copyright Notice
 
@@ -241,6 +241,10 @@ Table of Contents
 
    *  Added a note that folding of the examples should be done as per
       [RFC8792] conventions.
+
+   *  Added a recommendation about long trees.
+
+   *  Updated the prefix recommendation to insist more on uniqueness.
 
    *  Added a note that RFC8792-folding of YANG modules can be used if
       and only if native YANG features (e.g., break line, "+") are not
@@ -479,8 +483,34 @@ Table of Contents
 
    YANG tree diagrams provide a concise representation of a YANG module
    and SHOULD be included to help readers understand YANG module
-   structure.  Guidelines on tree diagrams can be found in Section 3 of
-   [RFC8340].
+   structure.  If the complete tree diagram for a module becomes long
+   (more than 2 pages, typically), the diagram SHOULD be split into
+   several smaller diagrams (a.k.a subtrees).  For the reader's
+   convenience, a subtree should fit within a page.  If the complete
+   tree diagram is too long (more than 5 pages, typically) even with
+   groupings unexpanded (Section 2.2 of [RFC8340]), the authors SHOULD
+   NOT include it in the document.  A stable pointer to retrieve the
+   full tree MAY be included.
+
+   The document SHOULD include the following note if the full tree is
+   not included:
+
+      -- If no stable pointer to retrieve the tree is included
+
+      The full tree diagram of the module can be generated using,
+      e.g., the "pyang" tool. That tree is not included here because
+      it is too long (Section 3.4 of [RFCXXXX]). Instead, subtrees
+      are provided for the reader's convenience.
+
+      -- If a stable pointer to retrieve the tree is included
+
+      The full tree diagram of the module can be retrieved at
+      <stable_url_ref>. That tree is not included here because it is too
+      long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
+      for the reader's convenience.
+
+   These guidelines take precedence over the generic guidance in
+   Section 3 of [RFC8340].
 
    If YANG tree diagrams are used, then an informative reference to the
    YANG tree diagrams specification MUST be included in the document.
@@ -975,9 +1005,9 @@ Table of Contents
       groupings, extensions, features, and identities defined in the
       module.
 
-   Prefix values SHOULD be short but are also likely to be unique.
-   Prefix values SHOULD NOT conflict with known modules that have been
-   previously published.
+   Prefix values SHOULD be selected carefully to be unique, and ideally
+   not too long.  Specifically, prefix values should not conflict with
+   known modules that have been previously published.
 
    For convenience, prefix values of example modules MAY be prefixed
    with "ex" or similar patterns.  In doing so, readers of example
@@ -1232,8 +1262,9 @@ Table of Contents
    ordered "list" or "leaf-list".
 
    The "id" function SHOULD NOT be used.  The "ID" attribute is not
-   present in YANG documents, so this function has no meaning.  The YANG
-   compiler SHOULD return an empty string for this function.
+   present in YANG documents, so this function has no meaning.  The
+   XPath execution environment SHOULD return an empty string for this
+   function.
 
    The "namespace-uri" and "name" functions SHOULD NOT be used.
    Expanded names in XPath are different than YANG.  A specific
@@ -1241,7 +1272,8 @@ Table of Contents
 
    The "lang" function SHOULD NOT be used.  This function does not apply
    to YANG because there is no "lang" attribute set with the document.
-   The YANG compiler SHOULD return "false" for this function.
+   The XPath execution environment SHOULD return "false" for this
+   function.
 
    The "local-name", "namespace-uri", "name", "string", and "number"
    functions SHOULD NOT be used if the argument is a node-set.  If so,
@@ -3759,9 +3791,9 @@ Acknowledgments
    and valuable comments.  Special thanks to Ladislav Lhotka for sharing
    more context that led to the design documented in [RFC9108].
 
-   Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch, Randy
-   Presuhn, Martin Björklund, Acee Lindem, Dale R.  Worley, and Kent
-   Watsen for the comments.
+   Thanks to Italo Busi, Benoit Claise, Tom Petch, Randy Presuhn, Martin
+   Björklund, Acee Lindem, Dale R.  Worley, Kent Watsen, Jan Lindblad,
+   and Qiufang Ma for the comments.
 
    Lou Berger suggested to include more details about IANA
    considerations.

@@ -1893,16 +1893,24 @@ document or if any terms are imported from other documents.<a href="#section-3.3
 <p id="section-3.4-1">YANG tree diagrams provide a concise representation of a YANG module
 and <span class="bcp14">SHOULD</span> be included to help readers understand YANG module
 structure. If the complete tree diagram for a module becomes long (more than 2 pages, typically),
-the diagram <span class="bcp14">SHOULD</span> be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded (<span><a href="https://rfc-editor.org/rfc/rfc8340#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>), authors <span class="bcp14">SHOULD NOT</span> include it in the document. In such a case, the document <span class="bcp14">SHOULD</span> include the following note:<a href="#section-3.4-1" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-3.4-2">
+the diagram <span class="bcp14">SHOULD</span> be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded (<span><a href="https://rfc-editor.org/rfc/rfc8340#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>), the authors <span class="bcp14">SHOULD NOT</span> include it in the document. A stable pointer to retrieve the full tree <span class="bcp14">MAY</span> be included.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+<p id="section-3.4-2">The document <span class="bcp14">SHOULD</span> include the following note if the full tree is not included:<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3.4-3">
 <pre>
-   The full tree diagram of the module can be generated using, e.g.,
-   the "pyang" tool. That tree is not included here because it is
-   too long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
-   for the reader's convenience.
-</pre><a href="#section-3.4-2" class="pilcrow">¶</a>
+ -- If no stable pointer to retrieve the tree is included
+
+ The full tree diagram of the module can be generated using, e.g.,
+ the "pyang" tool. That tree is not included here because it is
+ too long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
+ for the reader's convenience.
+
+ -- If a stable pointer to retrieve the tree is included
+
+ The full tree diagram of the module can be retrieved at [stable_url].
+ That tree is not included here because it is too long (Section 3.4 of
+ [RFCXXXX]). Instead, subtrees are provided for the reader's convenience.
+</pre><a href="#section-3.4-3" class="pilcrow">¶</a>
 </div>
-<p id="section-3.4-3">A stable pointer to retrieve the full tree <span class="bcp14">MAY</span> be included.<a href="#section-3.4-3" class="pilcrow">¶</a></p>
 <p id="section-3.4-4">These guidelines take precedence over the generic guidance in <span><a href="https://rfc-editor.org/rfc/rfc8340#section-3" class="relref">Section 3</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.<a href="#section-3.4-4" class="pilcrow">¶</a></p>
 <p id="section-3.4-5">If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification <span class="bcp14">MUST</span> be included in the document.

@@ -2148,6 +2148,32 @@ vulnerabilities:
 &lt;list RPC operations and explain the reasons for the sensitivity/
  privacy concerns&gt;
 
+   -- if your YANG module reuses groupings from other modules and
+   -- the document that specifies these groupings also
+   -- includes those as data nodes, then add this text to remind
+   -- the specific sensitivity or vulnerability of reused nodes.
+
+This YANG module uses groupings from other YANG modules that
+define nodes that may be considered sensitive or vulnerable
+in network environments. Refer to the Security Considerations
+of &lt;RFC-insert-numbers&gt; for information as to which nodes may
+be considered sensitive or vulnerable in network environments.
+
+  -- if your YANG module does not define any data nodes, then
+  -- add the following text
+
+The YANG module defines a set of identities, types, and
+groupings. These nodes are intended to be reused by other YANG
+modules. The module by itself does not expose any data nodes that
+are writable, data nodes that contain read-only state, or RPCs.
+As such, there are no additional security issues related to
+the YANG module that need to be considered.
+
+Modules that use the groupings that are defined in this document
+should identify the corresponding security considerations. For
+example, reusing some of these groupings will expose privacy-related
+information (e.g., 'node-example').
+
 
 &lt;CODE ENDS&gt;</pre><a href="#section-3.7.1-1" class="pilcrow">¶</a>
 </div>
@@ -2736,14 +2762,14 @@ or leaf-list.  The "position" and "last" functions <span class="bcp14">MAY</span
 they are evaluated in a context where the context node is a user-
 ordered "list" or "leaf-list".<a href="#section-4.6.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-2">The "id" function <span class="bcp14">SHOULD NOT</span> be used.  The "ID" attribute is not
-present in YANG documents, so this function has no meaning.  The YANG
-compiler <span class="bcp14">SHOULD</span> return an empty string for this function.<a href="#section-4.6.2-2" class="pilcrow">¶</a></p>
+present in YANG documents, so this function has no meaning.  The
+XPath execution environment <span class="bcp14">SHOULD</span> return an empty string for this function.<a href="#section-4.6.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-3">The "namespace-uri" and "name" functions <span class="bcp14">SHOULD NOT</span> be used.
 Expanded names in XPath are different than YANG.  A specific
 canonical representation of a YANG-expanded name does not exist.<a href="#section-4.6.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-4">The "lang" function <span class="bcp14">SHOULD NOT</span> be used.  This function does not apply
 to YANG because there is no "lang" attribute set with the document.
-The YANG compiler <span class="bcp14">SHOULD</span> return "false" for this function.<a href="#section-4.6.2-4" class="pilcrow">¶</a></p>
+The XPath execution environment <span class="bcp14">SHOULD</span> return "false" for this function.<a href="#section-4.6.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-5">The "local-name", "namespace-uri", "name", "string", and "number"
 functions <span class="bcp14">SHOULD NOT</span> be used if the argument is a node-set.  If so,
 the function result will be determined by the document order of the

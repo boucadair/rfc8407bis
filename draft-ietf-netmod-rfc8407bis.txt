@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 7 September 2024                                         Huawei
-                                                            6 March 2024
+Expires: 13 September 2024                                        Huawei
+                                                           12 March 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 September 2024.
+   This Internet-Draft will expire on 13 September 2024.
 
 Copyright Notice
 
@@ -509,6 +509,13 @@ Table of Contents
 
    These guidelines take precedence over the generic guidance in
    Section 3 of [RFC8340].
+
+      The tooling may evolve in the future to provide better rendering
+      of too long trees.  This tooling may offer (but not limited to),
+      unfold trees, control of expanded views, ease navigation among
+      various levels of a tree, support of hyperlinks, etc.  When such a
+      tooling is available, too long trees can be displayed in the HTML
+      version of documents that include such trees.
 
    If YANG tree diagrams are used, then an informative reference to the
    YANG tree diagrams specification MUST be included in the document.

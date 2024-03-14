@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-03-12T01:08:00.266464+00:00",
+  "timestamp": "2024-03-14T01:08:47.309252+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -1367,24 +1367,26 @@
       "id": "PR_kwDOJTh_ks5o8LeN",
       "title": "attempt to cover html versions",
       "url": "https://github.com/boucadair/rfc8407bis/pull/47",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-03-07T09:23:28Z",
-      "updatedAt": "2024-03-07T09:23:28Z",
+      "updatedAt": "2024-03-12T11:51:30Z",
       "baseRepository": "boucadair/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "20bd807a0088025f6ea4bd2d25bda8fda5a3de4f",
       "headRepository": "boucadair/rfc8407bis",
       "headRefName": "boucadair-patch-1",
       "headRefOid": "48ff0d9e39e32821518969c425abde0c5f1f49c7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-03-12T11:51:29Z",
+      "mergedAt": "2024-03-12T11:51:29Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "389715f14b7f69b8df129d91eab374da03ec26b3"
+      },
       "comments": [],
       "reviews": []
     }

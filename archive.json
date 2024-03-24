@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-03-21T01:10:13.003627+00:00",
+  "timestamp": "2024-03-24T01:15:31.293377+00:00",
   "repo": "boucadair/rfc8407bis",
   "labels": [
     {
@@ -1441,6 +1441,79 @@
       "mergeCommit": {
         "oid": "0cc11ab4979a1b58411a82db0e582a23262ca07a"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 50,
+      "id": "PR_kwDOJTh_ks5qTecF",
+      "title": "revision instructions",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/50",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-03-21T04:05:00Z",
+      "updatedAt": "2024-03-21T04:17:59Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "389715f14b7f69b8df129d91eab374da03ec26b3",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-1",
+      "headRefOid": "c1ad39f9690818c190fe57be1774dc9a484aa528",
+      "closedAt": "2024-03-21T04:17:59Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOJTh_ks50RcHa",
+          "commit": {
+            "abbreviatedOid": "4f0ffec"
+          },
+          "author": "boucadair",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-03-21T04:16:49Z",
+          "updatedAt": "2024-03-21T04:16:49Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n   *  An instruction about how to generate the \"revision\" statement. \r\n   \r\nThe \"description\" substatement should reflect what changed in the revised version. Typically, the description text enumerates the changes (e.g., list of the new registration entries). If the changes are triggered by an RFC, the description may also include text such as \"Applied updates as specified by RFC XXXX.\". If the changes are triggered following other IANA registration policy ({{Section 4 of !RFC8126}}), the description may also include \"Applied updated as specified by <Some_IANA_policy>\".\r\n```",
+              "createdAt": "2024-03-21T04:16:49Z",
+              "updatedAt": "2024-03-21T04:16:49Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "id": "PR_kwDOJTh_ks5qTh8X",
+      "title": "description text",
+      "url": "https://github.com/boucadair/rfc8407bis/pull/51",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-03-21T04:24:34Z",
+      "updatedAt": "2024-03-21T21:35:22Z",
+      "baseRepository": "boucadair/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "389715f14b7f69b8df129d91eab374da03ec26b3",
+      "headRepository": "boucadair/rfc8407bis",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "61222a2f91bca9a14d827365a7af98f1f34bab44",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }

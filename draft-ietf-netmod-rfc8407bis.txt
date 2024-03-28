@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 13 September 2024                                        Huawei
-                                                           12 March 2024
+Expires: 29 September 2024                                        Huawei
+                                                           28 March 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 September 2024.
+   This Internet-Draft will expire on 29 September 2024.
 
 Copyright Notice
 
@@ -243,6 +243,8 @@ Table of Contents
       [RFC8792] conventions.
 
    *  Added a recommendation about long trees.
+
+   *  Added a recommendation for the use of meaningful prefix values.
 
    *  Added a note that RFC8792-folding of YANG modules can be used if
       and only if native YANG features (e.g., break line, "+") are not
@@ -1010,7 +1012,7 @@ Table of Contents
       groupings, extensions, features, and identities defined in the
       module.
 
-   Prefix values SHOULD be short but are also likely to be unique.
+   Prefix values SHOULD be short but meaningful to the intended user.
    Prefix values SHOULD NOT conflict with known modules that have been
    previously published.
 

@@ -3137,6 +3137,46 @@ Table of Contents
                     Types";
      }
 
+   Duplicating the same reference at the high level and at the level of
+   the new additions to a module maight be redundant.  For example, the
+   following does not provide access to a specific revision of the
+   module when future revisions are made to the module:
+
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
+   revision 2021-04-23 {
+     description
+       "Registered tunnelType 19.";
+     reference
+       "https://www.iana.org/assignments/yang-parameters/iana-tunnel-\
+                                                    type@2021-04-23.yang
+        RFC 4301: Security Architecture for the Internet Protocol";
+   }
+
+   revision 2019-11-16 {
+     description
+       "Initial revision.";
+     reference
+       "RFC 8675: A YANG Data Model for Tunnel Interface Types";
+   }
+
+   The following example shows how to generate the "revision" statements
+   following the guidance in Section 4.30.3.1:
+
+   revision 2021-04-23 {
+     description
+       "Registered tunnelType 19.";
+     reference
+       "RFC 4301: Security Architecture for the Internet Protocol";
+   }
+
+   revision 2019-11-16 {
+     description
+       "Initial revision.";
+     reference
+       "RFC 8675: A YANG Data Model for Tunnel Interface Types";
+   }
+
    The following templates are to be considered in addition to the
    required information that is provided in Section 3.8.
 

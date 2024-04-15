@@ -3140,7 +3140,7 @@ Table of Contents
    Duplicating the same reference at the high level and at the level of
    a new addition might be redundant.  For example, the following does
    not provide access to a specific (OLD) revision of the module when
-   future revisions are made:
+   future revisions are made [IANA_Tunnel_Type_URL]:
 
    revision 2021-04-23 {
      description
@@ -3502,6 +3502,11 @@ Table of Contents
               IANA, "iana-pseudowire-types YANG Module",
               <https://www.iana.org/assignments/iana-pseudowire-types/
               iana-pseudowire-types.xhtml>.
+
+   [IANA_Tunnel_Type_URL]
+              IANA, "iana-tunnel-type YANG Module",
+              <https://www.iana.org/assignments/iana-tunnel-type/iana-
+              tunnel-type.xhtml>.
 
    [RFC-STYLE]
               RFC Editor, "Style Guide",

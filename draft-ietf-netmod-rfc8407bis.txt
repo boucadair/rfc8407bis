@@ -3186,6 +3186,14 @@ Table of Contents
      reference
        "RFC 8675: A YANG Data Model for Tunnel Interface Types";
    }
+   ...
+   identity ipsectunnelmode {
+     base ift:tunnel;
+     description
+       "IpSec tunnel mode encapsulation.";
+     reference
+       "RFC 4301: Security Architecture for the Internet Protocol";
+   }
 
    The following templates are to be considered in addition to the
    required information that is provided in Section 3.8.

@@ -4860,8 +4860,60 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
    registries can be listed for a single IANA-maintained module, no
    explicit description (or name) field is listed under the
    authoritative IANA registry, or the name does not comply with YANG naming conventions (<a href="#sec-id-naming" class="auto internal xref">Section 4.3.1</a>)).<a href="#section-4.30.3-3" class="pilcrow">¶</a></p>
-<p id="section-4.30.3-4">The following templates are to be considered in addition to the
-   required information that is provided in <a href="#sec-iana-cons" class="auto internal xref">Section 3.8</a>.<a href="#section-4.30.3-4" class="pilcrow">¶</a></p>
+<p id="section-4.30.3-4">An example of  "revision" statements that are generated following the guidance in <a href="#sec-temp-id" class="auto internal xref">Section 4.30.3.1</a>
+   is provided below:<a href="#section-4.30.3-4" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.30.3-5">
+<pre>
+=============== NOTE: '\' line wrapping per RFC 8792 ================
+
+  revision 2023-11-27 {
+    description
+      "Registered RR Type RESINFO 261.";
+    reference
+      "https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                       class-rr-type@2023-11-27.yang"
+  }
+
+  revision 2023-11-08 {
+    description
+      "Updated description and replaced draft string reference to
+       64 and 65 with RFC 9460: Service Binding and Parameter \
+                                                        Specification
+       via the DNS (SVCB and HTTPS Resource Records).";
+    reference
+      "RFC 9460: Service Binding and Parameter Specification via the
+                 DNS (SVCB and HTTPS Resource Records)
+       https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                       class-rr-type@2023-11-08.yang"
+  }
+
+  revision 2023-04-25 {
+    description
+      "Updated reference for 64 and 65.";
+    reference
+      "https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                       class-rr-type@2023-04-25.yang"
+  }
+
+  revision 2022-05-30 {
+    description
+      "Updated description, reference for 64 and 65.";
+    reference
+      "https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                       class-rr-type@2022-05-30.yang"
+  }
+
+  revision 2021-08-31 {
+    description
+      "Initial revision.";
+    reference
+      "RFC 9108: YANG Types for DNS Classes and Resource Record
+                 Types";
+  }
+</pre><a href="#section-4.30.3-5" class="pilcrow">¶</a>
+</div>
+<p id="section-4.30.3-6">The following templates are to be considered in addition to the
+   required information that is provided in <a href="#sec-iana-cons" class="auto internal xref">Section 3.8</a>.<a href="#section-4.30.3-6" class="pilcrow">¶</a></p>
 <div id="sec-temp-id">
 <section id="section-4.30.3.1">
             <h5 id="name-template-for-iana-maintaine">

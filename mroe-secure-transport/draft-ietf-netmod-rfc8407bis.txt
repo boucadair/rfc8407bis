@@ -762,8 +762,8 @@ Table of Contents
    information (e.g., 'node-example').
    <CODE ENDS>
 
-   Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed
-      references.
+   Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed as
+      normative references.
 
       By default, [RFC6241], [RFC6242], [RFC8040], [RFC8446], and
       [RFC9110] (or future RFCs that replace any of them) are listed as

@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 22 September 2024                                        Huawei
-                                                           21 March 2024
+Expires: 18 October 2024                                          Huawei
+                                                           16 April 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 September 2024.
+   This Internet-Draft will expire on 18 October 2024.
 
 Copyright Notice
 
@@ -235,14 +235,15 @@ Table of Contents
    *  Added statements that the security template is not required for
       modules that follow [RFC8791] or [RFC7952].
 
-   *  Added a statement that the RFCs that are listed in the security
-      template are to be listed as normative references in documents
-      that use the template.
+   *  Added a statement about how to cite the RFCs that are listed in
+      the security template.
 
    *  Added a note that folding of the examples should be done as per
       [RFC8792] conventions.
 
    *  Added a recommendation about long trees.
+
+   *  Added a recommendation for the use of meaningful prefix values.
 
    *  Added a note that RFC8792-folding of YANG modules can be used if
       and only if native YANG features (e.g., break line, "+") are not
@@ -676,11 +677,9 @@ Table of Contents
 
    The YANG module specified in this document defines a schema for data
    that is designed to be accessed via network management protocols such
-   as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
-   is the secure transport layer, and the mandatory-to-implement secure
-   transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
-   is HTTPS, and the mandatory-to-implement secure transport is TLS
-   [RFC8446].
+   as NETCONF [RFC6241] or RESTCONF [RFC8040]. Both of these protocols
+   have mandatory-to-implement secure transport layers (e.g., Secure
+   Shell (SSH) [RFC6242] or TLS [RFC8446]) with mutual authentication.
 
    The Network Configuration Access Control Model (NACM) [RFC8341]
    provides the means to restrict access for particular NETCONF or
@@ -760,9 +759,13 @@ Table of Contents
    information (e.g., 'node-example').
    <CODE ENDS>
 
-   Note:  [RFC8446], [RFC6241], [RFC6242], [RFC8341], and [RFC8040] (or
-      future RFCs that replace any of them) MUST be listed as normative
-      references.
+   Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed as
+      normative references.
+
+      By default, [RFC8446], [RFC6241], [RFC6242], and [RFC8040] (or
+      future RFCs that replace any of them) are listed as informative
+      references unless normatively cited in other sections of the
+      document that specifies the YANG module.
 
 3.8.  IANA Considerations Section
 
@@ -1010,7 +1013,7 @@ Table of Contents
       groupings, extensions, features, and identities defined in the
       module.
 
-   Prefix values SHOULD be short but are also likely to be unique.
+   Prefix values SHOULD be short but meaningful to the intended user.
    Prefix values SHOULD NOT conflict with known modules that have been
    previously published.
 
@@ -1508,7 +1511,11 @@ Table of Contents
 
    The "description" statement MUST be present.  For modules published
    within IETF documents, the appropriate IETF Trust Copyright text MUST
-   be present, as described in Section 3.1.
+   be present, as described in Section 3.1 and contain the following
+   statement:
+
+  All revisions of IETF and IANA published modules can be found at the YANG
+  Parameters registry: https://www.iana.org/assignments/yang-parameters.
 
    If the module relies on information contained in other documents,
    which are not the same documents implied by the import statements
@@ -3084,6 +3091,114 @@ Table of Contents
    authoritative IANA registry, or the name does not comply with YANG
    naming conventions (Section 4.3.1)).
 
+   An example of "revision" statements that are generated following the
+   guidance in Section 4.30.3.1 is provided below:
+
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
+     revision 2023-11-27 {
+       description
+         "Registered RR Type RESINFO 261.";
+       reference
+         "https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                          class-rr-type@2023-11-27.yang"
+     }
+
+     revision 2023-11-08 {
+       description
+         "Updated description and replaced draft string reference to
+          64 and 65 with RFC 9460: Service Binding and Parameter \
+                                                           Specification
+          via the DNS (SVCB and HTTPS Resource Records).";
+       reference
+         "RFC 9460: Service Binding and Parameter Specification via the
+                    DNS (SVCB and HTTPS Resource Records)
+          https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                          class-rr-type@2023-11-08.yang"
+     }
+
+     revision 2023-04-25 {
+       description
+         "Updated reference for 64 and 65.";
+       reference
+         "https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                          class-rr-type@2023-04-25.yang"
+     }
+
+     revision 2022-05-30 {
+       description
+         "Updated description, reference for 64 and 65.";
+       reference
+         "https://www.iana.org/assignments/yang-parameters/iana-dns-\
+                                          class-rr-type@2022-05-30.yang"
+     }
+
+     revision 2021-08-31 {
+       description
+         "Initial revision.";
+       reference
+         "RFC 9108: YANG Types for DNS Classes and Resource Record
+                    Types";
+     }
+
+   Duplicating the same reference at the high level and at the level of
+   a new addition might be redundant.  For example, the following does
+   not provide access to a specific (OLD) revision of the module when
+   future revisions are made [IANA_Tunnel_Type_URL]:
+
+   revision 2021-04-23 {
+     description
+       "Registered tunnelType 19.";
+     reference
+       "RFC 4301: Security Architecture for the Internet Protocol";
+   }
+
+   revision 2019-11-16 {
+     description
+       "Initial revision.";
+     reference
+       "RFC 8675: A YANG Data Model for Tunnel Interface Types";
+   }
+
+   ...
+
+   identity ipsectunnelmode {
+     base ift:tunnel;
+     description
+       "IpSec tunnel mode encapsulation.";
+     reference
+       "RFC 4301: Security Architecture for the Internet Protocol";
+   }
+
+   The following example shows how to generate the "revision" statements
+   following the guidance in Section 4.30.3.1:
+
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
+   revision 2021-04-23 {
+     description
+       "Registered tunnelType 19.";
+     reference
+       "https://www.iana.org/assignments/yang-parameters/iana-tunnel-\
+                                                    type@2021-04-23.yang
+        RFC 4301: Security Architecture for the Internet Protocol";
+   }
+
+   revision 2019-11-16 {
+     description
+       "Initial revision.";
+     reference
+       "RFC 8675: A YANG Data Model for Tunnel Interface Types";
+   }
+   ...
+   identity ipsectunnelmode {
+     base ift:tunnel;
+     description
+       "IpSec tunnel mode encapsulation.";
+     reference
+       "RFC 4301: Security Architecture for the Internet Protocol";
+   }
+
    The following templates are to be considered in addition to the
    required information that is provided in Section 3.8.
 
@@ -3140,7 +3255,7 @@ Table of Contents
      --- registry are covered by the same policy, insert this text:
 
     The "description" substatement should include this text:
-    "Applied updated as specified by the registration policy
+    "Applied updates as specified by the registration policy
      <Some_IANA_policy>".
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
@@ -3204,7 +3319,7 @@ Table of Contents
      --- registry are covered by the same policy, insert this text:
 
     The "description" substatement should include this text:
-    "Applied updated as specified by the registration policy
+    "Applied updates as specified by the registration policy
      <Some_IANA_policy>".
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
@@ -3391,6 +3506,11 @@ Table of Contents
               IANA, "iana-pseudowire-types YANG Module",
               <https://www.iana.org/assignments/iana-pseudowire-types/
               iana-pseudowire-types.xhtml>.
+
+   [IANA_Tunnel_Type_URL]
+              IANA, "iana-tunnel-type YANG Module",
+              <https://www.iana.org/assignments/iana-tunnel-type/iana-
+              tunnel-type.xhtml>.
 
    [RFC-STYLE]
               RFC Editor, "Style Guide",

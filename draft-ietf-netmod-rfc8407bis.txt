@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 17 October 2024                                          Huawei
-                                                           15 April 2024
+Expires: 20 October 2024                                          Huawei
+                                                           18 April 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 October 2024.
+   This Internet-Draft will expire on 20 October 2024.
 
 Copyright Notice
 
@@ -677,9 +677,12 @@ Table of Contents
 
    The YANG module specified in this document defines a schema for data
    that is designed to be accessed via network management protocols such
-   as NETCONF [RFC6241] or RESTCONF [RFC8040]. Both of these protocols
-   have mandatory-to-implement secure transport layers (e.g., Secure
-   Shell (SSH) [RFC6242] or TLS [RFC8446]) with mutual authentication.
+   as NETCONF [RFC6241] or RESTCONF [RFC8040]. These network management
+   protocols are required to use a secure transport layer and mutual
+   authentication, e.g., SSH [RFC6242] without the "none" authentication
+   option, Transport Layer Security (TLS) [RFC8446] with mutual X.509
+   authentication, and HTTPS with HTTP authentication (Section 11 of
+   [RFC9110]).
 
    The Network Configuration Access Control Model (NACM) [RFC8341]
    provides the means to restrict access for particular NETCONF or
@@ -762,10 +765,10 @@ Table of Contents
    Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed as
       normative references.
 
-      By default, [RFC8446], [RFC6241], [RFC6242], and [RFC8040] (or
-      future RFCs that replace any of them) are listed as informative
-      references unless normatively cited in other sections of the
-      document that specifies the YANG module.
+      By default, [RFC6241], [RFC6242], [RFC8040], [RFC8446], and
+      [RFC9110] (or future RFCs that replace any of them) are listed as
+      informative references unless normatively cited in other sections
+      of the document that specifies the YANG module.
 
 3.8.  IANA Considerations Section
 
@@ -3638,6 +3641,11 @@ Table of Contents
    [RFC9108]  Lhotka, L. and P. Špaček, "YANG Types for DNS Classes and
               Resource Record Types", RFC 9108, DOI 10.17487/RFC9108,
               September 2021, <https://www.rfc-editor.org/rfc/rfc9108>.
+
+   [RFC9110]  Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke,
+              Ed., "HTTP Semantics", STD 97, RFC 9110,
+              DOI 10.17487/RFC9110, June 2022,
+              <https://www.rfc-editor.org/rfc/rfc9110>.
 
    [RFC9132]  Boucadair, M., Ed., Shallow, J., and T. Reddy.K,
               "Distributed Denial-of-Service Open Threat Signaling

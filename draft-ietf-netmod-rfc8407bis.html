@@ -19,14 +19,14 @@
    providing additional guidelines for writing the IANA considerations
    for RFCs that specify IANA-maintained modules. 
     " name="description">
-<meta content="xml2rfc 3.20.1" name="generator">
+<meta content="xml2rfc 3.21.0" name="generator">
 <meta content="NETCONF" name="keyword">
 <meta content="RESTCONF" name="keyword">
 <meta content="Automation" name="keyword">
 <meta content="draft-ietf-netmod-rfc8407bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.20.1
-    Python 3.11.8
+  xml2rfc 3.21.0
+    Python 3.11.9
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
@@ -1041,7 +1041,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 17 October 2024</td>
+<td class="center">Expires 20 October 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1060,12 +1060,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-04-15" class="published">15 April 2024</time>
+<time datetime="2024-04-18" class="published">18 April 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-10-17">17 October 2024</time></dd>
+<dd class="expires"><time datetime="2024-10-20">20 October 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1127,7 +1127,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 17 October 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 20 October 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2099,9 +2099,12 @@ This section uses the template described in Section 3.7 of [RFCXXXX].
 
 The YANG module specified in this document defines a schema for data
 that is designed to be accessed via network management protocols such
-as NETCONF [RFC6241] or RESTCONF [RFC8040]. Both of these protocols
-have mandatory-to-implement secure transport layers (e.g., Secure
-Shell (SSH) [RFC6242] or TLS [RFC8446]) with mutual authentication.
+as NETCONF [RFC6241] or RESTCONF [RFC8040]. These network management
+protocols are required to use a secure transport layer and mutual
+authentication, e.g., SSH [RFC6242] without the "none" authentication
+option, Transport Layer Security (TLS) [RFC8446] with mutual X.509
+authentication, and HTTPS with HTTP authentication (Section 11 of
+[RFC9110]).
 
 The Network Configuration Access Control Model (NACM) [RFC8341]
 provides the means to restrict access for particular NETCONF or
@@ -2191,7 +2194,7 @@ information (e.g., 'node-example').
             <dd class="break"></dd>
 <dt id="section-3.7.1-2.3"></dt>
             <dd style="margin-left: 1.5em" id="section-3.7.1-2.4">
-              <p id="section-3.7.1-2.4.1">By default, <span>[<a href="#RFC8446" class="cite xref">RFC8446</a>]</span>, <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span>, <span>[<a href="#RFC6242" class="cite xref">RFC6242</a>]</span>, and <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span> (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.<a href="#section-3.7.1-2.4.1" class="pilcrow">¶</a></p>
+              <p id="section-3.7.1-2.4.1">By default, <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span>, <span>[<a href="#RFC6242" class="cite xref">RFC6242</a>]</span>, <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>, <span>[<a href="#RFC8446" class="cite xref">RFC8446</a>]</span>, and <span>[<a href="#RFC9110" class="cite xref">RFC9110</a>]</span> (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.<a href="#section-3.7.1-2.4.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 </dl>
@@ -5438,6 +5441,10 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <dt id="RFC9108">[RFC9108]</dt>
         <dd>
 <span class="refAuthor">Lhotka, L.</span> and <span class="refAuthor">P. Špaček</span>, <span class="refTitle">"YANG Types for DNS Classes and Resource Record Types"</span>, <span class="seriesInfo">RFC 9108</span>, <span class="seriesInfo">DOI 10.17487/RFC9108</span>, <time datetime="2021-09" class="refDate">September 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9108">https://www.rfc-editor.org/rfc/rfc9108</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9110">[RFC9110]</dt>
+        <dd>
+<span class="refAuthor">Fielding, R., Ed.</span>, <span class="refAuthor">Nottingham, M., Ed.</span>, and <span class="refAuthor">J. Reschke, Ed.</span>, <span class="refTitle">"HTTP Semantics"</span>, <span class="seriesInfo">STD 97</span>, <span class="seriesInfo">RFC 9110</span>, <span class="seriesInfo">DOI 10.17487/RFC9110</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9110">https://www.rfc-editor.org/rfc/rfc9110</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9132">[RFC9132]</dt>
         <dd>

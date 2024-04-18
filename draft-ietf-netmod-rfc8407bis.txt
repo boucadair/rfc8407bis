@@ -75,7 +75,7 @@ Table of Contents
 
    1.  Introduction
      1.1.  Changes Since RFC 8407
-   2.  Terminology
+   2.  Terminology & Notation Conventions
      2.1.  NETCONF Terms
      2.2.  YANG Terms
      2.3.  Network Management Datastore Architecture (NMDA) Terms
@@ -225,12 +225,14 @@ Table of Contents
 
    *  Updated the terminology.
 
+   *  Added a note about notation conventions.
+
    *  Updated the URL of the IETF authors guidelines.
 
    *  Added code markers for the security template.
 
-   *  Updated the YANG security considerations template to reflect the
-      latest version maintained in the Wiki.
+   *  Updated the YANG security considerations template to better insist
+      on the key secure transport features.
 
    *  Added statements that the security template is not required for
       modules that follow [RFC8791] or [RFC7952].
@@ -297,7 +299,12 @@ Table of Contents
 
    *  Added a template for IANA-maintained modules.
 
-2.  Terminology
+2.  Terminology & Notation Conventions
+
+   Some of the templates defined in the document uses "--" to easily
+   identify specific instructions to the authors.  Text prefixed with
+   "--" must not be copied as such when using a template.  Note that for
+   YANG templates, "//" is used to convey such instructions.
 
    The following terms are used throughout this document:
 

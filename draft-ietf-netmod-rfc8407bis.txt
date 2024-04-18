@@ -1514,7 +1514,11 @@ Table of Contents
 
    The "description" statement MUST be present.  For modules published
    within IETF documents, the appropriate IETF Trust Copyright text MUST
-   be present, as described in Section 3.1.
+   be present, as described in Section 3.1 and contain the following
+   statement:
+
+  All revisions of IETF and IANA published modules can be found at the YANG
+  Parameters registry: https://www.iana.org/assignments/yang-parameters.
 
    If the module relies on information contained in other documents,
    which are not the same documents implied by the import statements
@@ -3236,26 +3240,37 @@ Table of Contents
 
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
-   existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published
-   module (i.e., IANA_FOO_URL_With_REV). If the updates are triggered
-   by an RFC, that RFC must also be included in the "reference"
-   substatement. The "description" substatement should reflect what
-   changed in the revised version. Typically, the description text
-   enumerates the changes (e.g., list of the new registration entries).
+   existing revision statements. The "revision" statement MUST contain
+   both "description" and "reference" substatements as follows.
 
-     --- If the changes are triggered by an RFC, insert this text:
+   The "description" substatement captures what changed in the
+   revised version. Typically, the description enumerates the changes
+   such as udpates to existing entries (e.g., update a description or
+   a reference) or notes which identities were added or had their status
+   changed (e.g., deprecated, discouraged, or obsoleted).
+
+     --- When such a description is not feasible, the description varies
+     --- on how the update is triggered.
+
+     --- If the update is triggered by an RFC, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by RFC XXXX.".
 
-     --- If the changes are triggered following other IANA registration
+     --- If the update is triggered following other IANA registration
      --- policy (Section 4 of [RFC8126]) but not all the values in the
      --- registry are covered by the same policy, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by the registration policy
      <Some_IANA_policy>".
+
+   The "reference" substatement points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV). It may also point to an
+   authoritative event triggering the update to the YANG module. In all
+   cases, this event is cited from the underlying IANA registry. If the
+   update is triggered by an RFC, that RFC must also be included in
+   the "reference" substatement.
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3300,26 +3315,37 @@ Table of Contents
 
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
-   existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published
-   module (i.e., IANA_FOO_URL_With_REV). If the updates are triggered
-   by an RFC, that RFC must also be included in the "reference"
-   substatement. The "description" substatement should reflect what
-   changed in the revised version. Typically, the description text
-   enumerates the changes (e.g., list of the new registration entries).
+   existing revision statements. The "revision" statement MUST contain
+   both "description" and "reference" substatements as follows.
 
-     --- If the changes are triggered by an RFC, insert this text:
+   The "description" substatement captures what changed in the
+   revised version. Typically, the description enumerates the changes
+   such as udpates to existing entries (e.g., update a description or
+   a reference) or notes which "enums" were added or had their status
+   changed (e.g., deprecated, discouraged, or obsoleted).
+
+     --- When such a description is not feasible, the description varies
+     --- on how the update is triggered.
+
+     --- If the update is triggered by an RFC, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by RFC XXXX.".
 
-     --- If the changes are triggered following other IANA registration
+     --- If the update is triggered following other IANA registration
      --- policy (Section 4 of [RFC8126]) but not all the values in the
      --- registry are covered by the same policy, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by the registration policy
      <Some_IANA_policy>".
+
+   The "reference" substatement points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV). It may also point to an
+   authoritative event triggering the update to the YANG module. In all
+   cases, this event is cited from the underlying IANA registry. If the
+   update is triggered by an RFC, that RFC must also be included in
+   the "reference" substatement.
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3827,6 +3853,10 @@ Appendix B.  Template for IETF Modules
         Relating to IETF Documents
         (https://trustee.ietf.org/license-info).
 
+        All revisions of IETF and IANA published modules can be found
+        at the YANG Parameters registry
+        (https://www.iana.org/assignments/yang-parameters).
+
         This version of this YANG module is part of RFC XXXX; see
         the RFC itself for full legal notices.";
 
@@ -3895,6 +3925,10 @@ Appendix C.  Template for IANA-Maintained Modules
         forth in Section 4.c of the IETF Trust's Legal Provisions
         Relating to IETF Documents
         (https://trustee.ietf.org/license-info).
+
+        All revisions of IETF and IANA published modules can be found
+        at the YANG Parameters registry
+        (https://www.iana.org/assignments/yang-parameters).
 
         The initial version of this YANG module is part of RFC IIII;
         see the RFC itself for full legal notices.
@@ -3971,6 +4005,9 @@ Acknowledgments
    Italo Busi provided the examples of "case + when" construct.
 
    Thanks to Rach Salz and Michael Richardson for the SAAG review.
+
+   Kent Watsen contributed text to the security and IANA-maintained
+   module templates.
 
    The author of RFC 8407:  Andy Bierman
 

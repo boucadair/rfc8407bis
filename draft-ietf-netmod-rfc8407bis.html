@@ -3035,12 +3035,18 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    Chairs.<a href="#section-4.8-3" class="pilcrow">¶</a></p>
 <p id="section-4.8-4">The "description" statement <span class="bcp14">MUST</span> be present.  For modules published
    within IETF documents, the appropriate IETF Trust Copyright text <span class="bcp14">MUST</span>
-   be present, as described in Section 3.1.<a href="#section-4.8-4" class="pilcrow">¶</a></p>
-<p id="section-4.8-5">If the module relies on information contained in other documents,
+   be present, as described in Section 3.1 and contain the following statement:<a href="#section-4.8-4" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4.8-5">
+<pre>
+  All revisions of IETF and IANA published modules can be found at the YANG
+  Parameters registry: https://www.iana.org/assignments/yang-parameters.
+</pre><a href="#section-4.8-5" class="pilcrow">¶</a>
+</div>
+<p id="section-4.8-6">If the module relies on information contained in other documents,
    which are not the same documents implied by the import statements
    present in the module, then these documents <span class="bcp14">MUST</span> be identified in the
-   reference statement.<a href="#section-4.8-5" class="pilcrow">¶</a></p>
-<p id="section-4.8-6">A "revision" statement <span class="bcp14">MUST</span> be present for each published version of
+   reference statement.<a href="#section-4.8-6" class="pilcrow">¶</a></p>
+<p id="section-4.8-7">A "revision" statement <span class="bcp14">MUST</span> be present for each published version of
    the module.  The "revision" statement <span class="bcp14">MUST</span> have a "reference"
    substatement.  It <span class="bcp14">MUST</span> identify the published document that contains
    the module.  Modules are often extracted from their original
@@ -3050,10 +3056,10 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    the description text of a new published revision may summarize any changes made
    to a module compared to the previous published revision. Typically, that list
    is a YANG-specific subset of the summary of changes listing any changes made from the RFC
-   being updated or obsoleted as per <span>[<a href="#ID-Guidelines" class="cite xref">ID-Guidelines</a>]</span>.<a href="#section-4.8-6" class="pilcrow">¶</a></p>
-<p id="section-4.8-7">The following example shows the revision statement for a published
-   YANG module:<a href="#section-4.8-7" class="pilcrow">¶</a></p>
-<div class="lang-yang sourcecode" id="section-4.8-8">
+   being updated or obsoleted as per <span>[<a href="#ID-Guidelines" class="cite xref">ID-Guidelines</a>]</span>.<a href="#section-4.8-7" class="pilcrow">¶</a></p>
+<p id="section-4.8-8">The following example shows the revision statement for a published
+   YANG module:<a href="#section-4.8-8" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.8-9">
 <pre>
    revision 2010-09-24 {
      description
@@ -3061,12 +3067,12 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    reference
      "RFC 6021: Common YANG Data Types";
    }
-</pre><a href="#section-4.8-8" class="pilcrow">¶</a>
+</pre><a href="#section-4.8-9" class="pilcrow">¶</a>
 </div>
-<p id="section-4.8-9">The following example shows the revision statements for a published
+<p id="section-4.8-10">The following example shows the revision statements for a published
    YANG module that updates a published module. The new revision statement
-   summarizes the changes compared to the previous published revision.<a href="#section-4.8-9" class="pilcrow">¶</a></p>
-<div class="lang-yang sourcecode" id="section-4.8-10">
+   summarizes the changes compared to the previous published revision.<a href="#section-4.8-10" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.8-11">
 <pre>
   revision 2013-07-15 {
     description
@@ -3085,20 +3091,20 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    reference
      "RFC 6021: Common YANG Data Types";
    }
-</pre><a href="#section-4.8-10" class="pilcrow">¶</a>
+</pre><a href="#section-4.8-11" class="pilcrow">¶</a>
 </div>
-<p id="section-4.8-11">For an unpublished module, a complete history of each unpublished
+<p id="section-4.8-12">For an unpublished module, a complete history of each unpublished
    module revision is not required.  That is, within a sequence of draft
    versions, only the most recent revision need be recorded in the
    module.  Do not remove or reuse a revision statement for a published
    module.  A new revision date is not required unless the module
    contents have changed.  If the module contents have changed, then the
    revision date of that new module version <span class="bcp14">MUST</span> be updated to a date
-   later than that of the previous version.<a href="#section-4.8-11" class="pilcrow">¶</a></p>
-<p id="section-4.8-12">The following example shows the revision statements for an
+   later than that of the previous version.<a href="#section-4.8-12" class="pilcrow">¶</a></p>
+<p id="section-4.8-13">The following example shows the revision statements for an
    unpublished update to a published YANG module. The latest revision statement
-   of the unpublished module summarizes the changes compared to the previous revision.<a href="#section-4.8-12" class="pilcrow">¶</a></p>
-<div class="lang-yang sourcecode" id="section-4.8-13">
+   of the unpublished module summarizes the changes compared to the previous revision.<a href="#section-4.8-13" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.8-14">
 <pre>
   revision 2023-01-23 {
     description
@@ -3140,7 +3146,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    reference
      "RFC 6021: Common YANG Data Types";
    }
-</pre><a href="#section-4.8-13" class="pilcrow">¶</a>
+</pre><a href="#section-4.8-14" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
@@ -5016,26 +5022,37 @@ Unassigned or reserved values are not present in the module.
 
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
-existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published
-module (i.e., IANA_FOO_URL_With_REV). If the updates are triggered
-by an RFC, that RFC must also be included in the "reference"
-substatement. The "description" substatement should reflect what
-changed in the revised version. Typically, the description text
-enumerates the changes (e.g., list of the new registration entries).
+existing revision statements. The "revision" statement MUST contain
+both "description" and "reference" substatements as follows.
 
-  --- If the changes are triggered by an RFC, insert this text:
+The "description" substatement captures what changed in the
+revised version. Typically, the description enumerates the changes
+such as udpates to existing entries (e.g., update a description or
+a reference) or notes which identities were added or had their status
+changed (e.g., deprecated, discouraged, or obsoleted).
+
+  --- When such a description is not feasible, the description varies
+  --- on how the update is triggered.
+
+  --- If the update is triggered by an RFC, insert this text:
 
  The "description" substatement should include this text:
  "Applied updates as specified by RFC XXXX.".
 
-  --- If the changes are triggered following other IANA registration
+  --- If the update is triggered following other IANA registration
   --- policy (Section 4 of [RFC8126]) but not all the values in the
   --- registry are covered by the same policy, insert this text:
 
  The "description" substatement should include this text:
  "Applied updates as specified by the registration policy
   &lt;Some_IANA_policy&gt;".
+
+The "reference" substatement points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV). It may also point to an
+authoritative event triggering the update to the YANG module. In all
+cases, this event is cited from the underlying IANA registry. If the
+update is triggered by an RFC, that RFC must also be included in
+the "reference" substatement.
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -5091,26 +5108,37 @@ Unassigned or reserved values are not present in the module.
 
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
-existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published
-module (i.e., IANA_FOO_URL_With_REV). If the updates are triggered
-by an RFC, that RFC must also be included in the "reference"
-substatement. The "description" substatement should reflect what
-changed in the revised version. Typically, the description text
-enumerates the changes (e.g., list of the new registration entries).
+existing revision statements. The "revision" statement MUST contain
+both "description" and "reference" substatements as follows.
 
-  --- If the changes are triggered by an RFC, insert this text:
+The "description" substatement captures what changed in the
+revised version. Typically, the description enumerates the changes
+such as udpates to existing entries (e.g., update a description or
+a reference) or notes which "enums" were added or had their status
+changed (e.g., deprecated, discouraged, or obsoleted).
+
+  --- When such a description is not feasible, the description varies
+  --- on how the update is triggered.
+
+  --- If the update is triggered by an RFC, insert this text:
 
  The "description" substatement should include this text:
  "Applied updates as specified by RFC XXXX.".
 
-  --- If the changes are triggered following other IANA registration
+  --- If the update is triggered following other IANA registration
   --- policy (Section 4 of [RFC8126]) but not all the values in the
   --- registry are covered by the same policy, insert this text:
 
  The "description" substatement should include this text:
  "Applied updates as specified by the registration policy
   &lt;Some_IANA_policy&gt;".
+
+The "reference" substatement points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV). It may also point to an
+authoritative event triggering the update to the YANG module. In all
+cases, this event is cited from the underlying IANA registry. If the
+update is triggered by an RFC, that RFC must also be included in
+the "reference" substatement.
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -5640,6 +5668,10 @@ module ietf-template {
      Relating to IETF Documents
      (https://trustee.ietf.org/license-info).
 
+     All revisions of IETF and IANA published modules can be found
+     at the YANG Parameters registry
+     (https://www.iana.org/assignments/yang-parameters).
+
      This version of this YANG module is part of RFC XXXX; see
      the RFC itself for full legal notices.";
 
@@ -5719,6 +5751,10 @@ module iana-template {
      Relating to IETF Documents
      (https://trustee.ietf.org/license-info).
 
+     All revisions of IETF and IANA published modules can be found
+     at the YANG Parameters registry
+     (https://www.iana.org/assignments/yang-parameters).
+
      The initial version of this YANG module is part of RFC IIII;
      see the RFC itself for full legal notices.
 
@@ -5792,35 +5828,36 @@ module iana-template {
 <p id="appendix-D-6">Thanks to Xufeng Liu for reviewing the document.<a href="#appendix-D-6" class="pilcrow">¶</a></p>
 <p id="appendix-D-7">Italo Busi provided the examples of "case + when" construct.<a href="#appendix-D-7" class="pilcrow">¶</a></p>
 <p id="appendix-D-8">Thanks to Rach Salz and Michael Richardson for the SAAG review.<a href="#appendix-D-8" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="appendix-D-9">
-        <dt id="appendix-D-9.1">The author of RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-9.2">
-          <p id="appendix-D-9.2.1">Andy Bierman<a href="#appendix-D-9.2.1" class="pilcrow">¶</a></p>
+<p id="appendix-D-9">Kent Watsen contributed text to the security and IANA-maintained module templates.<a href="#appendix-D-9" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-D-10">
+        <dt id="appendix-D-10.1">The author of RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-10.2">
+          <p id="appendix-D-10.2.1">Andy Bierman<a href="#appendix-D-10.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-9.3"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-9.4">
-          <p id="appendix-D-9.4.1">YumaWorks<a href="#appendix-D-9.4.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-10.3"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-10.4">
+          <p id="appendix-D-10.4.1">YumaWorks<a href="#appendix-D-10.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-9.5"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-9.6">
-          <p id="appendix-D-9.6.1">email: andy@yumaworks.com<a href="#appendix-D-9.6.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-10.5"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-10.6">
+          <p id="appendix-D-10.6.1">email: andy@yumaworks.com<a href="#appendix-D-10.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-9.7">Acknowledgments from RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-9.8">
-          <p id="appendix-D-9.8.1">The structure and contents of this document are adapted from
+<dt id="appendix-D-10.7">Acknowledgments from RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-10.8">
+          <p id="appendix-D-10.8.1">The structure and contents of this document are adapted from
 "Guidelines for Authors and Reviewers of MIB Documents" <span>[<a href="#RFC4181" class="cite xref">RFC4181</a>]</span>, by
- C. M. Heard.<a href="#appendix-D-9.8.1" class="pilcrow">¶</a></p>
+ C. M. Heard.<a href="#appendix-D-10.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-9.9"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-9.10">
-          <p id="appendix-D-9.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
+<dt id="appendix-D-10.9"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-10.10">
+          <p id="appendix-D-10.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
 Ladislav Lhotka, Jernej Tuljak, Lou Berger, Robert Wilton, Kent
 Watsen, and William Lupton for their extensive reviews and
-contributions to this document.<a href="#appendix-D-9.10.1" class="pilcrow">¶</a></p>
+contributions to this document.<a href="#appendix-D-10.10.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>

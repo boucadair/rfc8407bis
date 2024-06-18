@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 17 October 2024                                          Huawei
-                                                           15 April 2024
+Expires: 20 December 2024                                         Huawei
+                                                            18 June 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 October 2024.
+   This Internet-Draft will expire on 20 December 2024.
 
 Copyright Notice
 
@@ -75,7 +75,7 @@ Table of Contents
 
    1.  Introduction
      1.1.  Changes Since RFC 8407
-   2.  Terminology
+   2.  Terminology & Notation Conventions
      2.1.  NETCONF Terms
      2.2.  YANG Terms
      2.3.  Network Management Datastore Architecture (NMDA) Terms
@@ -216,6 +216,9 @@ Table of Contents
    expected to know the YANG data modeling language before implementing
    the guidance in this document.
 
+      Note to the RFC Editor: Please replace "AAAA" through the document
+      with the RFC number assigned to this document.
+
 1.1.  Changes Since RFC 8407
 
    The following changes have been made to the guidelines published in
@@ -225,12 +228,14 @@ Table of Contents
 
    *  Updated the terminology.
 
+   *  Added a note about notation conventions.
+
    *  Updated the URL of the IETF authors guidelines.
 
    *  Added code markers for the security template.
 
-   *  Updated the YANG security considerations template to reflect the
-      latest version maintained in the Wiki.
+   *  Updated the YANG security considerations template to better insist
+      on the key secure transport features.
 
    *  Added statements that the security template is not required for
       modules that follow [RFC8791] or [RFC7952].
@@ -297,7 +302,12 @@ Table of Contents
 
    *  Added a template for IANA-maintained modules.
 
-2.  Terminology
+2.  Terminology & Notation Conventions
+
+   Some of the templates defined in the document uses "--" to easily
+   identify specific instructions to the authors.  Text prefixed with
+   "--" must not be copied as such when using a template.  Note that for
+   YANG templates, "//" is used to convey such instructions.
 
    The following terms are used throughout this document:
 
@@ -498,14 +508,14 @@ Table of Contents
 
       The full tree diagram of the module can be generated using,
       e.g., the "pyang" tool. That tree is not included here because
-      it is too long (Section 3.4 of [RFCXXXX]). Instead, subtrees
+      it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
       are provided for the reader's convenience.
 
       -- If a stable pointer to retrieve the tree is included
 
       The full tree diagram of the module can be retrieved at
       <stable_url_ref>. That tree is not included here because it is too
-      long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
+      long (Section 3.4 of [RFCAAAA]). Instead, subtrees are provided
       for the reader's convenience.
 
    These guidelines take precedence over the generic guidance in
@@ -673,13 +683,16 @@ Table of Contents
    <CODE BEGINS>
    X.  Security Considerations
 
-   This section uses the template described in Section 3.7 of [RFCXXXX].
+   This section uses the template described in Section 3.7 of [RFCAAAA].
 
    The YANG module specified in this document defines a schema for data
    that is designed to be accessed via network management protocols such
-   as NETCONF [RFC6241] or RESTCONF [RFC8040]. Both of these protocols
-   have mandatory-to-implement secure transport layers (e.g., Secure
-   Shell (SSH) [RFC6242] or TLS [RFC8446]) with mutual authentication.
+   as NETCONF [RFC6241] or RESTCONF [RFC8040]. These network management
+   protocols are required to use a secure transport layer and mutual
+   authentication, e.g., SSH [RFC6242] without the "none" authentication
+   option, Transport Layer Security (TLS) [RFC8446] with mutual X.509
+   authentication, and HTTPS with HTTP authentication (Section 11 of
+   [RFC9110]).
 
    The Network Configuration Access Control Model (NACM) [RFC8341]
    provides the means to restrict access for particular NETCONF or
@@ -762,10 +775,10 @@ Table of Contents
    Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed as
       normative references.
 
-      By default, [RFC8446], [RFC6241], [RFC6242], and [RFC8040] (or
-      future RFCs that replace any of them) are listed as informative
-      references unless normatively cited in other sections of the
-      document that specifies the YANG module.
+      By default, [RFC6241], [RFC6242], [RFC8040], [RFC8446], and
+      [RFC9110] (or future RFCs that replace any of them) are listed as
+      informative references unless normatively cited in other sections
+      of the document that specifies the YANG module.
 
 3.8.  IANA Considerations Section
 
@@ -785,6 +798,25 @@ Table of Contents
    maintained or not.  This applies to new modules and updated modules.
    An example of an update registration for the "ietf-template" module
    can be found in Section 5.
+
+   A registration template is provided below:
+
+    IANA is requested to register the following URI in the "ns"
+    subregistry within the "IETF XML Registry" [RFC3688]:
+
+       URI:
+       Registrant Contact:  The IESG.
+       XML: N/A; the requested URI is an XML namespace.
+
+    IANA is requested to register the following YANG module in the "YANG
+    Module Names" subregistry [RFC6020] within the "YANG Parameters"
+    registry.
+
+       Name:
+       Maintained by IANA?  Y/N
+       Namespace:
+       Prefix:
+       Reference:
 
    Additional IANA considerations applicable to IANA-maintained modules
    are provided in Section 4.30.3.
@@ -1511,7 +1543,12 @@ Table of Contents
 
    The "description" statement MUST be present.  For modules published
    within IETF documents, the appropriate IETF Trust Copyright text MUST
-   be present, as described in Section 3.1.
+   be present, as described in Section 3.1 and contain the following
+   statement:
+
+      All revisions of IETF and IANA published modules can be found at
+      the YANG Parameters registry: https://www.iana.org/assignments/
+      yang-parameters.
 
    If the module relies on information contained in other documents,
    which are not the same documents implied by the import statements
@@ -3233,26 +3270,37 @@ Table of Contents
 
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
-   existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published
-   module (i.e., IANA_FOO_URL_With_REV). If the updates are triggered
-   by an RFC, that RFC must also be included in the "reference"
-   substatement. The "description" substatement should reflect what
-   changed in the revised version. Typically, the description text
-   enumerates the changes (e.g., list of the new registration entries).
+   existing revision statements. The "revision" statement MUST contain
+   both "description" and "reference" substatements as follows.
 
-     --- If the changes are triggered by an RFC, insert this text:
+   The "description" substatement captures what changed in the
+   revised version. Typically, the description enumerates the changes
+   such as udpates to existing entries (e.g., update a description or
+   a reference) or notes which identities were added or had their status
+   changed (e.g., deprecated, discouraged, or obsoleted).
+
+     -- When such a description is not feasible, the description varies
+     -- on how the update is triggered.
+
+     -- If the update is triggered by an RFC, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by RFC XXXX.".
 
-     --- If the changes are triggered following other IANA registration
-     --- policy (Section 4 of [RFC8126]) but not all the values in the
-     --- registry are covered by the same policy, insert this text:
+     -- If the update is triggered following other IANA registration
+     -- policy (Section 4 of [RFC8126]) but not all the values in the
+     -- registry are covered by the same policy, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by the registration policy
      <Some_IANA_policy>".
+
+   The "reference" substatement points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV). It may also point to an
+   authoritative event triggering the update to the YANG module. In all
+   cases, this event is cited from the underlying IANA registry. If the
+   update is triggered by an RFC, that RFC must also be included in
+   the "reference" substatement.
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3297,26 +3345,37 @@ Table of Contents
 
    When the "iana-foo" YANG module is updated, a new "revision"
    statement with a unique revision date must be added in front of the
-   existing revision statements. The "revision" statement must have a
-   "reference" substatement that points specifically to the published
-   module (i.e., IANA_FOO_URL_With_REV). If the updates are triggered
-   by an RFC, that RFC must also be included in the "reference"
-   substatement. The "description" substatement should reflect what
-   changed in the revised version. Typically, the description text
-   enumerates the changes (e.g., list of the new registration entries).
+   existing revision statements. The "revision" statement MUST contain
+   both "description" and "reference" substatements as follows.
 
-     --- If the changes are triggered by an RFC, insert this text:
+   The "description" substatement captures what changed in the
+   revised version. Typically, the description enumerates the changes
+   such as udpates to existing entries (e.g., update a description or
+   a reference) or notes which "enums" were added or had their status
+   changed (e.g., deprecated, discouraged, or obsoleted).
+
+     -- When such a description is not feasible, the description varies
+     -- on how the update is triggered.
+
+     -- If the update is triggered by an RFC, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by RFC XXXX.".
 
-     --- If the changes are triggered following other IANA registration
-     --- policy (Section 4 of [RFC8126]) but not all the values in the
-     --- registry are covered by the same policy, insert this text:
+     -- If the update is triggered following other IANA registration
+     -- policy (Section 4 of [RFC8126]) but not all the values in the
+     -- registry are covered by the same policy, insert this text:
 
     The "description" substatement should include this text:
     "Applied updates as specified by the registration policy
      <Some_IANA_policy>".
+
+   The "reference" substatement points specifically to the published
+   module (i.e., IANA_FOO_URL_With_REV). It may also point to an
+   authoritative event triggering the update to the YANG module. In all
+   cases, this event is cited from the underlying IANA registry. If the
+   update is triggered by an RFC, that RFC must also be included in
+   the "reference" substatement.
 
    IANA is requested to add this note to [reference-to-the-iana-foo-
    registry]:
@@ -3350,13 +3409,13 @@ Table of Contents
       Maintained by IANA?  N
       Namespace:  urn:ietf:params:xml:ns:yang:ietf-template
       Prefix:  temp
-      Reference:  RFC XXXX
+      Reference:  RFC AAAA
 
       Name:  iana-template
       Maintained by IANA?  N
       Namespace:  urn:ietf:params:xml:ns:yang:iana-template
       Prefix:  iana-foo
-      Reference:  RFC XXXX
+      Reference:  RFC AAAA
 
    Also, this document requests IANA to update the reference for the
    "YANG Module Names" registry under the "YANG Parameters" registry
@@ -3639,6 +3698,11 @@ Table of Contents
               Resource Record Types", RFC 9108, DOI 10.17487/RFC9108,
               September 2021, <https://www.rfc-editor.org/rfc/rfc9108>.
 
+   [RFC9110]  Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke,
+              Ed., "HTTP Semantics", STD 97, RFC 9110,
+              DOI 10.17487/RFC9110, June 2022,
+              <https://www.rfc-editor.org/rfc/rfc9110>.
+
    [RFC9132]  Boucadair, M., Ed., Shallow, J., and T. Reddy.K,
               "Distributed Denial-of-Service Open Threat Signaling
               (DOTS) Signal Channel Specification", RFC 9132,
@@ -3819,6 +3883,10 @@ Appendix B.  Template for IETF Modules
         Relating to IETF Documents
         (https://trustee.ietf.org/license-info).
 
+        All revisions of IETF and IANA published modules can be found
+        at the YANG Parameters registry
+        (https://www.iana.org/assignments/yang-parameters).
+
         This version of this YANG module is part of RFC XXXX; see
         the RFC itself for full legal notices.";
 
@@ -3888,6 +3956,10 @@ Appendix C.  Template for IANA-Maintained Modules
         Relating to IETF Documents
         (https://trustee.ietf.org/license-info).
 
+        All revisions of IETF and IANA published modules can be found
+        at the YANG Parameters registry
+        (https://www.iana.org/assignments/yang-parameters).
+
         The initial version of this YANG module is part of RFC IIII;
         see the RFC itself for full legal notices.
 
@@ -3915,9 +3987,11 @@ Appendix C.  Template for IANA-Maintained Modules
 
      revision date-revision {
        description
-         "Indicates the list of changes";
+         "Indicates the list of changes per Section 4.30.3 of RFCAAAA.";
        reference
-         "URL of the latest version of the module";
+         "URL of the latest version of the module
+          (if any) list the authoritative event (e.g., RFC) that
+          triggered the update to the YANG module";
      }
 
      // replace 'date-initial' with the module publication date
@@ -3963,6 +4037,9 @@ Acknowledgments
    Italo Busi provided the examples of "case + when" construct.
 
    Thanks to Rach Salz and Michael Richardson for the SAAG review.
+
+   Kent Watsen contributed text to the security and IANA-maintained
+   module templates.
 
    The author of RFC 8407:  Andy Bierman
 
